@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Raw and derived data are uploaded to Modal separately.
+Vni_air_writing/
+
+# Experiment artifacts are downloaded from the results volume when needed.
+artifacts/
+results/
+preprocessed_128.npz
