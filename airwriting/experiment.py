@@ -17,12 +17,14 @@ from .data import AirWritingDataset, PreprocessConfig, collate_batch
 from .metrics import corpus_metrics, greedy_decode
 from .models import RecognitionModel
 
-TRAINING_VERSION = 3
+TRAINING_VERSION = 4
 
 
 @dataclass
 class ExperimentConfig:
     name: str
+    experiment_role: str = ""
+    hypothesis: str = ""
     backbone: str = "conformer"
     representation: str = "all"
     fusion: str = "gated"
@@ -139,6 +141,7 @@ def run_experiment(
     manifest: dict,
     output_root: Path,
     point_cache: dict | None = None,
+    evaluate_test: bool = True,
 ) -> dict:
     labels_by_split = {
         split: {
@@ -167,7 +170,11 @@ def run_experiment(
     result_path = run_dir / "result.json"
     if result_path.exists():
         result = json.loads(result_path.read_text(encoding="utf-8"))
-        if result.get("status") == "complete" and result.get("training_version") == TRAINING_VERSION:
+        reusable_statuses = {"complete"} if evaluate_test else {"validated", "complete"}
+        if (
+            result.get("status") in reusable_statuses
+            and result.get("training_version") == TRAINING_VERSION
+        ):
             print(f"Skipping completed run {config.name}/seed_{config.seed}", flush=True)
             return result
 
@@ -192,10 +199,8 @@ def run_experiment(
         **common,
     )
     val_dataset = AirWritingDataset(split="val", augment=False, **common)
-    test_dataset = AirWritingDataset(split="test", augment=False, **common)
     train_loader = _loader(train_dataset, config.batch_size, True)
     val_loader = _loader(val_dataset, config.batch_size, False)
-    test_loader = _loader(test_dataset, config.batch_size, False)
 
     model = RecognitionModel(
         num_classes=len(manifest["vocabulary"]),
@@ -295,15 +300,25 @@ def run_experiment(
     checkpoint = torch.load(run_dir / "best.pt", map_location=device, weights_only=False)
     model.load_state_dict(checkpoint["model"])
     val_metrics, val_predictions = evaluate(model, val_loader, manifest["vocabulary"], device)
-    test_metrics, test_predictions = evaluate(model, test_loader, manifest["vocabulary"], device)
     (run_dir / "predictions_val.jsonl").write_text(
         "\n".join(json.dumps(row, ensure_ascii=False) for row in val_predictions) + "\n", encoding="utf-8"
     )
-    (run_dir / "predictions_test.jsonl").write_text(
-        "\n".join(json.dumps(row, ensure_ascii=False) for row in test_predictions) + "\n", encoding="utf-8"
-    )
+    test_metrics = None
+    if evaluate_test:
+        test_dataset = AirWritingDataset(split="test", augment=False, **common)
+        test_loader = _loader(test_dataset, config.batch_size, False)
+        test_metrics, test_predictions = evaluate(
+            model, test_loader, manifest["vocabulary"], device
+        )
+        (run_dir / "predictions_test.jsonl").write_text(
+            "\n".join(
+                json.dumps(row, ensure_ascii=False) for row in test_predictions
+            )
+            + "\n",
+            encoding="utf-8",
+        )
     result = {
-        "status": "complete",
+        "status": "complete" if evaluate_test else "validated",
         "training_version": TRAINING_VERSION,
         "config": asdict(config),
         "parameters": parameters,
@@ -311,6 +326,10 @@ def run_experiment(
         "duration_seconds": time.time() - started,
         "validation": val_metrics,
         "test": test_metrics,
+        "selection": {
+            "criterion": "validation.cer",
+            "test_locked_during_training": not evaluate_test,
+        },
         "history": history,
         "environment": {
             "torch": torch.__version__,
@@ -320,6 +339,52 @@ def run_experiment(
     }
     result_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     return result
+
+
+@torch.inference_mode()
+def evaluate_saved_checkpoint_on_test(
+    checkpoint_path: Path,
+    data_root: Path,
+    manifest: dict,
+    point_cache: dict | None = None,
+) -> tuple[dict, list[dict]]:
+    """Evaluate a frozen checkpoint on test after validation-only selection."""
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
+    config = ExperimentConfig(**checkpoint["config"])
+    model = RecognitionModel(
+        num_classes=len(checkpoint["tokens"]),
+        representation=config.representation,
+        fusion=config.fusion,
+        backbone=config.backbone,
+        positional=config.positional,
+        fourier_scales=config.fourier_scales,
+        d_model=config.d_model,
+        layers=config.layers,
+        heads=config.heads,
+        d_ff=config.d_ff,
+        dropout=config.dropout,
+        branch_dropout=config.branch_dropout,
+        time_mask_probability=config.time_mask_probability,
+        time_mask_width=config.time_mask_width,
+    ).to(device)
+    model.load_state_dict(checkpoint["model"])
+    preprocess = PreprocessConfig(
+        config.length, config.savgol, config.spline, config.normalize
+    )
+    test_dataset = AirWritingDataset(
+        data_root=data_root,
+        manifest=manifest,
+        split="test",
+        representation=config.representation,
+        fourier_scales=config.fourier_scales,
+        preprocess=preprocess,
+        augment=False,
+        seed=config.seed,
+        point_cache=point_cache,
+    )
+    test_loader = _loader(test_dataset, config.batch_size, False)
+    return evaluate(model, test_loader, checkpoint["tokens"], device)
 
 
 @torch.inference_mode()

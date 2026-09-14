@@ -5,6 +5,7 @@ import numpy as np
 import torch
 
 from airwriting.data import PreprocessConfig, feature_branches, preprocess_trajectory
+from airwriting.experiment import ExperimentConfig, run_experiment
 from airwriting.metrics import corpus_metrics, greedy_decode
 from airwriting.models import RecognitionModel
 
@@ -137,3 +138,46 @@ def test_regularized_model_forward_is_finite():
     assert torch.isfinite(output).all()
     assert torch.isfinite(weights).all()
     assert torch.allclose(weights.sum(-1), torch.ones(3, 24), atol=1e-5)
+
+
+def test_validation_only_training_never_opens_test_sample(tmp_path):
+    sample = tmp_path / "sample.csv"
+    sample.write_text(
+        "x,y\n0,0\n1,0\n1,1\n2,1\n3,2\n4,3\n", encoding="utf-8"
+    )
+    manifest = {
+        "records": [
+            {"path": "sample.csv", "label": "a", "split": "train"},
+            {"path": "sample.csv", "label": "a", "split": "val"},
+            {"path": "missing-test.csv", "label": "a", "split": "test"},
+        ],
+        "vocabulary": ["<blank>", "a"],
+    }
+    config = ExperimentConfig(
+        name="validation_only",
+        representation="xy",
+        fusion="concat",
+        positional="none",
+        d_model=8,
+        layers=1,
+        heads=1,
+        d_ff=16,
+        length=16,
+        dropout=0.1,
+        augment=False,
+        batch_size=1,
+        epochs=1,
+        patience=1,
+    )
+    result = run_experiment(
+        config,
+        tmp_path,
+        manifest,
+        tmp_path / "results",
+        evaluate_test=False,
+    )
+    run_dir = tmp_path / "results" / "validation_only" / "seed_42"
+    assert result["status"] == "validated"
+    assert result["test"] is None
+    assert result["selection"]["test_locked_during_training"] is True
+    assert not (run_dir / "predictions_test.jsonl").exists()

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import tarfile
 from dataclasses import replace
@@ -143,17 +144,35 @@ def lexical_ablation_suite() -> list[dict]:
         return {"name": name, **common, **changes}
 
     return [
-        # Dropout sweep around the known-good point (dynamics+Fourier, concat).
-        candidate("lex_dynf_d20", representation="dynamics_fourier", fusion="concat", dropout=0.20),
-        candidate("lex_dynf_d30", representation="dynamics_fourier", fusion="concat", dropout=0.30),
-        candidate("lex_dynf_d40", representation="dynamics_fourier", fusion="concat", dropout=0.40),
+        # A small, hypothesis-driven dropout sweep around the known-good point.
+        candidate(
+            "lexlock_dynf_d20", representation="dynamics_fourier", fusion="concat",
+            dropout=0.20, experiment_role="regularization_lower_bound",
+            hypothesis="Dropout 0.2 reduces lexical overfitting without suppressing trajectory detail.",
+        ),
+        candidate(
+            "lexlock_dynf_d30", representation="dynamics_fourier", fusion="concat",
+            dropout=0.30, experiment_role="regularization_candidate",
+            hypothesis="Moderately stronger dropout best supports composition of unseen phrases.",
+        ),
+        candidate(
+            "lexlock_dynf_d40", representation="dynamics_fourier", fusion="concat",
+            dropout=0.40, experiment_role="regularization_upper_bound",
+            hypothesis="Dropout 0.4 tests whether stronger regularization begins to underfit.",
+        ),
         # Control: does the same dropout help the full gated architecture, or
         # is dropping the spatial branch what actually matters?
-        candidate("lex_all_gated_d30", representation="all", fusion="gated", dropout=0.30),
+        candidate(
+            "lexlock_all_gated_d30", representation="all", fusion="gated", dropout=0.30,
+            experiment_role="representation_control",
+            hypothesis="At matched dropout, removing raw XY should improve unseen-phrase generalization.",
+        ),
         # Does stacking branch dropout on top of the best dropout help further?
         candidate(
-            "lex_dynf_d30_branchdrop20", representation="dynamics_fourier",
+            "lexlock_dynf_d30_branchdrop20", representation="dynamics_fourier",
             fusion="concat", dropout=0.30, branch_dropout=0.20,
+            experiment_role="structured_regularization_control",
+            hypothesis="Branch dropout tests whether structured masking adds value beyond standard dropout.",
         ),
     ]
 
@@ -169,13 +188,16 @@ def _write_summary(output_root: Path) -> None:
     results = []
     for path in output_root.glob("*/seed_*/result.json"):
         payload = json.loads(path.read_text(encoding="utf-8"))
-        if payload.get("status") == "complete":
+        if payload.get("status") in {"validated", "complete"}:
             results.append(payload)
     rows = []
     for result in results:
+        test = result.get("test") or {}
         rows.append(
             {
                 "name": result["config"]["name"],
+                "experiment_role": result["config"].get("experiment_role", ""),
+                "hypothesis": result["config"].get("hypothesis", ""),
                 "seed": result["config"]["seed"],
                 "backbone": result["config"]["backbone"],
                 "representation": result["config"]["representation"],
@@ -199,9 +221,10 @@ def _write_summary(output_root: Path) -> None:
                 "parameters": result["parameters"],
                 "best_epoch": result["best_epoch"],
                 "val_cer": result["validation"]["cer"],
-                "test_cer": result["test"]["cer"],
-                "test_wer": result["test"]["wer"],
-                "test_exact_accuracy": result["test"]["exact_accuracy"],
+                "test_cer": test.get("cer"),
+                "test_wer": test.get("wer"),
+                "test_exact_accuracy": test.get("exact_accuracy"),
+                "status": result["status"],
             }
         )
     rows.sort(key=lambda row: (row["name"], row["seed"]))
@@ -295,8 +318,8 @@ def train_suite(suite: str = "core") -> dict:
 @app.function(
     image=image,
     gpu="L4",
-    cpu=8,
-    memory=32768,
+    cpu=4,
+    memory=8192,
     timeout=24 * 60 * 60,
     volumes={"/data": data_volume, "/results": results_volume},
 )
@@ -326,16 +349,19 @@ def train_lexical_candidate(config_payload: dict) -> dict:
             }
         )
         print(f"Loaded trajectory cache: {len(point_cache)} samples", flush=True)
-    result = run_experiment(config, data_root, manifest, output_root, point_cache)
+    # Lexical ablations are validation-only. Test remains unopened until the
+    # complete ablation has selected a frozen configuration by validation CER.
+    result = run_experiment(
+        config, data_root, manifest, output_root, point_cache,
+        evaluate_test=False,
+    )
     results_volume.commit()
     return {
         "name": config.name,
         "seed": config.seed,
         "best_epoch": result["best_epoch"],
         "val_cer": result["validation"]["cer"],
-        "test_cer": result["test"]["cer"],
-        "test_wer": result["test"]["wer"],
-        "test_exact_accuracy": result["test"]["exact_accuracy"],
+        "test_evaluated": result.get("test") is not None,
     }
 
 
@@ -352,8 +378,162 @@ def summarize_lexical_runs() -> dict:
     _write_summary(output_root)
     results_volume.commit()
     rows = json.loads((output_root / "summary.json").read_text(encoding="utf-8"))
-    eligible = [row for row in rows if row["name"].startswith("lex_")]
+    eligible = [row for row in rows if row["name"].startswith("lexlock_")]
     return min(eligible, key=lambda row: row["val_cer"])
+
+
+@app.function(
+    image=image,
+    cpu=2,
+    memory=4096,
+    timeout=30 * 60,
+    volumes={"/results": results_volume},
+)
+def freeze_lexical_selection() -> dict:
+    """Freeze validation selection before any version-4 test evaluation."""
+    results_volume.reload()
+    output_root = Path("/results/lexical_regularization")
+    manifest_path = Path("/root/manifests/label_disjoint_seed_20260908.json")
+    expected = [payload["name"] for payload in lexical_ablation_suite()]
+    candidates = []
+    for name in expected:
+        result_path = output_root / name / "seed_42" / "result.json"
+        if not result_path.exists():
+            raise FileNotFoundError(f"Missing validation result: {result_path}")
+        result = json.loads(result_path.read_text(encoding="utf-8"))
+        if result.get("training_version") != 4:
+            raise ValueError(f"{name} was not trained under protocol version 4")
+        if result.get("status") != "validated" or result.get("test") is not None:
+            raise ValueError(f"Test was not locked for validation candidate {name}")
+        candidates.append(
+            {
+                "name": name,
+                "experiment_role": result["config"]["experiment_role"],
+                "hypothesis": result["config"]["hypothesis"],
+                "validation_cer": result["validation"]["cer"],
+                "best_epoch": result["best_epoch"],
+            }
+        )
+
+    winner = min(candidates, key=lambda row: row["validation_cer"])
+    # These matched-dropout controls were declared before test access. They
+    # separate representation removal from the effect of dropout itself.
+    test_names = list(
+        dict.fromkeys(
+            [
+                winner["name"],
+                "lexlock_dynf_d30",
+                "lexlock_all_gated_d30",
+            ]
+        )
+    )
+    selection = {
+        "protocol": "lexical-disjoint-validation-lock-v4",
+        "manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
+        "selection_metric": "validation.cer",
+        "test_unopened_at_selection": True,
+        "candidates": sorted(candidates, key=lambda row: row["validation_cer"]),
+        "winner": winner,
+        "prespecified_test_names": test_names,
+    }
+    (output_root / "selection_v4.json").write_text(
+        json.dumps(selection, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    results_volume.commit()
+    return selection
+
+
+@app.function(
+    image=image,
+    gpu="L4",
+    cpu=4,
+    memory=8192,
+    timeout=4 * 60 * 60,
+    volumes={"/data": data_volume, "/results": results_volume},
+)
+def test_lexical_checkpoints() -> list[dict]:
+    """Open the lexical test split only for validation-selected checkpoints."""
+    import numpy as np
+    from airwriting.experiment import evaluate_saved_checkpoint_on_test
+
+    results_volume.reload()
+    manifest = json.loads(
+        Path("/root/manifests/label_disjoint_seed_20260908.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    data_root = Path("/data/VNI_airwriting")
+    output_root = Path("/results/lexical_regularization")
+    selection_path = output_root / "selection_v4.json"
+    if not selection_path.exists():
+        raise FileNotFoundError("Freeze validation selection before opening test")
+    selection = json.loads(selection_path.read_text(encoding="utf-8"))
+    if not selection.get("test_unopened_at_selection"):
+        raise ValueError("Selection record does not certify a locked test split")
+    manifest_path = Path("/root/manifests/label_disjoint_seed_20260908.json")
+    current_manifest_hash = hashlib.sha256(manifest_path.read_bytes()).hexdigest()
+    if current_manifest_hash != selection.get("manifest_sha256"):
+        raise ValueError("Lexical manifest changed after validation selection")
+    names = selection["prespecified_test_names"]
+    point_cache: dict = {}
+    compact_cache = Path("/data/preprocessed_128.npz")
+    if compact_cache.exists():
+        cached = np.load(compact_cache, allow_pickle=False)
+        config_key = (128, True, True, True)
+        point_cache.update(
+            {
+                (str(path), config_key): points
+                for path, points in zip(cached["paths"], cached["points"])
+            }
+        )
+
+    tested = []
+    for name in names:
+        run_root = output_root / name
+        for run_dir in sorted(run_root.glob("seed_*")):
+            result_path = run_dir / "result.json"
+            checkpoint_path = run_dir / "best.pt"
+            if not result_path.exists() or not checkpoint_path.exists():
+                raise FileNotFoundError(f"Missing validated checkpoint for {run_dir}")
+            result = json.loads(result_path.read_text(encoding="utf-8"))
+            if result.get("test") is None:
+                test_metrics, predictions = evaluate_saved_checkpoint_on_test(
+                    checkpoint_path, data_root, manifest, point_cache
+                )
+                (run_dir / "predictions_test.jsonl").write_text(
+                    "\n".join(
+                        json.dumps(row, ensure_ascii=False) for row in predictions
+                    )
+                    + "\n",
+                    encoding="utf-8",
+                )
+                result["test"] = test_metrics
+                result["status"] = "complete"
+                result.setdefault("selection", {}).update(
+                    {
+                        "criterion": "validation.cer",
+                        "test_locked_during_training": True,
+                        "test_opened_after_validation_selection": True,
+                    }
+                )
+                result_path.write_text(
+                    json.dumps(result, ensure_ascii=False, indent=2),
+                    encoding="utf-8",
+                )
+            tested.append(
+                {
+                    "name": name,
+                    "seed": result["config"]["seed"],
+                    "val_cer": result["validation"]["cer"],
+                    "test_cer": result["test"]["cer"],
+                    "test_wer": result["test"]["wer"],
+                    "test_exact_accuracy": result["test"]["exact_accuracy"],
+                }
+            )
+            results_volume.commit()
+    _write_summary(output_root)
+    results_volume.commit()
+    return tested
 
 
 @app.function(
@@ -446,10 +626,15 @@ def main(suite: str = "core"):
         completed = list(train_lexical_candidate.map(payloads))
         print(json.dumps({"completed": completed}, indent=2))
         print(json.dumps({"validation_selected": summarize_lexical_runs.remote()}, indent=2))
-    elif suite.startswith("lexical_seeds:"):
-        name = suite.split(":", 1)[1]
+    elif suite == "lexical_select":
+        print(json.dumps(freeze_lexical_selection.remote(), indent=2))
+    elif suite == "lexical_seeds":
+        selection = freeze_lexical_selection.remote()
+        name = selection["winner"]["name"]
         payloads = lexical_seed_suite(name)
         completed = list(train_lexical_candidate.map(payloads))
         print(json.dumps({"completed": completed}, indent=2))
+    elif suite == "lexical_test":
+        print(json.dumps({"tested": test_lexical_checkpoints.remote()}, indent=2))
     else:
         print(train_suite.remote(suite))

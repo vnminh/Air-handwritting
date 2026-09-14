@@ -258,6 +258,23 @@ modal run --detach modal_app.py --suite priority
 modal run --detach modal_app.py --suite robustness
 ```
 
+The lexical-disjoint study uses a staged validation-to-test protocol. The
+ablation trains five predeclared, hypothesis-driven candidates and writes only
+validation metrics. Selection is then frozen to `selection_v4.json`; two extra
+training seeds use that selected configuration. The test split is opened only
+after these choices are fixed:
+
+```bash
+modal run --detach modal_app.py --suite lexical_ablation
+modal run modal_app.py --suite lexical_select
+modal run --detach modal_app.py --suite lexical_seeds
+modal run modal_app.py --suite lexical_test
+```
+
+The final test stage evaluates the selected model and the two predeclared
+matched-dropout controls. It rejects runs that lack the frozen selection file
+or whose manifest hash differs from the one recorded at selection time.
+
 The suites cover:
 
 | Suite | Experiments |
@@ -267,6 +284,10 @@ The suites cover:
 | `core` | Backbones, representations, fusion, positional encoding, augmentation, and selected multi-seed runs |
 | `extended` | Fourier scales, preprocessing components, and input lengths |
 | `robustness` | Rotation, noise, scaling, and temporal-warp perturbations |
+| `lexical_ablation` | Validation-only dropout, representation, and branch-dropout hypotheses |
+| `lexical_select` | Freeze the lowest-validation-CER candidate before test access |
+| `lexical_seeds` | Retrain only the frozen winner at seeds 3407 and 2026 |
+| `lexical_test` | Evaluate the frozen winner and predeclared controls on test |
 
 Download completed experiment directories with:
 
