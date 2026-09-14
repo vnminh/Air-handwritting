@@ -10,6 +10,7 @@
 \setlength{\floatsep}{6pt plus 1pt minus 2pt}
 \setlength{\abovecaptionskip}{4pt}
 \setlength{\belowcaptionskip}{2pt}
+\raggedbottom
 
 \title{Multi-Representation Trajectory Learning for Vietnamese Air-Writing Recognition}
 \author{Authors}
@@ -59,7 +60,7 @@ The spatial branch is $S_t=[x_t,y_t]$. The dynamic branch $D_t=[\Delta x_t,\Delt
 \subsection{Training-Only Data Augmentation}
 Training trajectories (only) are augmented once, after preprocessing, with four transformations: rotation $p'_t=R(\theta)p_t,\ \theta\sim\mathcal U(-15^\circ,15^\circ)$, modeling wrist/camera orientation change; independent axis stretching $x'_t=s_xx_t,\ y'_t=s_yy_t,\ s_x,s_y\sim\mathcal U(0.85,1.15)$, modeling aspect-ratio variation; additive noise $p'_t=p_t+\epsilon_t,\ \epsilon_t\sim\mathcal N(0,0.008^2I)$, modeling tremor and tracking error; and temporal warping, where positive increments $q_t=\exp(z_t),\ z_t\sim\mathcal N(0,0.2^2)$ are accumulated into a monotone time axis and interpolated, stretching some intervals and compressing others without reordering points. Validation and test trajectories are left untouched, since augmenting them would duplicate evaluation examples and bias reported metrics.
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\linewidth]{figures/training_augmentation.png}
 \caption{Augmentation applied to a normalized trajectory. Green/red markers denote the first/last points.}
@@ -80,7 +81,7 @@ The fused sequence passes through four Conformer blocks (four heads, $d_{\mathrm
 \end{equation}
 where $\mathcal B^{-1}(y)$ is the set of frame-level paths collapsing to target string $y$ (removing blanks, merging repeats), so explicit character boundaries are unnecessary while the space token stays available for multi-word labels. The selected configuration is the gated relative-position Conformer with all three branches and Fourier scale $K=2$.
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.75\linewidth]{figures/best_model_architecture.pdf}
 \caption{Architecture used in the reproducible experiments.}
@@ -90,11 +91,13 @@ where $\mathcal B^{-1}(y)$ is the set of frame-level paths collapsing to target 
 \section{Experimental Setup}
 We train with AdamW, initial learning rate $10^{-3}$, four-epoch linear warm-up then cosine decay, weight decay $10^{-2}$, batch size 512, gradient-norm clipping at 5, at most 40 epochs, and early stopping after 20 epochs without validation-CER improvement; the lowest-validation-CER checkpoint is evaluated on the test set. The core suite compares BiLSTM, GRU, TCN, Transformer, and Conformer backbones; spatial/dynamic/Fourier representations; concatenation/sum/static/gated fusion; none/absolute/relative positional encoding; and augmentation on/off. The extended suite varies Fourier scale, preprocessing, and resampling length. Robustness evaluation applies rotation, additive noise, scale, and temporal-warp perturbations to the selected checkpoint. All experiments use the frozen source-disjoint manifest and seed 42 unless a multi-seed confirmation is explicitly reported. We report CER $=(S+D+I)/N$, WER, exact sequence accuracy, and insertion/deletion/substitution counts, computed on Unicode NFC-normalized strings with spaces preserved.
 
+A separate lexical-disjoint experiment (Section~\ref{sec:lexical}) uses the frozen lexical-disjoint manifest of Section~\ref{sec:protocol} instead, with augmentation disabled throughout. It first trains the default full architecture (S+D+F, gated fusion, dropout 0.1) with and without augmentation, then a leaner D+F, concatenation-fusion model at dropout $\in\{0.1,0.2,0.3,0.4\}$, then two controls that isolate branch dropout and full-architecture dropout as alternative explanations. The best configuration by validation CER (D+F, dropout 0.2) is retrained at three seeds (42, 3407, 2026) with the manifest held fixed, so seed variation is not conflated with split variation.
+
 \section{Results}
 Tables~\ref{tab:backbone}--\ref{tab:robustness} report source-disjoint results; S, D, F denote the spatial, dynamic, and Fourier branches. Validation CER is the checkpoint-selection criterion; test CER/WER/exact accuracy are reported only after selection. The nominal $K=4$ configuration was run independently in the core and extended suites (2.40\% vs.\ 2.36\% test CER); we retain both as a rerun sanity check.
 
 \subsection{Backbone Comparison}
-\begin{table}[t]
+\begin{table}[htbp]
 \centering
 \caption{Backbone comparison at seed 42. All rows use S+D features, concatenation, augmentation, $L=128$. TCN is a reduced diagnostic (Section~\ref{sec:protocol} setup), not a fair-capacity comparison.}
 \label{tab:backbone}
@@ -114,7 +117,7 @@ Conformer & Relative & 1.579 & \textbf{1.85} & \textbf{5.46} & \textbf{94.90}\\
 A three-seed confirmation (42, 43, 44) on the source-disjoint split shows this ranking is stable: BiLSTM $74.30\pm0.85\%$, Transformer + absolute PE $14.76\pm2.77\%$, Conformer + relative PE $1.94\pm0.11\%$, and the gated S+D+F, $K=4$ configuration $2.48\pm0.18\%$ CER (mean $\pm$ sample standard deviation).
 
 \subsection{Representation and Fusion Ablations}
-\begin{table}[t]
+\begin{table}[htbp]
 \centering
 \caption{Representation ablation at seed 42. Relative-position Conformer, concatenation fusion; Fourier rows use $K=4$. $\Delta$ is $(\Delta x,\Delta y)$ only; D is all seven dynamic descriptors.}
 \label{tab:representation}
@@ -135,7 +138,7 @@ All (S+D+F), concat. & S+D+F & 1.597 & 38 & 2.12 & 2.23 & 6.41 & 94.42\\
 \end{tabular}}
 \end{table}
 
-\begin{table}[t]
+\begin{table}[htbp]
 \centering
 \caption{Fusion ablation at seed 42, S+D+F, relative-position Conformer, $K=4$. Static fusion learns one global branch-weight vector; gated fusion predicts branch weights per time step.}
 \label{tab:fusion}
@@ -155,32 +158,24 @@ Time-dependent gate & 1.549 & 40 & 2.18 & 2.40 & 6.93 & 93.94\\
 Under simple concatenation, adding the third branch does not help monotonically (D+F: 1.77\%; S+D+F: 2.23\%), which motivates a fusion mechanism able to down-weight a less useful branch rather than always concatenating all three; Section~\ref{sec:lexical} and the gate analysis below return to this point under the harder lexical-disjoint protocol, where the choice between these representations changes the outcome by more than a factor of 1.5.
 
 \subsection{Positional Encoding, Augmentation, and Secondary Ablations}
-\begin{table}[t]
-\centering
-\caption{Positional-encoding and augmentation ablations at seed 42. All rows use S+D+F, gated fusion, $K=4$, and otherwise default settings; each block varies only the named factor.}
-\label{tab:components}
-\begin{tabular}{llrrrr}
-\toprule
-Factor & Setting & Val. CER (\%) & CER (\%) & WER (\%) & Exact (\%)\\
-\midrule
-PE & None & \textbf{2.16} & \textbf{1.74} & \textbf{5.52} & \textbf{94.82}\\
-PE & Absolute & 4.74 & 4.12 & 10.30 & 91.83\\
-PE & Relative & 2.18 & 2.40 & 6.93 & 93.94\\
-\midrule
-Augmentation & Disabled & \textbf{1.51} & \textbf{1.57} & \textbf{4.97} & \textbf{94.64}\\
-Augmentation & Enabled & 2.18 & 2.40 & 6.93 & 93.94\\
-\bottomrule
-\end{tabular}
-\end{table}
+Table~\ref{tab:secondary} isolates positional encoding and augmentation, then extends to Fourier scale, preprocessing, and resampling length, all at the shared $K=4$, S+D+F, gated-fusion default unless the block itself varies that factor.
 
-\begin{table}[t]
+\begin{table}[htbp]
 \centering
-\caption{Fourier-scale, preprocessing, and resampling-length ablations at seed 42 ($K=4$ except the Fourier-scale block itself; S+D+F, gated fusion, relative PE otherwise default). ``Raw'' disables smoothing, spline interpolation, and normalization.}
+\caption{Positional-encoding, augmentation, Fourier-scale, preprocessing, and resampling-length ablations at seed 42. Unless the block itself varies the factor, all rows use S+D+F, gated fusion, $K=4$, relative PE, and default preprocessing/length. ``Raw'' disables smoothing, spline interpolation, and normalization.}
+\label{tab:components}
 \label{tab:secondary}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{llrrrrr}
 \toprule
 Study & Setting & Epoch & Val. CER (\%) & CER (\%) & WER (\%) & Exact (\%)\\
+\midrule
+PE & None & 40 & \textbf{2.16} & \textbf{1.74} & \textbf{5.52} & \textbf{94.82}\\
+PE & Absolute & 38 & 4.74 & 4.12 & 10.30 & 91.83\\
+PE & Relative & 40 & 2.18 & 2.40 & 6.93 & 93.94\\
+\midrule
+Augmentation & Disabled & 39 & \textbf{1.51} & \textbf{1.57} & \textbf{4.97} & \textbf{94.64}\\
+Augmentation & Enabled & 40 & 2.18 & 2.40 & 6.93 & 93.94\\
 \midrule
 Fourier scale & $K=2$ & 38 & \textbf{1.85} & \textbf{1.77} & \textbf{5.55} & \textbf{94.77}\\
 Fourier scale & $K=4$ & 40 & 2.24 & 2.36 & 7.11 & 93.28\\
@@ -202,7 +197,7 @@ Length & $L=192$ & 36 & \textbf{2.12} & \textbf{1.94} & \textbf{6.35} & 93.72\\
 
 \FloatBarrier
 \subsection{Robustness}
-\begin{table}[t]
+\begin{table}[htbp]
 \centering
 \caption{Robustness of the selected $K=2$ checkpoint. Rotation (signed, degrees) is applied symmetrically about $0^\circ$ since a camera/wrist offset has no preferred direction; noise is normalized coordinate standard deviation; scale is multiplicative; time warp is the log-increment standard deviation.}
 \label{tab:robustness}
@@ -239,7 +234,7 @@ Degradation is close to symmetric under rotation (3.67\% CER at $-20^\circ$ vs.\
 \label{sec:lexical}
 The source-disjoint protocol still allows every test label to have been seen, worded identically, during training. Table~\ref{tab:lexical} instead uses the lexical-disjoint protocol of Section~\ref{sec:protocol}, where none of the 66 test phrases occur in the 528 training phrases. All rows use the same Conformer backbone, relative-position bias, and CTC objective as the main experiments, with augmentation disabled throughout (Table~\ref{tab:components} already shows augmentation is not beneficial even in the easier source-disjoint setting).
 
-\begin{table}[t]
+\begin{table}[htbp]
 \centering
 \caption{Lexical-disjoint open-phrase recognition (66 unseen test phrases). All rows disable augmentation, relative-position Conformer; D+F rows use dynamics+Fourier concatenation, batch size 256. ``Full model, control'' applies the same dropout to the default S+D+F gated architecture instead of removing the spatial branch.}
 \label{tab:lexical}
@@ -265,7 +260,7 @@ Two effects are visible and separable. First, representation choice matters on i
 
 To test whether the gated fusion module genuinely specializes rather than converging to a fixed mixture, we extract per-time-step gate weights $\alpha_t=(\alpha_t^S,\alpha_t^D,\alpha_t^F)$ for every valid point of every source-disjoint test trajectory using the selected $K=2$ checkpoint (291{,}328 points, 2{,}276 trajectories), and compute the corpus-wide mean weight per branch, the normalized entropy $H_t=-\sum_b\alpha_t^b\log\alpha_t^b/\log 3\in[0,1]$ (0: one-hot, 1: uniform), the fraction of points at which each branch ``wins,'' and the Spearman correlation between $|\kappa_t|$ and each branch's weight.
 
-\begin{table}[t]
+\begin{table}[htbp]
 \centering
 \caption{Gate specialization for the selected $K=2$ checkpoint, over every point of every test trajectory. ``Wins'' is the fraction of points where a branch gets the largest weight. All three $\rho$ have $p<10^{-6}$.}
 \label{tab:gate}
@@ -283,16 +278,14 @@ Fourier (F) & 0.444 & 52.11 & $-0.242$\\
 All three branches win a non-trivial share of points (spatial: 5.80\%), so the gate does not collapse onto one representation, and mean normalized entropy is $0.890\pm0.118$, below the uniform value of 1. Most informative is the curvature correlation: the dynamic branch's weight rises with $|\kappa_t|$ ($\rho=0.571$) while spatial and Fourier weights fall ($\rho=-0.311,-0.242$) -- at geometrically complex points (corners, diacritic strokes, direction reversals) the model shifts weight toward the branch that most directly encodes instantaneous motion, relying more on global shape and periodic detail along straighter segments. This gives a quantitative, corpus-wide counterpart to the single-example gate curves in Figure~\ref{fig:qualitative-long}.
 
 \subsection{Quantitative and Qualitative Analysis}
-The selected $K=2$ model produces 207 character-level edit operations over 11,721 reference characters (101 substitutions, 81 deletions, 25 insertions; CER 1.77\%) and 181 word-level errors over 3,261 reference words (WER 5.55\%); 2,157 of 2,276 test trajectories are transcribed exactly (94.77\%). The relative-position Conformer reduces CER from 11.79\% (Transformer) to 1.85\%, confirmed over three seeds ($1.94\pm0.11\%$ vs.\ $14.76\pm2.77\%$); recurrent baselines remain far weaker. The component ablations (Tables~\ref{tab:components}--\ref{tab:secondary}) show no single factor dominates in isolation -- no positional encoding and disabled augmentation both beat the default configuration alone -- so the $K=2$ checkpoint's accuracy should be attributed to the joint configuration rather than any one component; length $L=192$ and spline-only preprocessing each individually improve on the $K=4$ default, suggesting headroom the selected checkpoint does not yet capture.
+The selected $K=2$ model produces 207 character-level edit operations over 11,721 reference characters (101 substitutions, 81 deletions, 25 insertions; CER 1.77\%) and 181 word-level errors over 3,261 reference words (WER 5.55\%); 2,157 of 2,276 test trajectories are transcribed exactly (94.77\%). The relative-position Conformer reduces CER from 11.79\% (Transformer) to 1.85\%, confirmed over three seeds ($1.94\pm0.11\%$ vs.\ $14.76\pm2.77\%$); recurrent baselines remain far weaker. The component ablations (Table~\ref{tab:secondary}) show no single factor dominates in isolation -- no positional encoding and disabled augmentation both beat the default configuration alone -- so the $K=2$ checkpoint's accuracy should be attributed to the joint configuration rather than any one component; length $L=192$ and spline-only preprocessing each individually improve on the $K=4$ default, suggesting headroom the selected checkpoint does not yet capture.
 
-Figure~\ref{fig:qualitative-bao-gio} shows exact recognition of \emph{bao giờ} (156 raw points), preserving the space and diacritic. Figure~\ref{fig:qualitative-long} shows the harder 415-point phrase \emph{ngọn núi cao vời vợi}, also decoded exactly, with mean spatial/dynamic/Fourier gate weights 0.162/0.454/0.384 -- the dynamic branch dominates while the others stay active, consistent with the corpus-wide gate analysis above. Figure~\ref{fig:qualitative-bi} shows a failure case: \emph{bí} decoded as \emph{bú}, a base-vowel substitution rather than a segmentation error (length and tone mark are retained). This is plausible because the short vowel-defining movement occupies only a small part of the trajectory and can be weakened by smoothing/resampling or confused with jitter. Samples with two to seven non-space characters have CER 0.31--0.48\%, but samples with eight or more rise to 4.59\% and contribute 178 of the 207 character errors -- long trajectories remain the principal failure mode even though all inputs are compressed to the same 128-point representation.
+Figure~\ref{fig:qualitative-bao-gio} plots each example's preprocessed trajectory (colored by time, green/red markers denoting the first/last point) above its three per-time-step gate curves $\alpha_t^S,\alpha_t^D,\alpha_t^F$. \emph{Bao giờ} (left, 156 raw points) and the harder 415-point phrase \emph{ngọn núi cao vời vợi} (center) are both decoded exactly, with mean spatial/dynamic/Fourier gate weights $0.181/0.409/0.411$ and $0.162/0.454/0.384$ respectively -- no single branch dominates throughout, consistent with the corpus-wide gate analysis above. The right panel shows a failure case: \emph{bí} decoded as \emph{bú}, a base-vowel substitution rather than a segmentation error (length and tone mark are retained). Its gate curve makes the failure mechanistically visible: the Fourier weight spikes sharply (to ${\approx}0.8$) exactly over the short vowel-defining stroke around the trajectory's midpoint, the same brief movement whose weakening under smoothing and resampling plausibly causes the \emph{i}/\emph{u} confusion. Samples with two to seven non-space characters have CER 0.31--0.48\%, but samples with eight or more rise to 4.59\% and contribute 178 of the 207 character errors -- long trajectories remain the principal failure mode even though all inputs are compressed to the same 128-point representation.
 
-\begin{figure}[t]
+\begin{figure}[htbp]
 \centering
-\begin{minipage}{0.32\linewidth}\centering\includegraphics[width=\linewidth]{figures/qualitative_bao_gio.png}\end{minipage}\hfill
-\begin{minipage}{0.32\linewidth}\centering\includegraphics[width=\linewidth]{figures/qualitative_ngon_nui_cao_voi_voi.png}\end{minipage}\hfill
-\begin{minipage}{0.32\linewidth}\centering\includegraphics[width=\linewidth]{figures/qualitative_bi_error.png}\end{minipage}
-\caption{Left: correct \emph{bao giờ}. Center: correct long phrase \emph{ngọn núi cao vời vợi}. Right: failure case, \emph{bí} recognized as \emph{bú}.}
+\includegraphics[width=\linewidth]{figures/gate_curves.png}
+\caption{Top: preprocessed trajectory (color = time; green/red = first/last point) for \emph{bao giờ} (left, correct), \emph{ngọn núi cao vời vợi} (center, correct), and \emph{bí}$\to$\emph{bú} (right, failure). Bottom: the corresponding per-time-step gate weights $\alpha_t^S,\alpha_t^D,\alpha_t^F$ predicted by the fusion module.}
 \label{fig:qualitative-bao-gio}
 \label{fig:qualitative-long}
 \label{fig:qualitative-bi}
@@ -301,7 +294,7 @@ Figure~\ref{fig:qualitative-bao-gio} shows exact recognition of \emph{bao giờ}
 \subsection{Vietnamese Orthographic Error Analysis}
 The \emph{bí}$\to$\emph{bú} example suggests some errors change the base vowel while leaving the tone mark intact. To quantify this across the full test set, we decompose every reference and hypothesis character via Unicode NFD normalization into a base letter and combining marks (e.g.\ \emph{\'i} $\to$ base \emph{i} + acute mark), and classify each non-correct edit from the $K=2$ checkpoint's alignments into base-character, diacritic/tone, space, deletion, or insertion.
 
-\begin{table}[t]
+\begin{table}[htbp]
 \centering
 \caption{Vietnamese orthographic error taxonomy, $K=2$ checkpoint, all 207 test-set character errors (11{,}721 reference characters).}
 \label{tab:taxonomy}
