@@ -18,6 +18,14 @@ image = (
         "manifests/split_seed_20260908.json",
         remote_path="/root/manifests/split_seed_20260908.json",
     )
+    .add_local_file(
+        "manifests/label_disjoint_seed_20260908.json",
+        remote_path="/root/manifests/label_disjoint_seed_20260908.json",
+    )
+    .add_local_file(
+        "models/best_fourier_k2.pt",
+        remote_path="/root/models/best_fourier_k2.pt",
+    )
 )
 data_volume = modal.Volume.from_name("vni-airwriting-data", create_if_missing=True)
 results_volume = modal.Volume.from_name("vni-airwriting-results", create_if_missing=True)
@@ -77,6 +85,12 @@ def experiment_suite(suite: str):
             )
         return configs
 
+    if suite == "repr_completion":
+        # Completes Table II: the dynamics-only (D) row, now that
+        # branch_dimensions/feature_branches support a pure "dynamics"
+        # representation. S+D+F is already covered by fusion_concat above.
+        return [_base("repr_dynamics", representation="dynamics", fusion="concat", positional="relative")]
+
     if suite == "priority":
         return [
             _base("arch_transformer", backbone="transformer", positional="absolute", **baseline),
@@ -102,6 +116,55 @@ def experiment_suite(suite: str):
     raise ValueError(f"Unknown suite: {suite}")
 
 
+def lexical_ablation_suite() -> list[dict]:
+    """Focused lexical-disjoint regularization ablation.
+
+    Motivation: on the lexical-disjoint split (unseen test phrases), the raw
+    spatial-coordinate branch lets the model shortcut toward memorizing
+    absolute phrase shape rather than composing characters from motion, so
+    dropping it (dynamics+Fourier, concat fusion) generalizes better than the
+    full gated architecture even before adding any extra regularization. This
+    suite holds the core architecture fixed (Conformer backbone, relative
+    positional bias, CTC) and varies only (a) representation/fusion choice
+    and (b) dropout strength, to separate the two effects instead of a blind
+    hyperparameter sweep.
+    """
+    common = dict(
+        positional="relative",
+        fourier_scales=4,
+        augment=False,
+        batch_size=256,
+        epochs=70,
+        patience=15,
+        learning_rate=1e-3,
+    )
+
+    def candidate(name: str, **changes) -> dict:
+        return {"name": name, **common, **changes}
+
+    return [
+        # Dropout sweep around the known-good point (dynamics+Fourier, concat).
+        candidate("lex_dynf_d20", representation="dynamics_fourier", fusion="concat", dropout=0.20),
+        candidate("lex_dynf_d30", representation="dynamics_fourier", fusion="concat", dropout=0.30),
+        candidate("lex_dynf_d40", representation="dynamics_fourier", fusion="concat", dropout=0.40),
+        # Control: does the same dropout help the full gated architecture, or
+        # is dropping the spatial branch what actually matters?
+        candidate("lex_all_gated_d30", representation="all", fusion="gated", dropout=0.30),
+        # Does stacking branch dropout on top of the best dropout help further?
+        candidate(
+            "lex_dynf_d30_branchdrop20", representation="dynamics_fourier",
+            fusion="concat", dropout=0.30, branch_dropout=0.20,
+        ),
+    ]
+
+
+def lexical_seed_suite(name: str) -> list[dict]:
+    """Reruns one winning lexical-ablation config at two extra seeds for mean +/- std."""
+    (candidate,) = [c for c in lexical_ablation_suite() if c["name"] == name]
+    return [{**candidate, "seed": seed} for seed in (3407, 2026)]
+
+
+
 def _write_summary(output_root: Path) -> None:
     results = []
     for path in output_root.glob("*/seed_*/result.json"):
@@ -118,6 +181,21 @@ def _write_summary(output_root: Path) -> None:
                 "representation": result["config"]["representation"],
                 "fusion": result["config"]["fusion"],
                 "positional": result["config"]["positional"],
+                "dropout": result["config"].get("dropout", 0.1),
+                "branch_dropout": result["config"].get("branch_dropout", 0.0),
+                "time_mask_probability": result["config"].get("time_mask_probability", 0.0),
+                "time_mask_width": result["config"].get("time_mask_width", 0),
+                "confidence_penalty": result["config"].get("confidence_penalty", 0.0),
+                "rdrop_alpha": result["config"].get("rdrop_alpha", 0.0),
+                "augment": result["config"].get("augment", False),
+                "augmentation_copies": result["config"].get("augmentation_copies", 1),
+                "length": result["config"].get("length", 128),
+                "fourier_scales": result["config"].get("fourier_scales", 4),
+                "d_model": result["config"].get("d_model", 128),
+                "layers": result["config"].get("layers", 4),
+                "batch_size": result["config"].get("batch_size", 512),
+                "learning_rate": result["config"].get("learning_rate", 1e-3),
+                "weight_decay": result["config"].get("weight_decay", 1e-2),
                 "parameters": result["parameters"],
                 "best_epoch": result["best_epoch"],
                 "val_cer": result["validation"]["cer"],
@@ -188,7 +266,9 @@ def train_suite(suite: str = "core") -> dict:
     from airwriting.experiment import run_experiment
     import numpy as np
 
-    manifest = json.loads(Path("/root/manifests/split_seed_20260908.json").read_text(encoding="utf-8"))
+    manifest = json.loads(
+        Path("/root/manifests/split_seed_20260908.json").read_text(encoding="utf-8")
+    )
     data_root = Path("/data/VNI_airwriting")
     if not data_root.exists():
         raise FileNotFoundError("Upload VNI_airwriting to the vni-airwriting-data volume first")
@@ -210,6 +290,70 @@ def train_suite(suite: str = "core") -> dict:
         _write_summary(output_root)
         results_volume.commit()
     return {"suite": suite, "completed": completed}
+
+
+@app.function(
+    image=image,
+    gpu="L4",
+    cpu=8,
+    memory=32768,
+    timeout=24 * 60 * 60,
+    volumes={"/data": data_volume, "/results": results_volume},
+)
+def train_lexical_candidate(config_payload: dict) -> dict:
+    from airwriting.experiment import ExperimentConfig, run_experiment
+    import numpy as np
+
+    config = ExperimentConfig(**config_payload)
+    manifest = json.loads(
+        Path("/root/manifests/label_disjoint_seed_20260908.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    data_root = Path("/data/VNI_airwriting")
+    if not data_root.exists():
+        raise FileNotFoundError("VNI_airwriting is missing from the Modal data volume")
+    output_root = Path("/results/lexical_regularization")
+    point_cache: dict = {}
+    compact_cache = Path("/data/preprocessed_128.npz")
+    if compact_cache.exists():
+        cached = np.load(compact_cache, allow_pickle=False)
+        config_key = (128, True, True, True)
+        point_cache.update(
+            {
+                (str(path), config_key): points
+                for path, points in zip(cached["paths"], cached["points"])
+            }
+        )
+        print(f"Loaded trajectory cache: {len(point_cache)} samples", flush=True)
+    result = run_experiment(config, data_root, manifest, output_root, point_cache)
+    results_volume.commit()
+    return {
+        "name": config.name,
+        "seed": config.seed,
+        "best_epoch": result["best_epoch"],
+        "val_cer": result["validation"]["cer"],
+        "test_cer": result["test"]["cer"],
+        "test_wer": result["test"]["wer"],
+        "test_exact_accuracy": result["test"]["exact_accuracy"],
+    }
+
+
+@app.function(
+    image=image,
+    cpu=2,
+    memory=4096,
+    timeout=30 * 60,
+    volumes={"/results": results_volume},
+)
+def summarize_lexical_runs() -> dict:
+    results_volume.reload()
+    output_root = Path("/results/lexical_regularization")
+    _write_summary(output_root)
+    results_volume.commit()
+    rows = json.loads((output_root / "summary.json").read_text(encoding="utf-8"))
+    eligible = [row for row in rows if row["name"].startswith("lex_")]
+    return min(eligible, key=lambda row: row["val_cer"])
 
 
 @app.function(
@@ -247,9 +391,65 @@ def robustness() -> dict:
     return {"completed": completed}
 
 
+@app.function(
+    image=image,
+    gpu="L4",
+    timeout=10 * 60,
+    volumes={"/data": data_volume},
+)
+def infer_example(relative_path: str) -> dict:
+    """Run the paper checkpoint on one trajectory in the Modal data volume."""
+    import json
+    from airwriting.inference import AirWritingRecognizer
+
+    recognizer = AirWritingRecognizer("/root/models/best_fourier_k2.pt")
+    output = recognizer.predict_csv(Path("/data/VNI_airwriting") / relative_path)
+    output["path"] = relative_path
+    print(json.dumps(output, ensure_ascii=False), flush=True)
+    return output
+
+
 @app.local_entrypoint()
 def main(suite: str = "core"):
     if suite == "robustness":
         print(robustness.remote())
+    elif suite == "lexical_smoke":
+        print(
+            json.dumps(
+                train_lexical_candidate.remote(
+                    {
+                        "name": "lex_smoke",
+                        "d_model": 32,
+                        "d_ff": 64,
+                        "layers": 1,
+                        "heads": 4,
+                        "batch_size": 512,
+                        "epochs": 1,
+                        "patience": 1,
+                        "dropout": 0.2,
+                        "branch_dropout": 0.2,
+                        "time_mask_probability": 0.5,
+                        "time_mask_width": 8,
+                        "augment": True,
+                        "augmentation_copies": 2,
+                        "augmentation_rotation": 5.0,
+                        "augmentation_scale": 0.05,
+                        "augmentation_noise": 0.003,
+                        "augmentation_time_warp": 0.1,
+                    }
+                ),
+                indent=2,
+            )
+        )
+    elif suite == "lexical_ablation":
+        payloads = lexical_ablation_suite()
+        completed = list(train_lexical_candidate.map(payloads))
+        print(json.dumps({"completed": completed}, indent=2))
+        print(json.dumps({"validation_selected": summarize_lexical_runs.remote()}, indent=2))
+    elif suite.startswith("lexical_seeds:"):
+        name = suite.split(":", 1)[1]
+        payloads = lexical_seed_suite(name)
+        completed = list(train_lexical_candidate.map(payloads))
+        print(json.dumps({"completed": completed}, indent=2))
     else:
         print(train_suite.remote(suite))

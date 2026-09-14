@@ -190,19 +190,26 @@ def preprocess_trajectory(
     return points.astype(np.float32)
 
 
-def augment_trajectory(points: np.ndarray, rng: np.random.Generator) -> np.ndarray:
+def augment_trajectory(
+    points: np.ndarray,
+    rng: np.random.Generator,
+    rotation_degrees: float = 15.0,
+    scale_jitter: float = 0.15,
+    noise_std: float = 0.008,
+    time_warp_std: float = 0.20,
+) -> np.ndarray:
     result = points.copy()
-    angle = math.radians(float(rng.uniform(-15.0, 15.0)))
+    angle = math.radians(float(rng.uniform(-rotation_degrees, rotation_degrees)))
     rotation = np.asarray(
         [[math.cos(angle), -math.sin(angle)], [math.sin(angle), math.cos(angle)]],
         dtype=np.float32,
     )
     result = result @ rotation.T
-    result *= rng.uniform(0.85, 1.15, size=(1, 2)).astype(np.float32)
-    result += rng.normal(0.0, 0.008, size=result.shape).astype(np.float32)
+    result *= rng.uniform(1.0 - scale_jitter, 1.0 + scale_jitter, size=(1, 2)).astype(np.float32)
+    result += rng.normal(0.0, noise_std, size=result.shape).astype(np.float32)
 
     # Smooth positive increments produce a monotone temporal warp.
-    increments = np.exp(rng.normal(0.0, 0.20, size=len(result) - 1))
+    increments = np.exp(rng.normal(0.0, time_warp_std, size=len(result) - 1))
     warped_time = np.r_[0.0, np.cumsum(increments)]
     warped_time /= warped_time[-1]
     target = np.linspace(0.0, 1.0, len(result))
@@ -244,7 +251,7 @@ def feature_branches(points: np.ndarray, representation: str, fourier_scales: in
         branches["spatial"] = spatial_features(points)
     if representation == "xy_delta":
         branches["dynamic"] = dynamic_features(points, "delta")
-    elif representation in {"xy_dynamics", "dynamics_fourier", "all"}:
+    elif representation in {"dynamics", "xy_dynamics", "dynamics_fourier", "all"}:
         branches["dynamic"] = dynamic_features(points, "full")
     if representation in {"fourier", "xy_fourier", "dynamics_fourier", "all"}:
         branches["fourier"] = fourier_features(points, fourier_scales)
@@ -274,6 +281,11 @@ class AirWritingDataset(Dataset):
         seed: int = 42,
         point_cache: dict | None = None,
         perturbation: tuple[str, float] | None = None,
+        augmentation_copies: int = 1,
+        augmentation_rotation: float = 15.0,
+        augmentation_scale: float = 0.15,
+        augmentation_noise: float = 0.008,
+        augmentation_time_warp: float = 0.20,
     ) -> None:
         self.records = [r for r in manifest["records"] if r["split"] == split]
         self.tokens = manifest["vocabulary"]
@@ -284,6 +296,11 @@ class AirWritingDataset(Dataset):
         self.seed = seed
         self.epoch = 0
         self.perturbation = perturbation
+        self.augmentation_copies = max(1, int(augmentation_copies))
+        self.augmentation_rotation = float(augmentation_rotation)
+        self.augmentation_scale = float(augmentation_scale)
+        self.augmentation_noise = float(augmentation_noise)
+        self.augmentation_time_warp = float(augmentation_time_warp)
         point_cache = point_cache if point_cache is not None else {}
         config_key = (preprocess.length, preprocess.savgol, preprocess.spline, preprocess.normalize)
         prepared = []
@@ -295,23 +312,56 @@ class AirWritingDataset(Dataset):
                 )
             prepared.append(point_cache[cache_key])
         self.points = np.stack(prepared)
-        # Materialize deterministic features once per run. This avoids repeating
-        # NumPy feature extraction for every epoch; augmentation remains training
-        # only and is sampled once per trajectory before materialization.
-        materialized_points = self.points.copy()
+        # Precompute a deterministic augmentation bank.  With more than one
+        # copy, set_epoch rotates the training view instead of reusing the same
+        # transformed trajectory throughout training.
         if self.augment:
-            materialized_points = np.stack(
-                [augment_trajectory(points, np.random.default_rng(self.seed + i)) for i, points in enumerate(materialized_points)]
-            )
-        if self.perturbation is not None:
-            materialized_points = np.stack(
-                [self._apply_perturbation(points, i) for i, points in enumerate(materialized_points)]
-            )
-        feature_sets = [feature_branches(points, self.representation, self.fourier_scales) for points in materialized_points]
-        self.branch_arrays = {
-            name: np.stack([features[name] for features in feature_sets]).astype(np.float32)
-            for name in feature_sets[0]
-        }
+            copies = []
+            for copy_index in range(self.augmentation_copies):
+                transformed = np.stack(
+                    [
+                        augment_trajectory(
+                            points,
+                            np.random.default_rng(
+                                self.seed + copy_index * 1_000_003 + sample_index
+                            ),
+                            rotation_degrees=self.augmentation_rotation,
+                            scale_jitter=self.augmentation_scale,
+                            noise_std=self.augmentation_noise,
+                            time_warp_std=self.augmentation_time_warp,
+                        )
+                        for sample_index, points in enumerate(self.points)
+                    ]
+                )
+                copies.append(
+                    [
+                        feature_branches(points, self.representation, self.fourier_scales)
+                        for points in transformed
+                    ]
+                )
+            self.branch_arrays = {
+                name: np.stack(
+                    [
+                        np.stack([features[name] for features in copy]).astype(np.float32)
+                        for copy in copies
+                    ]
+                )
+                for name in copies[0][0]
+            }
+        else:
+            materialized_points = self.points.copy()
+            if self.perturbation is not None:
+                materialized_points = np.stack(
+                    [self._apply_perturbation(points, i) for i, points in enumerate(materialized_points)]
+                )
+            feature_sets = [
+                feature_branches(points, self.representation, self.fourier_scales)
+                for points in materialized_points
+            ]
+            self.branch_arrays = {
+                name: np.stack([features[name] for features in feature_sets]).astype(np.float32)
+                for name in feature_sets[0]
+            }
 
     def set_epoch(self, epoch: int) -> None:
         self.epoch = epoch
@@ -341,7 +391,17 @@ class AirWritingDataset(Dataset):
     def __getitem__(self, index: int):
         record = self.records[index]
         points = self.points[index]
-        branches = {key: torch.from_numpy(value[index]) for key, value in self.branch_arrays.items()}
+        if self.augment:
+            copy_index = max(0, self.epoch - 1) % self.augmentation_copies
+            branches = {
+                key: torch.from_numpy(value[copy_index, index])
+                for key, value in self.branch_arrays.items()
+            }
+        else:
+            branches = {
+                key: torch.from_numpy(value[index])
+                for key, value in self.branch_arrays.items()
+            }
         target = torch.tensor([self.token_to_id[c] for c in record["label"]], dtype=torch.long)
         return branches, target, record["label"], record["path"]
 

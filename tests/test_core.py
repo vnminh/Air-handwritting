@@ -19,6 +19,7 @@ def test_preprocessing_and_features():
     assert {key: value.shape for key, value in branches.items()} == {
         "spatial": (32, 2), "dynamic": (32, 7), "fourier": (32, 16)
     }
+    assert feature_branches(points, "dynamics", 4).keys() == {"dynamic"}
 
 
 def test_model_ctc_shape_and_relative_attention():
@@ -73,3 +74,66 @@ def test_manifest_has_disjoint_sources_and_complete_labels():
         "exact_duplicates_removed": 6,
     }
 
+
+
+def test_augmentation_bank_changes_view_across_epochs(tmp_path):
+    from airwriting.data import AirWritingDataset
+
+    sample = tmp_path / "sample.csv"
+    sample.write_text("x,y\n0,0\n1,0\n1,1\n2,1\n3,2\n", encoding="utf-8")
+    manifest = {
+        "records": [{"path": "sample.csv", "label": "a", "split": "train"}],
+        "vocabulary": ["<blank>", "a"],
+    }
+    dataset = AirWritingDataset(
+        tmp_path,
+        manifest,
+        "train",
+        "all",
+        fourier_scales=2,
+        preprocess=PreprocessConfig(length=16),
+        augment=True,
+        seed=7,
+        augmentation_copies=2,
+        augmentation_rotation=5.0,
+        augmentation_scale=0.05,
+        augmentation_noise=0.003,
+        augmentation_time_warp=0.1,
+    )
+    dataset.set_epoch(1)
+    first = dataset[0][0]["spatial"].clone()
+    dataset.set_epoch(2)
+    second = dataset[0][0]["spatial"].clone()
+    dataset.set_epoch(3)
+    third = dataset[0][0]["spatial"].clone()
+    assert not torch.allclose(first, second)
+    assert torch.allclose(first, third)
+
+
+def test_regularized_model_forward_is_finite():
+    model = RecognitionModel(
+        12,
+        representation="all",
+        fusion="gated",
+        backbone="conformer",
+        positional="relative",
+        fourier_scales=2,
+        d_model=32,
+        layers=2,
+        heads=4,
+        d_ff=64,
+        dropout=0.2,
+        branch_dropout=0.5,
+        time_mask_probability=1.0,
+        time_mask_width=4,
+    )
+    model.train()
+    branches = {
+        "spatial": torch.randn(3, 24, 2),
+        "dynamic": torch.randn(3, 24, 7),
+        "fourier": torch.randn(3, 24, 8),
+    }
+    output, _, weights = model(branches, torch.tensor([24, 20, 16]))
+    assert torch.isfinite(output).all()
+    assert torch.isfinite(weights).all()
+    assert torch.allclose(weights.sum(-1), torch.ones(3, 24), atol=1e-5)

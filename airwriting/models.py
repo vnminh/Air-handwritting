@@ -13,7 +13,7 @@ def branch_dimensions(representation: str, fourier_scales: int) -> dict[str, int
         dimensions["spatial"] = 2
     if representation == "xy_delta":
         dimensions["dynamic"] = 2
-    elif representation in {"xy_dynamics", "dynamics_fourier", "all"}:
+    elif representation in {"dynamics", "xy_dynamics", "dynamics_fourier", "all"}:
         dimensions["dynamic"] = 7
     if representation in {"fourier", "xy_fourier", "dynamics_fourier", "all"}:
         dimensions["fourier"] = 4 * fourier_scales
@@ -73,10 +73,20 @@ class RelativeSelfAttention(nn.Module):
 
 
 class BranchFusion(nn.Module):
-    def __init__(self, dimensions: dict[str, int], d_model: int, strategy: str, dropout: float) -> None:
+    def __init__(
+        self,
+        dimensions: dict[str, int],
+        d_model: int,
+        strategy: str,
+        dropout: float,
+        branch_dropout: float = 0.0,
+    ) -> None:
         super().__init__()
+        if not 0.0 <= branch_dropout < 1.0:
+            raise ValueError("branch_dropout must be in [0, 1)")
         self.names = list(dimensions)
         self.strategy = strategy
+        self.branch_dropout = branch_dropout
         self.embeddings = nn.ModuleDict(
             {
                 name: nn.Sequential(nn.Linear(width, d_model), nn.LayerNorm(d_model), nn.SiLU())
@@ -89,27 +99,52 @@ class BranchFusion(nn.Module):
         self.gate = nn.Linear(count * d_model, count) if count > 1 and strategy == "gated" else None
         self.dropout = nn.Dropout(dropout)
 
+    def _branch_mask(self, stacked: torch.Tensor) -> torch.Tensor | None:
+        if not self.training or self.branch_dropout <= 0.0 or stacked.shape[2] == 1:
+            return None
+        batch, _, count, _ = stacked.shape
+        keep = torch.rand(batch, count, device=stacked.device) >= self.branch_dropout
+        empty = ~keep.any(dim=1)
+        if empty.any():
+            fallback = torch.randint(count, (int(empty.sum()),), device=stacked.device)
+            keep[empty] = False
+            keep[empty, fallback] = True
+        return keep[:, None, :]
+
     def forward(self, branches: dict[str, torch.Tensor]) -> tuple[torch.Tensor, torch.Tensor | None]:
         embedded = [self.embeddings[name](branches[name]) for name in self.names]
         if len(embedded) == 1:
             return self.dropout(embedded[0]), None
         stacked = torch.stack(embedded, dim=2)
-        concatenated = torch.cat(embedded, dim=-1)
+        branch_mask = self._branch_mask(stacked)
+        if branch_mask is not None:
+            stacked = stacked * branch_mask.unsqueeze(-1)
+        concatenated = stacked.flatten(start_dim=2)
         weights = None
         if self.strategy == "concat":
             fused = self.concat_projection(concatenated)
         elif self.strategy == "sum":
-            fused = stacked.mean(dim=2)
+            if branch_mask is None:
+                fused = stacked.mean(dim=2)
+            else:
+                fused = stacked.sum(dim=2) / branch_mask.sum(dim=2).clamp_min(1).unsqueeze(-1)
         elif self.strategy == "static":
-            weights = F.softmax(self.static_logits, dim=0)
-            fused = (stacked * weights[None, None, :, None]).sum(dim=2)
+            logits = self.static_logits[None, None, :].expand(
+                stacked.shape[0], stacked.shape[1], -1
+            )
+            if branch_mask is not None:
+                logits = logits.masked_fill(~branch_mask, torch.finfo(logits.dtype).min)
+            weights = F.softmax(logits, dim=-1)
+            fused = (stacked * weights.unsqueeze(-1)).sum(dim=2)
         elif self.strategy == "gated":
-            weights = F.softmax(self.gate(concatenated), dim=-1)
+            logits = self.gate(concatenated)
+            if branch_mask is not None:
+                logits = logits.masked_fill(~branch_mask, torch.finfo(logits.dtype).min)
+            weights = F.softmax(logits, dim=-1)
             fused = (stacked * weights.unsqueeze(-1)).sum(dim=2)
         else:
             raise ValueError(f"Unknown fusion strategy: {self.strategy}")
         return self.dropout(fused), weights
-
 
 class FeedForward(nn.Module):
     def __init__(self, d_model: int, expansion: int, dropout: float) -> None:
@@ -214,11 +249,26 @@ class RecognitionModel(nn.Module):
         d_ff: int = 512,
         dropout: float = 0.1,
         kernel_size: int = 15,
+        branch_dropout: float = 0.0,
+        time_mask_probability: float = 0.0,
+        time_mask_width: int = 0,
     ) -> None:
         super().__init__()
+        if not 0.0 <= time_mask_probability <= 1.0:
+            raise ValueError("time_mask_probability must be in [0, 1]")
+        if time_mask_width < 0:
+            raise ValueError("time_mask_width must be non-negative")
         self.backbone_name = backbone
         self.positional_name = positional
-        self.fusion = BranchFusion(branch_dimensions(representation, fourier_scales), d_model, fusion, dropout)
+        self.time_mask_probability = time_mask_probability
+        self.time_mask_width = time_mask_width
+        self.fusion = BranchFusion(
+            branch_dimensions(representation, fourier_scales),
+            d_model,
+            fusion,
+            dropout,
+            branch_dropout,
+        )
         self.absolute_position = SinusoidalPosition(d_model) if positional == "absolute" else None
 
         if backbone == "conformer":
@@ -251,6 +301,13 @@ class RecognitionModel(nn.Module):
         self, branches: dict[str, torch.Tensor], lengths: torch.Tensor
     ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor | None]:
         values, fusion_weights = self.fusion(branches)
+        if self.training and self.time_mask_probability > 0.0 and self.time_mask_width > 0:
+            values = values.clone()
+            for batch_index, valid_length in enumerate(lengths.tolist()):
+                if valid_length > 1 and torch.rand((), device=values.device) < self.time_mask_probability:
+                    width = min(self.time_mask_width, valid_length - 1)
+                    start = int(torch.randint(valid_length - width + 1, (), device=values.device))
+                    values[batch_index, start : start + width] = 0.0
         if self.absolute_position is not None:
             values = self.absolute_position(values)
         positions = torch.arange(values.shape[1], device=values.device)

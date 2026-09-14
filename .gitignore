@@ -2,6 +2,10 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .venv/
+build/
+dist/
+*.egg-info/
+.~lock.*#
 
 # Raw and derived data are uploaded to Modal separately.
 Vni_air_writing/

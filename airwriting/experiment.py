@@ -17,7 +17,7 @@ from .data import AirWritingDataset, PreprocessConfig, collate_batch
 from .metrics import corpus_metrics, greedy_decode
 from .models import RecognitionModel
 
-TRAINING_VERSION = 2
+TRAINING_VERSION = 3
 
 
 @dataclass
@@ -39,6 +39,16 @@ class ExperimentConfig:
     heads: int = 4
     d_ff: int = 512
     dropout: float = 0.1
+    branch_dropout: float = 0.0
+    time_mask_probability: float = 0.0
+    time_mask_width: int = 0
+    confidence_penalty: float = 0.0
+    rdrop_alpha: float = 0.0
+    augmentation_copies: int = 1
+    augmentation_rotation: float = 15.0
+    augmentation_scale: float = 0.15
+    augmentation_noise: float = 0.008
+    augmentation_time_warp: float = 0.20
     batch_size: int = 512
     epochs: int = 40
     patience: int = 20
@@ -85,6 +95,30 @@ def evaluate(model, loader, tokens, device) -> tuple[dict, list[dict]]:
     return corpus_metrics(references, hypotheses), rows
 
 
+def _masked_frame_mean(values: torch.Tensor, lengths: torch.Tensor) -> torch.Tensor:
+    positions = torch.arange(values.shape[0], device=values.device).unsqueeze(1)
+    mask = positions < lengths.unsqueeze(0)
+    return values.masked_select(mask).mean()
+
+
+def _symmetric_frame_kl(
+    first: torch.Tensor, second: torch.Tensor, lengths: torch.Tensor
+) -> torch.Tensor:
+    first_probability = first.exp()
+    second_probability = second.exp()
+    first_to_second = (first_probability * (first - second)).sum(dim=-1)
+    second_to_first = (second_probability * (second - first)).sum(dim=-1)
+    return 0.5 * (
+        _masked_frame_mean(first_to_second, lengths)
+        + _masked_frame_mean(second_to_first, lengths)
+    )
+
+
+def _confidence_regularizer(log_probs: torch.Tensor, lengths: torch.Tensor) -> torch.Tensor:
+    negative_entropy = (log_probs.exp() * log_probs).sum(dim=-1)
+    return _masked_frame_mean(negative_entropy, lengths)
+
+
 def _loader(dataset, batch_size: int, shuffle: bool, workers: int = 0):
     generator = torch.Generator().manual_seed(dataset.seed)
     return DataLoader(
@@ -106,6 +140,26 @@ def run_experiment(
     output_root: Path,
     point_cache: dict | None = None,
 ) -> dict:
+    labels_by_split = {
+        split: {
+            record["label"] for record in manifest["records"]
+            if record["split"] == split
+        }
+        for split in ("train", "val", "test")
+    }
+    train_characters = set("".join(labels_by_split["train"]))
+    for split in ("val", "test"):
+        missing = sorted(set("".join(labels_by_split[split])) - train_characters)
+        if missing:
+            raise ValueError(
+                f"{split} contains output characters absent from train: {missing!r}"
+            )
+    if manifest.get("evaluation_protocol") == "lexical-disjoint open-phrase recognition":
+        if labels_by_split["train"] & labels_by_split["val"]:
+            raise ValueError("Lexical-disjoint manifest has train/validation label overlap")
+        if labels_by_split["train"] & labels_by_split["test"]:
+            raise ValueError("Lexical-disjoint manifest has train/test label overlap")
+
     set_seed(config.seed)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     run_dir = output_root / config.name / f"seed_{config.seed}"
@@ -127,7 +181,16 @@ def run_experiment(
         seed=config.seed,
         point_cache=point_cache,
     )
-    train_dataset = AirWritingDataset(split="train", augment=config.augment, **common)
+    train_dataset = AirWritingDataset(
+        split="train",
+        augment=config.augment,
+        augmentation_copies=config.augmentation_copies,
+        augmentation_rotation=config.augmentation_rotation,
+        augmentation_scale=config.augmentation_scale,
+        augmentation_noise=config.augmentation_noise,
+        augmentation_time_warp=config.augmentation_time_warp,
+        **common,
+    )
     val_dataset = AirWritingDataset(split="val", augment=False, **common)
     test_dataset = AirWritingDataset(split="test", augment=False, **common)
     train_loader = _loader(train_dataset, config.batch_size, True)
@@ -146,6 +209,9 @@ def run_experiment(
         heads=config.heads,
         d_ff=config.d_ff,
         dropout=config.dropout,
+        branch_dropout=config.branch_dropout,
+        time_mask_probability=config.time_mask_probability,
+        time_mask_width=config.time_mask_width,
     ).to(device)
     parameters = sum(parameter.numel() for parameter in model.parameters())
     optimizer = torch.optim.AdamW(
@@ -179,7 +245,23 @@ def run_experiment(
             optimizer.zero_grad(set_to_none=True)
             with torch.autocast(device_type=device.type, dtype=torch.bfloat16, enabled=device.type == "cuda"):
                 log_probs, output_lengths, _ = model(branches, lengths)
-                loss = loss_function(log_probs.float(), targets, output_lengths, target_lengths)
+                float_log_probs = log_probs.float()
+                loss = loss_function(
+                    float_log_probs, targets, output_lengths, target_lengths
+                )
+                if config.rdrop_alpha > 0.0:
+                    second_log_probs, _, _ = model(branches, lengths)
+                    second_float = second_log_probs.float()
+                    second_ctc = loss_function(
+                        second_float, targets, output_lengths, target_lengths
+                    )
+                    loss = 0.5 * (loss + second_ctc) + config.rdrop_alpha * _symmetric_frame_kl(
+                        float_log_probs, second_float, output_lengths
+                    )
+                if config.confidence_penalty > 0.0:
+                    loss = loss + config.confidence_penalty * _confidence_regularizer(
+                        float_log_probs, output_lengths
+                    )
             scaler.scale(loss).backward()
             scaler.unscale_(optimizer)
             nn.utils.clip_grad_norm_(model.parameters(), 5.0)
@@ -256,11 +338,14 @@ def run_robustness(
         fusion=config.fusion, backbone=config.backbone, positional=config.positional,
         fourier_scales=config.fourier_scales, d_model=config.d_model, layers=config.layers,
         heads=config.heads, d_ff=config.d_ff, dropout=config.dropout,
+        branch_dropout=config.branch_dropout,
+        time_mask_probability=config.time_mask_probability,
+        time_mask_width=config.time_mask_width,
     ).to(device)
     model.load_state_dict(checkpoint["model"])
     preprocess = PreprocessConfig(config.length, config.savgol, config.spline, config.normalize)
     settings = (
-        [("rotation", value) for value in (0.0, 5.0, 10.0, 15.0, 20.0)]
+        [("rotation", value) for value in (-20.0, -15.0, -10.0, -5.0, 0.0, 5.0, 10.0, 15.0, 20.0)]
         + [("noise", value) for value in (0.0, 0.005, 0.01, 0.02, 0.05)]
         + [("scale", value) for value in (0.8, 0.9, 1.0, 1.1, 1.2)]
         + [("time_warp", value) for value in (0.0, 0.1, 0.2, 0.35)]
