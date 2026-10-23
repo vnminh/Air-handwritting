@@ -7,4 +7,4 @@
 | source | alam_lstm | xy | 311,252 | 1 | 20.81 | 26.10 | 76.76 |
 | source | carbune_bilstm | delta | 443,480 | 1 | 91.14 | 100.00 | 0.00 |
 | source | ott_cnn_bilstm | xy | 225,968 | 1 | 5.45 | 14.26 | 88.58 |
-| source | ours | all | 1,548,267 | 1 | 2.12 | 6.32 | 94.16 |
+| source | ours | all | 1,548,267 | 2 | 2.07 ± 0.07 | 6.24 ± 0.11 | 94.29 ± 0.18 |
