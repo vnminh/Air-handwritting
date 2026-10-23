@@ -1,0 +1,4 @@
+{"run": "ours", "epoch": 1, "train_loss": 18.222753127415974, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0002857142857142857}
+{"run": "ours", "epoch": 2, "train_loss": 4.041627609067493, "val_cer": 0.9788854848058293, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.00042857142857142855}
+{"run": "ours", "epoch": 3, "train_loss": 3.2427541282441883, "val_cer": 0.7194667549888217, "val_wer": 1.0060711188204683, "val_exact_accuracy": 0.0, "learning_rate": 0.0005714285714285714}
+{"run": "ours", "epoch": 4, "train_loss": 2.1927210870716305, "val_cer": 0.5218183323673098, "val_wer": 0.9768719283029778, "val_exact_accuracy": 0.027742749054224466, "learning_rate": 0.0007142857142857143}

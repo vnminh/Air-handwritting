@@ -1,0 +1,3 @@
+protocol,name,seed,backbone,representation,fusion,parameters,best_epoch,minutes,val_cer,test_cer,test_wer,test_exact
+source,alam_cnn,42,alam_cnn,xy,gated,1209180,195,2.7,14.69,14.67,17.33,86.38
+source,alam_lstm,42,alam_lstm,xy,gated,311252,100,1.4,18.08,20.81,26.1,76.76
