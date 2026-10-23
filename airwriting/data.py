@@ -245,19 +245,99 @@ def fourier_features(points: np.ndarray, scales: int = 4) -> np.ndarray:
     return np.concatenate([np.sin(phase), np.cos(phase)], axis=2).reshape(len(points), -1).astype(np.float32)
 
 
-def feature_branches(points: np.ndarray, representation: str, fourier_scales: int) -> dict[str, np.ndarray]:
-    branches: dict[str, np.ndarray] = {}
-    if representation in {"xy", "xy_delta", "xy_dynamics", "xy_fourier", "all"}:
-        branches["spatial"] = spatial_features(points)
-    if representation == "xy_delta":
-        branches["dynamic"] = dynamic_features(points, "delta")
-    elif representation in {"dynamics", "xy_dynamics", "dynamics_fourier", "all"}:
-        branches["dynamic"] = dynamic_features(points, "full")
-    if representation in {"fourier", "xy_fourier", "dynamics_fourier", "all"}:
-        branches["fourier"] = fourier_features(points, fourier_scales)
-    if not branches:
+SPECTRAL_WINDOWS = (8, 16, 32)
+GLOBAL_SPECTRAL_HARMONICS = 16
+
+
+def spectral_features(points: np.ndarray, windows: tuple[int, ...] = SPECTRAL_WINDOWS) -> np.ndarray:
+    """Multi-resolution short-time spectrum of the complex trajectory z = x + iy.
+
+    Each position keeps the log-magnitude of a Hann-windowed local DFT with the
+    DC bin removed. Removing DC makes the descriptor translation invariant, and
+    taking the magnitude makes it rotation invariant because a rotation only
+    multiplies z by a unit phasor. Positive and negative frequencies remain
+    separate, so counter-clockwise and clockwise local motion are distinguished.
+    """
+    z = points[:, 0].astype(np.float64) + 1j * points[:, 1].astype(np.float64)
+    features = []
+    for window in windows:
+        half = window // 2
+        padded = np.pad(z, (half, window - half - 1), mode="edge")
+        frames = np.lib.stride_tricks.sliding_window_view(padded, window)
+        frames = frames - frames.mean(axis=1, keepdims=True)
+        spectrum = np.fft.fft(frames * np.hanning(window), axis=1)[:, 1:]
+        features.append(np.log(np.abs(spectrum) + 1e-4))
+    return np.concatenate(features, axis=1).astype(np.float32)
+
+
+def global_spectral_features(
+    points: np.ndarray, harmonics: int = GLOBAL_SPECTRAL_HARMONICS
+) -> np.ndarray:
+    """Log-magnitudes of the +/-1..harmonics DFT coefficients of the whole
+    complex trajectory, broadcast to every position as global shape context."""
+    z = points[:, 0].astype(np.float64) + 1j * points[:, 1].astype(np.float64)
+    spectrum = np.fft.fft(z - z.mean()) / len(z)
+    indices = np.r_[1 : harmonics + 1, -harmonics:0]
+    descriptor = np.log(np.abs(spectrum[indices]) + 1e-4)
+    return np.repeat(descriptor[None, :], len(points), axis=0).astype(np.float32)
+
+
+# Legacy representation names map onto feature parts; new names join parts
+# with "+", e.g. "dyn+fourier+spec".
+_LEGACY_REPRESENTATIONS = {
+    "xy": ("xy",),
+    "xy_delta": ("xy", "delta"),
+    "dynamics": ("dyn",),
+    "fourier": ("fourier",),
+    "xy_dynamics": ("xy", "dyn"),
+    "xy_fourier": ("xy", "fourier"),
+    "dynamics_fourier": ("dyn", "fourier"),
+    "all": ("xy", "dyn", "fourier"),
+}
+_PART_BRANCH = {
+    "xy": "spatial",
+    "delta": "dynamic",
+    "dyn": "dynamic",
+    "fourier": "fourier",
+    "spec": "spectral",
+    "gspec": "global_spectral",
+}
+
+
+def representation_parts(representation: str) -> tuple[str, ...]:
+    parts = _LEGACY_REPRESENTATIONS.get(representation) or tuple(representation.split("+"))
+    unknown = [part for part in parts if part not in _PART_BRANCH]
+    branches = [_PART_BRANCH[part] for part in parts if part in _PART_BRANCH]
+    if not parts or unknown or len(set(branches)) != len(branches):
         raise ValueError(f"Unknown representation: {representation}")
-    return branches
+    return parts
+
+
+def feature_dimensions(representation: str, fourier_scales: int) -> dict[str, int]:
+    widths = {
+        "xy": 2,
+        "delta": 2,
+        "dyn": 7,
+        "fourier": 4 * fourier_scales,
+        "spec": sum(window - 1 for window in SPECTRAL_WINDOWS),
+        "gspec": 2 * GLOBAL_SPECTRAL_HARMONICS,
+    }
+    return {_PART_BRANCH[part]: widths[part] for part in representation_parts(representation)}
+
+
+def feature_branches(points: np.ndarray, representation: str, fourier_scales: int) -> dict[str, np.ndarray]:
+    builders = {
+        "xy": lambda: spatial_features(points),
+        "delta": lambda: dynamic_features(points, "delta"),
+        "dyn": lambda: dynamic_features(points, "full"),
+        "fourier": lambda: fourier_features(points, fourier_scales),
+        "spec": lambda: spectral_features(points),
+        "gspec": lambda: global_spectral_features(points),
+    }
+    return {
+        _PART_BRANCH[part]: builders[part]()
+        for part in representation_parts(representation)
+    }
 
 
 @dataclass(frozen=True)

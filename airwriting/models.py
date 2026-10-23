@@ -6,20 +6,11 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
+from .data import feature_dimensions
+
 
 def branch_dimensions(representation: str, fourier_scales: int) -> dict[str, int]:
-    dimensions: dict[str, int] = {}
-    if representation in {"xy", "xy_delta", "xy_dynamics", "xy_fourier", "all"}:
-        dimensions["spatial"] = 2
-    if representation == "xy_delta":
-        dimensions["dynamic"] = 2
-    elif representation in {"dynamics", "xy_dynamics", "dynamics_fourier", "all"}:
-        dimensions["dynamic"] = 7
-    if representation in {"fourier", "xy_fourier", "dynamics_fourier", "all"}:
-        dimensions["fourier"] = 4 * fourier_scales
-    if not dimensions:
-        raise ValueError(f"Unknown representation: {representation}")
-    return dimensions
+    return feature_dimensions(representation, fourier_scales)
 
 
 class SinusoidalPosition(nn.Module):

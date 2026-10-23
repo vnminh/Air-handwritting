@@ -11,11 +11,13 @@ from pathlib import Path
 import numpy as np
 import torch
 from torch import nn
+from torch.nn import functional as F
 from torch.utils.data import DataLoader
 
 from .data import AirWritingDataset, PreprocessConfig, collate_batch
 from .metrics import corpus_metrics, greedy_decode
-from .models import RecognitionModel
+from .baselines import BASELINES, BaselineModel
+from .models import RecognitionModel, branch_dimensions
 
 TRAINING_VERSION = 4
 
@@ -56,6 +58,41 @@ class ExperimentConfig:
     patience: int = 20
     learning_rate: float = 1e-3
     weight_decay: float = 1e-2
+    optimizer: str = "adamw"
+    schedule: str = "cosine"
+    grad_clip: float = 5.0
+
+
+def build_model(config: ExperimentConfig, num_classes: int, num_labels: int = 0) -> nn.Module:
+    """Build the proposed recognizer or a re-implemented published baseline.
+
+    CTC models predict ``num_classes`` symbols; closed-set classifiers predict
+    one of ``num_labels`` training labels.
+    """
+    if config.backbone in BASELINES:
+        widths = branch_dimensions(config.representation, config.fourier_scales)
+        outputs = num_labels if config.backbone.startswith("alam") else num_classes
+        return BaselineModel(config.backbone, widths, outputs, config.length)
+    return RecognitionModel(
+        num_classes=num_classes,
+        representation=config.representation,
+        fusion=config.fusion,
+        backbone=config.backbone,
+        positional=config.positional,
+        fourier_scales=config.fourier_scales,
+        d_model=config.d_model,
+        layers=config.layers,
+        heads=config.heads,
+        d_ff=config.d_ff,
+        dropout=config.dropout,
+        branch_dropout=config.branch_dropout,
+        time_mask_probability=config.time_mask_probability,
+        time_mask_width=config.time_mask_width,
+    )
+
+
+def _is_classifier(model: nn.Module) -> bool:
+    return getattr(model, "task", "ctc") == "classification"
 
 
 def set_seed(seed: int) -> None:
@@ -77,7 +114,7 @@ def _to_device(branches, targets, lengths, target_lengths, device):
 
 
 @torch.inference_mode()
-def evaluate(model, loader, tokens, device) -> tuple[dict, list[dict]]:
+def evaluate(model, loader, tokens, device, class_labels=None) -> tuple[dict, list[dict]]:
     model.eval()
     references: list[str] = []
     hypotheses: list[str] = []
@@ -86,8 +123,11 @@ def evaluate(model, loader, tokens, device) -> tuple[dict, list[dict]]:
         branches = {name: values.to(device, non_blocking=True) for name, values in branches.items()}
         lengths = lengths.to(device, non_blocking=True)
         with torch.autocast(device_type=device.type, dtype=torch.bfloat16, enabled=device.type == "cuda"):
-            log_probs, _, _ = model(branches, lengths)
-        predictions = greedy_decode(log_probs.float().cpu(), tokens)
+            outputs = model(branches, lengths)
+        if _is_classifier(model):
+            predictions = [class_labels[index] for index in outputs.argmax(dim=-1).tolist()]
+        else:
+            predictions = greedy_decode(outputs[0].float().cpu(), tokens)
         references.extend(labels)
         hypotheses.extend(predictions)
         rows.extend(
@@ -202,29 +242,22 @@ def run_experiment(
     train_loader = _loader(train_dataset, config.batch_size, True)
     val_loader = _loader(val_dataset, config.batch_size, False)
 
-    model = RecognitionModel(
-        num_classes=len(manifest["vocabulary"]),
-        representation=config.representation,
-        fusion=config.fusion,
-        backbone=config.backbone,
-        positional=config.positional,
-        fourier_scales=config.fourier_scales,
-        d_model=config.d_model,
-        layers=config.layers,
-        heads=config.heads,
-        d_ff=config.d_ff,
-        dropout=config.dropout,
-        branch_dropout=config.branch_dropout,
-        time_mask_probability=config.time_mask_probability,
-        time_mask_width=config.time_mask_width,
-    ).to(device)
+    class_labels = sorted(labels_by_split["train"])
+    label_to_class = {label: index for index, label in enumerate(class_labels)}
+    model = build_model(config, len(manifest["vocabulary"]), len(class_labels)).to(device)
+    classifier = _is_classifier(model)
     parameters = sum(parameter.numel() for parameter in model.parameters())
-    optimizer = torch.optim.AdamW(
-        model.parameters(), lr=config.learning_rate, weight_decay=config.weight_decay
-    )
+    if config.optimizer == "adam":
+        optimizer = torch.optim.Adam(model.parameters(), lr=config.learning_rate)
+    else:
+        optimizer = torch.optim.AdamW(
+            model.parameters(), lr=config.learning_rate, weight_decay=config.weight_decay
+        )
     warmup = max(1, config.epochs // 10)
 
     def learning_rate(epoch: int):
+        if config.schedule == "constant":
+            return 1.0
         if epoch < warmup:
             return (epoch + 1) / warmup
         progress = (epoch - warmup) / max(config.epochs - warmup - 1, 1)
@@ -243,11 +276,26 @@ def run_experiment(
         train_dataset.set_epoch(epoch)
         running_loss = 0.0
         batches = 0
-        for branches, targets, lengths, target_lengths, _, _ in train_loader:
+        for branches, targets, lengths, target_lengths, batch_labels, _ in train_loader:
             branches, targets, lengths, target_lengths = _to_device(
                 branches, targets, lengths, target_lengths, device
             )
             optimizer.zero_grad(set_to_none=True)
+            if classifier:
+                classes = torch.tensor(
+                    [label_to_class[label] for label in batch_labels], device=device
+                )
+                with torch.autocast(device_type=device.type, dtype=torch.bfloat16, enabled=device.type == "cuda"):
+                    logits = model(branches, lengths)
+                loss = F.cross_entropy(logits.float(), classes)
+                scaler.scale(loss).backward()
+                scaler.unscale_(optimizer)
+                nn.utils.clip_grad_norm_(model.parameters(), config.grad_clip)
+                scaler.step(optimizer)
+                scaler.update()
+                running_loss += float(loss.item())
+                batches += 1
+                continue
             with torch.autocast(device_type=device.type, dtype=torch.bfloat16, enabled=device.type == "cuda"):
                 log_probs, output_lengths, _ = model(branches, lengths)
                 float_log_probs = log_probs.float()
@@ -269,14 +317,14 @@ def run_experiment(
                     )
             scaler.scale(loss).backward()
             scaler.unscale_(optimizer)
-            nn.utils.clip_grad_norm_(model.parameters(), 5.0)
+            nn.utils.clip_grad_norm_(model.parameters(), config.grad_clip)
             scaler.step(optimizer)
             scaler.update()
             running_loss += float(loss.item())
             batches += 1
         scheduler.step()
 
-        val_metrics, _ = evaluate(model, val_loader, manifest["vocabulary"], device)
+        val_metrics, _ = evaluate(model, val_loader, manifest["vocabulary"], device, class_labels)
         record = {
             "epoch": epoch,
             "train_loss": running_loss / max(batches, 1),
@@ -291,7 +339,7 @@ def run_experiment(
             best_cer = val_metrics["cer"]
             best_epoch = epoch
             torch.save(
-                {"model": model.state_dict(), "config": asdict(config), "tokens": manifest["vocabulary"], "training_version": TRAINING_VERSION},
+                {"model": model.state_dict(), "config": asdict(config), "tokens": manifest["vocabulary"], "labels": class_labels, "training_version": TRAINING_VERSION},
                 run_dir / "best.pt",
             )
         elif epoch - best_epoch >= config.patience:
@@ -299,7 +347,7 @@ def run_experiment(
 
     checkpoint = torch.load(run_dir / "best.pt", map_location=device, weights_only=False)
     model.load_state_dict(checkpoint["model"])
-    val_metrics, val_predictions = evaluate(model, val_loader, manifest["vocabulary"], device)
+    val_metrics, val_predictions = evaluate(model, val_loader, manifest["vocabulary"], device, class_labels)
     (run_dir / "predictions_val.jsonl").write_text(
         "\n".join(json.dumps(row, ensure_ascii=False) for row in val_predictions) + "\n", encoding="utf-8"
     )
@@ -308,7 +356,7 @@ def run_experiment(
         test_dataset = AirWritingDataset(split="test", augment=False, **common)
         test_loader = _loader(test_dataset, config.batch_size, False)
         test_metrics, test_predictions = evaluate(
-            model, test_loader, manifest["vocabulary"], device
+            model, test_loader, manifest["vocabulary"], device, class_labels
         )
         (run_dir / "predictions_test.jsonl").write_text(
             "\n".join(
@@ -352,22 +400,8 @@ def evaluate_saved_checkpoint_on_test(
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
     config = ExperimentConfig(**checkpoint["config"])
-    model = RecognitionModel(
-        num_classes=len(checkpoint["tokens"]),
-        representation=config.representation,
-        fusion=config.fusion,
-        backbone=config.backbone,
-        positional=config.positional,
-        fourier_scales=config.fourier_scales,
-        d_model=config.d_model,
-        layers=config.layers,
-        heads=config.heads,
-        d_ff=config.d_ff,
-        dropout=config.dropout,
-        branch_dropout=config.branch_dropout,
-        time_mask_probability=config.time_mask_probability,
-        time_mask_width=config.time_mask_width,
-    ).to(device)
+    class_labels = checkpoint.get("labels")
+    model = build_model(config, len(checkpoint["tokens"]), len(class_labels or [])).to(device)
     model.load_state_dict(checkpoint["model"])
     preprocess = PreprocessConfig(
         config.length, config.savgol, config.spline, config.normalize
@@ -384,7 +418,7 @@ def evaluate_saved_checkpoint_on_test(
         point_cache=point_cache,
     )
     test_loader = _loader(test_dataset, config.batch_size, False)
-    return evaluate(model, test_loader, checkpoint["tokens"], device)
+    return evaluate(model, test_loader, checkpoint["tokens"], device, class_labels)
 
 
 @torch.inference_mode()
@@ -398,15 +432,8 @@ def run_robustness(
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
     config = ExperimentConfig(**checkpoint["config"])
-    model = RecognitionModel(
-        num_classes=len(checkpoint["tokens"]), representation=config.representation,
-        fusion=config.fusion, backbone=config.backbone, positional=config.positional,
-        fourier_scales=config.fourier_scales, d_model=config.d_model, layers=config.layers,
-        heads=config.heads, d_ff=config.d_ff, dropout=config.dropout,
-        branch_dropout=config.branch_dropout,
-        time_mask_probability=config.time_mask_probability,
-        time_mask_width=config.time_mask_width,
-    ).to(device)
+    class_labels = checkpoint.get("labels")
+    model = build_model(config, len(checkpoint["tokens"]), len(class_labels or [])).to(device)
     model.load_state_dict(checkpoint["model"])
     preprocess = PreprocessConfig(config.length, config.savgol, config.spline, config.normalize)
     settings = (
@@ -422,7 +449,7 @@ def run_robustness(
             preprocess, False, config.seed, point_cache, (kind, strength),
         )
         loader = _loader(dataset, config.batch_size, False, workers=0)
-        metrics, _ = evaluate(model, loader, checkpoint["tokens"], device)
+        metrics, _ = evaluate(model, loader, checkpoint["tokens"], device, class_labels)
         row = {"perturbation": kind, "strength": strength, **{k: metrics[k] for k in ("cer", "wer", "exact_accuracy")}}
         print(json.dumps(row), flush=True)
         results.append(row)

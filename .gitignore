@@ -14,3 +14,7 @@ Vni_air_writing/
 artifacts/
 results/
 preprocessed_128.npz
+
+# Benchmark checkpoints and caches stay on the training server.
+benchmarks/**/best.pt
+benchmarks/.cache/
