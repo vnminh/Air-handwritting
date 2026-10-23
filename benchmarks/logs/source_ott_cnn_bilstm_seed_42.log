@@ -192,3 +192,11 @@
 {"run": "ott_cnn_bilstm", "epoch": 190, "train_loss": 0.09833557537361368, "val_cer": 0.05784489378039417, "val_wer": 0.14934069303894512, "val_exact_accuracy": 0.8866432337434095, "learning_rate": 0.0001}
 {"run": "ott_cnn_bilstm", "epoch": 191, "train_loss": 0.09937300960699173, "val_cer": 0.05895401416261411, "val_wer": 0.15210058264336093, "val_exact_accuracy": 0.8809314586994728, "learning_rate": 0.0001}
 {"run": "ott_cnn_bilstm", "epoch": 192, "train_loss": 0.09987987649359115, "val_cer": 0.06006313454483406, "val_wer": 0.1551671266482674, "val_exact_accuracy": 0.8787346221441125, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 193, "train_loss": 0.0971922582436404, "val_cer": 0.05605323777834656, "val_wer": 0.14259429622815087, "val_exact_accuracy": 0.8888400702987698, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 194, "train_loss": 0.09317856635706984, "val_cer": 0.05793021073287262, "val_wer": 0.14811407543698252, "val_exact_accuracy": 0.8892794376098418, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 195, "train_loss": 0.093975446215027, "val_cer": 0.05562665301595427, "val_wer": 0.14320760502913216, "val_exact_accuracy": 0.8963093145869947, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 196, "train_loss": 0.092731656001447, "val_cer": 0.0565651394932173, "val_wer": 0.1478074210364919, "val_exact_accuracy": 0.8866432337434095, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 197, "train_loss": 0.09097219287124399, "val_cer": 0.05511475130108352, "val_wer": 0.14290095062864153, "val_exact_accuracy": 0.8897188049209139, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 198, "train_loss": 0.09089137768398409, "val_cer": 0.05485880044364815, "val_wer": 0.14290095062864153, "val_exact_accuracy": 0.8897188049209139, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 199, "train_loss": 0.09009128906955458, "val_cer": 0.052469925774251344, "val_wer": 0.1376878258203005, "val_exact_accuracy": 0.8945518453427065, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 200, "train_loss": 0.08965786809535467, "val_cer": 0.052043341011859055, "val_wer": 0.1376878258203005, "val_exact_accuracy": 0.8932337434094904, "learning_rate": 0.0001}

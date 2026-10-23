@@ -20,3 +20,8 @@
 {"run": "carbune_bilstm", "epoch": 20, "train_loss": 3.107333357884334, "val_cer": 0.9256437857083712, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
 {"run": "carbune_bilstm", "epoch": 21, "train_loss": 3.0446099628196968, "val_cer": 0.9263062018713256, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
 {"run": "carbune_bilstm", "epoch": 22, "train_loss": 2.980458909548246, "val_cer": 0.9090005796141426, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "carbune_bilstm", "epoch": 23, "train_loss": 2.915315636540507, "val_cer": 0.9214208826695371, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "carbune_bilstm", "epoch": 24, "train_loss": 2.856641900408399, "val_cer": 0.9133062846733461, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "carbune_bilstm", "epoch": 25, "train_loss": 2.7977040736229863, "val_cer": 0.9131406806326074, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "carbune_bilstm", "epoch": 26, "train_loss": 2.730646483033568, "val_cer": 0.9090833816345119, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "carbune_bilstm", "epoch": 27, "train_loss": 2.6605049583938096, "val_cer": 0.9066821230438022, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
