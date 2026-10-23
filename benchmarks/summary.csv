@@ -1,8 +1,11 @@
 protocol,name,seed,backbone,representation,fusion,parameters,best_epoch,minutes,val_cer,test_cer,test_wer,test_exact
 lexical,alam_cnn,42,alam_cnn,xy,gated,1192152,119,1.3,79.44,83.32,100.45,0.0
 lexical,alam_lstm,42,alam_lstm,xy,gated,277328,99,0.9,80.51,81.63,99.35,0.0
+lexical,ott_cnn_bilstm,42,ott_cnn_bilstm,xy,gated,225968,179,20.1,42.29,42.65,84.47,11.06
 lexical,ours,42,conformer,dynamics_fourier,concat,1580392,70,15.1,18.31,21.47,57.12,29.59
+source,alam_cnn,3407,alam_cnn,xy,gated,1209180,200,1.8,8.05,8.72,11.38,89.41
 source,alam_cnn,42,alam_cnn,xy,gated,1209180,195,2.7,14.69,14.67,17.33,86.38
+source,alam_lstm,3407,alam_lstm,xy,gated,311252,97,1.0,18.63,20.63,25.91,77.64
 source,alam_lstm,42,alam_lstm,xy,gated,311252,100,1.4,18.08,20.81,26.1,76.76
 source,carbune_bilstm,42,carbune_bilstm,delta,gated,443480,9,24.0,91.17,91.14,100.0,0.0
 source,ott_cnn_bilstm,42,ott_cnn_bilstm,xy,gated,225968,200,28.0,5.2,5.45,14.26,88.58
