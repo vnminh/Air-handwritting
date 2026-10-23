@@ -1,4 +1,5 @@
 protocol,name,seed,backbone,representation,fusion,parameters,best_epoch,minutes,val_cer,test_cer,test_wer,test_exact
+lexical,ours,42,conformer,dynamics_fourier,concat,1580392,70,15.1,18.31,21.47,57.12,29.59
 source,alam_cnn,42,alam_cnn,xy,gated,1209180,195,2.7,14.69,14.67,17.33,86.38
 source,alam_lstm,42,alam_lstm,xy,gated,311252,100,1.4,18.08,20.81,26.1,76.76
 source,ours,42,conformer,all,gated,1548267,39,10.3,2.42,2.12,6.32,94.16
