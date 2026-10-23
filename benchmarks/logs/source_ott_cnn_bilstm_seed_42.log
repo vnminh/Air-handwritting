@@ -1,0 +1,4 @@
+/venv/main/lib/python3.12/site-packages/torch/nn/modules/conv.py:370: UserWarning: Using padding='same' with even kernel lengths and odd dilation may require a zero-padded copy of the input be created (Triggered internally at /pytorch/aten/src/ATen/native/Convolution.cpp:1024.)
+  return F.conv1d(
+{"run": "ott_cnn_bilstm", "epoch": 1, "train_loss": 19.354153258179966, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 2, "train_loss": 4.359219586359312, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
