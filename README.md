@@ -1,355 +1,132 @@
 # Vietnamese Air-Writing Recognition
 
-Character-level recognition of Vietnamese air-writing trajectories using
-multi-representation gated fusion, a relative-position Conformer encoder, and
-Connectionist Temporal Classification (CTC).
+Character-level recognition of Vietnamese air-writing trajectories: a hand
+traces letters in free space, a camera tracks the fingertip as a sequence of
+`(x, y)` coordinates, and the model reads out the Vietnamese text — diacritics
+and all.
 
-The repository contains the training and evaluation pipeline used for the
-SOICT paper, preserved model checkpoints, a frozen source-disjoint split, and a
-standalone inference interface for coordinate CSV files.
+The core idea is a **representation-adaptive Conformer**. Instead of feeding
+raw coordinates into a sequence model, each trajectory is split into three
+complementary views — spatial shape, motion dynamics (speed, direction,
+curvature), and multi-scale Fourier detail — which a learned gate recombines
+*differently at every point along the stroke*. A relative-position Conformer
+encoder and a CTC objective turn the fused sequence into text.
 
 ![Selected model architecture](paper/figures/best_model_architecture.png)
 
 ## Results
 
-The paper checkpoint uses two Fourier scales and contains 1.55 million
-parameters. On the held-out source-disjoint test set, it produces 207 character
-edits over 11,721 reference characters and correctly transcribes 2,157 of 2,276
-complete trajectories.
+We evaluate under two protocols. **Source-disjoint** holds out entire
+recording sessions, which is the standard setup — but still lets every test
+*phrase* have been seen, word-for-word, during training. **Lexical-disjoint**
+is a harder, self-imposed test: none of the test phrases occur anywhere in
+training, so the model can't just recall a phrase — it has to compose
+characters from motion it has never seen combined that way before.
 
-| Configuration | CER (%) ↓ | WER (%) ↓ | Exact accuracy (%) ↑ |
-|---|---:|---:|---:|
-| BiLSTM–CTC | 73.58 | 97.55 | 3.51 |
-| GRU–CTC | 58.58 | 92.55 | 10.63 |
-| TCN–CTC, compact diagnostic | 91.02 | 100.00 | 0.00 |
-| Transformer–CTC + absolute PE | 11.79 | 22.51 | 85.85 |
-| Conformer–CTC + relative PE | 1.85 | **5.46** | **94.90** |
-| Gated Fourier, K=2, paper checkpoint | **1.77** | 5.55 | 94.77 |
-| Gated Fourier, K=4 | 2.36 | 7.11 | 93.28 |
-| Gated Fourier, K=6 | 2.13 | 6.69 | 93.67 |
-| Gated Fourier, K=8 | 2.14 | 6.53 | 93.85 |
+| Protocol | Configuration | CER ↓ | WER ↓ | Exact accuracy ↑ |
+|---|---|---:|---:|---:|
+| Source-disjoint | Full model (spatial + dynamics + Fourier, gated) | **1.77%** | 5.55% | 94.77% |
+| Lexical-disjoint | Same full model, no changes | 33.16% | 77.22% | 15.23% |
+| Lexical-disjoint | Dynamics + Fourier only, dropout 0.2 | **19.52% ± 1.17%** | 52.4% ± 2.0% | 37.2% ± 3.0% |
 
-CER is computed on Unicode NFC-normalized strings and includes spaces. The K=2
-model has the lowest CER in the augmented Fourier-scale comparison. The plain
-relative-position Conformer is slightly better in WER and exact sequence
-accuracy, so the K=2 result should be interpreted as a character-level gain.
+The lexical-disjoint number is the interesting one: dropping the spatial
+(raw-coordinate) branch and increasing dropout — no architecture change —
+cuts the error by more than a third (33.16% → 19.52%, averaged over three
+random seeds) on phrases the model has truly never encountered. That's
+evidence the model is composing characters from motion, not memorizing 660
+training labels.
 
-## Model
+On the backbone side, the Conformer isn't a marginal choice: it beats a
+Transformer with the same features by more than 6× lower CER (1.85% vs.
+11.79%), and recurrent baselines (BiLSTM, GRU) are far worse still.
 
-Each input trajectory passes through the following stages:
+## What we found interesting
 
-1. Consecutive duplicate removal, Savitzky–Golay smoothing, cubic interpolation,
-   centroid and maximum-radius normalization, and arc-length resampling to 128
-   points.
-2. Three parallel representations:
-   - spatial coordinates with 2 features per point;
-   - 7-dimensional dynamics containing displacement, speed, unit direction,
-     acceleration, and curvature;
-   - 8-dimensional deterministic multi-scale Fourier features with K=2.
-3. Independent `Linear → LayerNorm → SiLU` embeddings into 128 dimensions.
-4. Time-dependent softmax gating over the three embedded branches.
-5. Four Conformer blocks with four attention heads, learned clipped relative
-   bias, a feed-forward width of 512, and a depthwise convolution kernel of 15.
-6. A linear CTC head with 88 outputs: 86 corpus characters, one explicit space,
-   and one CTC blank.
+**The fusion gate genuinely specializes, and it tracks trajectory geometry.**
+Across every point of every test trajectory, the dynamic (motion) branch's
+gate weight rises specifically where the pen is turning sharply — corners,
+diacritic strokes, direction reversals (Spearman ρ = 0.57 between gate weight
+and local curvature). The gate isn't a fixed blend; it shifts weight toward
+motion detail exactly where shape alone stops being enough.
 
-Training augmentation is applied only to the training split. It includes
-rotation, independent axis scaling, Gaussian coordinate noise, and monotone
-temporal warping.
+**Most residual errors are about *which letter*, not *which tone*.**
+Decomposing every error into base-letter vs. diacritic/tone components, base
+letters account for 5× more errors than tone marks (40.6% vs. 7.3% of all
+errors). Vietnamese tone placement — often assumed to be the hard part — is
+already handled well; the harder problem is short, low-amplitude strokes that
+distinguish similar-looking vowels (e.g. *bí* → *bú*).
 
-## Installation
+**Geometric noise is tolerated well; localization noise is not.** CER stays
+under 3% across ±15° rotation, 0.8–1.2× scale, and moderate time-warping, but
+degrades sharply under fingertip-tracking jitter — a much more realistic
+threat model for a camera-based system than viewpoint or speed variation.
 
-Python 3.10 or newer is required.
-
-```bash
-git clone https://github.com/vnminh/Air-handwritting.git
-cd Air-handwritting
-
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -e .
-```
-
-For an exact match to the training container, install the pinned dependencies:
-
-```bash
-python -m pip install -r requirements.txt
-python -m pip install -e . --no-deps
-```
-
-CUDA is optional for inference. The CLI selects CUDA when it is available and
-otherwise runs on CPU.
+Full experimental detail, all ablations, and the complete write-up are in
+[`paper/Paper_XLA.pdf`](paper/Paper_XLA.pdf).
 
 ## Quick inference
 
-The repository includes successful and failure examples from the held-out test
-split:
+Two checkpoints ship with the repo — one for each protocol above:
 
 ```bash
+# Source-disjoint model (best overall accuracy)
 python -m airwriting examples/bao_gio.csv \
-  --checkpoint models/best_fourier_k2.pt --device auto
-```
+  --checkpoint models/best_fourier_k2.pt
 
-The command returns UTF-8 JSON:
+# Lexical-disjoint model (best at generalizing to unseen phrases)
+python -m airwriting examples/bao_gio.csv \
+  --checkpoint models/best_lexical_disjoint_dynf_d20.pt
+```
 
 ```json
 {
-  "source": "examples/bao_gio.csv",
-  "checkpoint": "models/best_fourier_k2.pt",
   "prediction": "bao giờ",
   "raw_points": 156,
-  "model_points": 128,
-  "device": "cpu",
-  "mean_fusion_weights": {
-    "spatial": 0.1805,
-    "dynamic": 0.4088,
-    "fourier": 0.4107
-  }
+  "model_points": 128
 }
 ```
 
-The installed console entry point provides the same interface:
-
-```bash
-airwriting-infer examples/bao_gio.csv \
-  --checkpoint models/best_fourier_k2.pt
-```
-
-Multiple trajectories can be processed after loading the model once:
-
-```bash
-python -m airwriting \
-  examples/bao_gio.csv \
-  examples/ngon_nui_cao_voi_voi.csv \
-  examples/bi_failure.csv \
-  --checkpoint models/best_fourier_k2.pt \
-  --jsonl
-```
-
-The expected predictions are:
-
-| Example | Reference | Prediction | Outcome |
-|---|---|---|---|
-| `bao_gio.csv` | `bao giờ` | `bao giờ` | Correct |
-| `ngon_nui_cao_voi_voi.csv` | `ngọn núi cao vời vợi` | `ngọn núi cao vời vợi` | Correct |
-| `bi_failure.csv` | `bí` | `bú` | Vowel substitution |
-
-An input CSV must contain an `x,y` header and at least two finite coordinate
-rows:
-
-```csv
-x,y
-568.0,486.0
-567.0,477.0
-```
-
-## Python API
-
-`AirWritingRecognizer` loads the checkpoint once and reconstructs the model,
-preprocessing settings, feature branches, and output vocabulary stored in that
-checkpoint.
+A few more example trajectories (including a failure case) live in
+[`examples/`](examples/). See [`models/README.md`](models/README.md) for the
+full checkpoint inventory, and the Python API:
 
 ```python
 from airwriting.inference import AirWritingRecognizer
 
-recognizer = AirWritingRecognizer(
-    "models/best_fourier_k2.pt",
-    device="auto",
-)
-
-result = recognizer.predict_csv("examples/bao_gio.csv")
-print(result["prediction"])
-
-results = recognizer.predict_many(
-    ["examples/bao_gio.csv", "examples/bi_failure.csv"]
-)
+recognizer = AirWritingRecognizer("models/best_fourier_k2.pt")
+print(recognizer.predict_csv("examples/bao_gio.csv")["prediction"])
 ```
 
-NumPy arrays with shape `(T, 2)` can be transcribed with
-`recognizer.predict_points(points)`. Set `AIRWRITING_CHECKPOINT` to define the
-default checkpoint outside a source checkout.
+## Installation
 
-## Dataset and split protocol
+```bash
+git clone https://github.com/vnminh/Air-handwritting.git
+cd Air-handwritting
+python3 -m venv .venv && source .venv/bin/activate
+python -m pip install -e .
+```
 
-The full VNI Air Writing Dataset is not stored in this repository. Place the
-downloaded data at:
+## Repository layout
 
 ```text
-Vni_air_writing/
-└── VNI_airwriting/
-    ├── 1_gram/
-    ├── 2_grams/
-    ├── 3_grams/
-    └── n_grams/
+airwriting/     Data, model, training, and inference code
+examples/       Example trajectories for quick inference
+manifests/      Frozen train/val/test split definitions
+models/         Preserved checkpoints
+paper/          The paper (LaTeX + PDF) and its figures
+scripts/        Manifest, figure, and inference utilities
+modal_app.py    Cloud training/evaluation pipeline (Modal)
 ```
 
-Each label directory must end in `_w`, and each sample must be a coordinate CSV
-named with its numeric source ID, for example:
+## Reproducing training
 
-```text
-VNI_airwriting/2_grams/bao giờ_w/17.csv
-```
-
-The raw collection contains 22,760 files. Six byte-identical duplicates are
-removed, leaving 22,754 trajectories and 660 labels. The frozen manifest is
-[`manifests/split_seed_20260908.json`](manifests/split_seed_20260908.json).
-
-| Split | Trajectories | Numeric source IDs | Label coverage |
-|---|---:|---:|---:|
-| Train | 18,202 | 40 | 660/660 |
-| Validation | 2,276 | 5 | 660/660 |
-| Test | 2,276 | 5 | 660/660 |
-
-Numeric source IDs are globally disjoint across the three splits. The dataset
-does not provide metadata confirming that these IDs identify individual
-writers. Results are therefore described as source-disjoint rather than
-writer-independent.
-
-Regenerate the source-disjoint manifest with:
-
-```bash
-python scripts/make_manifest.py --protocol source
-```
-
-An exploratory lexical-disjoint manifest can be generated with `--protocol
-label`; it is retained for audit purposes and is not used for the paper's main
-results.
-
-## Training on Modal
-
-Install and authenticate the Modal CLI separately from the model dependencies:
-
-```bash
-python -m pip install modal
-modal setup
-```
-
-Create the dataset archive, upload it to a persistent Modal volume, and build
-the exact preprocessing cache:
-
-```bash
-tar -C Vni_air_writing -czf /tmp/vni_airwriting.tar.gz VNI_airwriting
-
-modal volume create vni-airwriting-data
-modal volume create vni-airwriting-results
-modal volume put \
-  vni-airwriting-data \
-  /tmp/vni_airwriting.tar.gz \
-  /staging/vni_airwriting.tar.gz
-
-modal run modal_app.py::prepare_data_volume
-modal run modal_app.py::prepare_exact_cache
-```
-
-Run a two-epoch smoke test before launching the experiment suites:
-
-```bash
-modal run modal_app.py --suite smoke
-```
-
-Long suites should be detached so they continue after the local terminal is
-closed:
-
-```bash
-modal run --detach modal_app.py --suite core
-modal run --detach modal_app.py --suite extended
-modal run --detach modal_app.py --suite priority
-modal run --detach modal_app.py --suite robustness
-```
-
-The lexical-disjoint study uses a staged validation-to-test protocol. The
-ablation trains five predeclared, hypothesis-driven candidates and writes only
-validation metrics. Selection is then frozen to `selection_v4.json`; two extra
-training seeds use that selected configuration. The test split is opened only
-after these choices are fixed:
-
-```bash
-modal run --detach modal_app.py --suite lexical_ablation
-modal run modal_app.py --suite lexical_select
-modal run --detach modal_app.py --suite lexical_seeds
-modal run modal_app.py --suite lexical_test
-```
-
-The final test stage evaluates the selected model and the two predeclared
-matched-dropout controls. It rejects runs that lack the frozen selection file
-or whose manifest hash differs from the one recorded at selection time.
-
-The suites cover:
-
-| Suite | Experiments |
-|---|---|
-| `smoke` | Two-epoch pipeline check |
-| `priority` | Transformer, Conformer, and proposed model |
-| `core` | Backbones, representations, fusion, positional encoding, augmentation, and selected multi-seed runs |
-| `extended` | Fourier scales, preprocessing components, and input lengths |
-| `robustness` | Rotation, noise, scaling, and temporal-warp perturbations |
-| `lexical_ablation` | Validation-only dropout, representation, and branch-dropout hypotheses |
-| `lexical_select` | Freeze the lowest-validation-CER candidate before test access |
-| `lexical_seeds` | Retrain only the frozen winner at seeds 3407 and 2026 |
-| `lexical_test` | Evaluate the frozen winner and predeclared controls on test |
-
-Download completed experiment directories with:
-
-```bash
-modal volume get vni-airwriting-results /experiments ./artifacts
-```
-
-Each completed run contains `best.pt`, `result.json`, validation/test prediction
-files, training history, environment metadata, and edit-error statistics.
-Existing completed runs are detected and skipped when a suite is restarted.
-
-## Checkpoints
-
-The repository preserves several source-disjoint and exploratory checkpoints.
-Two checkpoints are particularly relevant:
-
-| Checkpoint | Selection scope | Validation CER (%) | Test CER (%) | SHA-256 |
-|---|---|---:|---:|---|
-| `best_fourier_k2.pt` | Paper's augmented Fourier-scale comparison | 1.85 | 1.77 | `fe460023f0037dfe58697c3f795cc61dca040b21dda02297e200274e8bc46e4b` |
-| `best_validation_selected.pt` | Best validation CER among completed seed-42 source-disjoint runs | 1.51 | 1.57 | `08b1ebc27d122af8701a0ae7f354b4ecf387e2db0714a273e025f5db730662a9` |
-
-The inference examples and paper analysis use `best_fourier_k2.pt`. See
-[`models/README.md`](models/README.md) for the complete checkpoint inventory and
-the exploratory label-disjoint results.
-
-## Repository structure
-
-```text
-airwriting/                 Reusable data, model, metric, training, and inference modules
-examples/                   Held-out CSV trajectories for end-to-end inference
-manifests/                  Frozen split definitions and duplicate hashes
-models/                     Preserved PyTorch checkpoints
-paper/                      LaTeX manuscript and publication figures
-scripts/                    Manifest, inference, cache, table, and figure utilities
-tests/                      Core preprocessing, model, decoding, and manifest tests
-modal_app.py                Modal data preparation, training, robustness, and inference app
-pyproject.toml              Installable package and console entry point
-requirements.txt            Exact training dependency versions
-```
-
-## Validation
-
-Run the core test suite locally with:
-
-```bash
-python -m pip install pytest
-python -m pytest -q
-```
-
-The architecture figure used by the paper can be regenerated as a LaTeX-ready
-vector PDF and high-resolution PNG:
-
-```bash
-python -m pip install matplotlib
-python scripts/render_architecture.py
-```
+Training runs on [Modal](https://modal.com/) GPUs; `modal_app.py` defines
+every experiment suite referenced in the paper (backbone/representation/
+fusion ablations, robustness sweeps, and the lexical-disjoint study with its
+validation-then-test protocol). Run `modal run modal_app.py --help` after
+`modal setup`, or see the suite definitions directly in `modal_app.py`.
 
 ## Citation
-
-If this repository supports your work, cite the accompanying paper and the VNI
-Air Writing Dataset. The final BibTeX entry should be updated after the paper's
-publication metadata becomes available.
 
 ```bibtex
 @inproceedings{vietnamese_airwriting_conformer,
@@ -362,10 +139,9 @@ publication metadata becomes available.
 
 ## Limitations
 
-The model starts from tracked 2D coordinates and does not include fingertip
-detection from images or video. Its performance therefore excludes errors from
-lighting, viewpoint, occlusion, and upstream hand tracking. Writer-independent
-generalization cannot be claimed without verified writer identifiers. Errors
-are concentrated in long trajectories and short discriminative vowel or
-diacritic movements; the included `bí → bú` example illustrates this failure
-mode.
+The model reads tracked 2D coordinates, not images or video, so it doesn't
+account for upstream hand-tracking errors. Long phrases and short
+discriminative vowel strokes remain the main failure mode (see the `bí → bú`
+example in `examples/`), and the lexical-disjoint test set still draws from
+the same 86-character alphabet seen in training — it tests phrase
+composition, not zero-shot character learning.

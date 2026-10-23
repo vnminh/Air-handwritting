@@ -16,6 +16,7 @@ dependencies = [
 
 [project.scripts]
 airwriting-infer = "airwriting.cli:main"
+airwriting-train = "airwriting.train:main"
 
 [tool.setuptools]
 packages = ["airwriting"]

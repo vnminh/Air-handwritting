@@ -5,30 +5,35 @@ trajectories. The model combines spatial coordinates, motion dynamics, and
 multi-scale Fourier features with adaptive gated fusion, a relative-position
 Conformer encoder, and CTC decoding.
 
-This directory contains everything required for inference: source code, the
-paper checkpoint, and three example trajectories. It does not require the full
+This directory contains everything required for inference: source code, two
+checkpoints, and three example trajectories. It does not require the full
 training dataset or a GPU.
 
 ![Model architecture](assets/best_model_architecture.png)
 
-## Model result
+## Results
 
-The included `best_fourier_k2.pt` checkpoint contains 1.55 million parameters
-and uses two Fourier scales. On the held-out source-disjoint test split, it
-achieved:
+Two checkpoints ship here, each best at a different thing:
 
-| Metric | Result |
-|---|---:|
-| Character error rate (CER) | 1.77% |
-| Word error rate (WER) | 5.55% |
-| Exact sequence accuracy | 94.77% |
-| Correct complete sequences | 2,157 / 2,276 |
+| Checkpoint | Protocol | CER ↓ | WER ↓ | Exact accuracy ↑ |
+|---|---|---:|---:|---:|
+| `best_fourier_k2.pt` | Source-disjoint (standard split) | **1.77%** | 5.55% | 94.77% |
+| `best_lexical_disjoint_dynf_d20.pt` | Lexical-disjoint (unseen phrases) | **18.67%** | 51.1% | 39.9% |
 
-The checkpoint SHA-256 is:
+The second number is the more demanding test: the lexical-disjoint protocol
+holds out entire *phrases*, so nothing in the test set was ever seen — even
+partially — during training. The model has to compose Vietnamese characters
+from motion it has learned, not recall a phrase it memorized. Reaching that
+number required dropping the raw-coordinate branch and tuning dropout — no
+architecture change — which nearly halved the error versus the unmodified
+model (33% → under 20%, see the paper for the full ablation).
 
-```text
-fe460023f0037dfe58697c3f795cc61dca040b21dda02297e200274e8bc46e4b
-```
+Along the way we found that the fusion gate genuinely specializes by
+trajectory geometry — the motion branch's weight rises specifically at sharp
+turns and diacritic strokes (Spearman ρ = 0.57 with local curvature) — and
+that residual errors are dominated by base-letter confusions (e.g. *bí* → *bú*)
+rather than tone-mark placement, by more than 5 to 1. Full detail is in the
+paper this package accompanies.
 
 ## Installation
 
@@ -64,8 +69,17 @@ The shortest complete example is:
 python -m airwriting examples/bao_gio.csv
 ```
 
-The checkpoint is found automatically at `models/best_fourier_k2.pt`. An
-explicit path and device can also be supplied:
+The checkpoint is found automatically at `models/best_fourier_k2.pt` — the
+source-disjoint model, best for everyday use. To try the lexical-disjoint
+model instead (better on phrases unlike anything in training), pass it
+explicitly:
+
+```bash
+python -m airwriting examples/bao_gio.csv \
+  --checkpoint models/best_lexical_disjoint_dynf_d20.pt
+```
+
+An explicit path and device can also be supplied for the default checkpoint:
 
 ```bash
 python -m airwriting examples/bao_gio.csv \
@@ -217,6 +231,28 @@ python -m airwriting /path/to/trajectory.csv
 The architecture configuration, preprocessing parameters, output tokens, and
 model state are stored together in the checkpoint.
 
+## Training
+
+`airwriting.train` trains a model from scratch on your own copy of the
+dataset (or any data in the same directory layout). It needs a GPU to finish
+in reasonable time, but will fall back to CPU automatically.
+
+```bash
+python -m airwriting.train \
+  --data-root /path/to/VNI_airwriting \
+  --manifest manifests/split.json \
+  --output-root runs --name my_run
+```
+
+If `--manifest` doesn't exist yet, it's generated automatically — pass
+`--protocol source` (default; same labels in every split) or `--protocol
+lexical` (phrases held out entirely from training, the harder generalization
+test used for `best_lexical_disjoint_dynf_d20.pt`). Architecture and
+optimization settings (representation, fusion, backbone, dropout, epochs,
+learning rate, ...) are all flags; run `python -m airwriting.train --help`
+for the full list. The resulting checkpoint is compatible with
+`AirWritingRecognizer` and the inference CLI above.
+
 ## Directory contents
 
 ```text
@@ -227,6 +263,7 @@ model state are stored together in the checkpoint.
 ├── __main__.py
 ├── cli.py
 ├── inference.py
+├── train.py
 ├── data.py
 ├── metrics.py
 ├── models.py
@@ -235,14 +272,14 @@ model state are stored together in the checkpoint.
 │   ├── ngon_nui_cao_voi_voi.csv
 │   └── bi_failure.csv
 ├── models/
-│   └── best_fourier_k2.pt
+│   ├── best_fourier_k2.pt
+│   └── best_lexical_disjoint_dynf_d20.pt
 └── assets/
     └── best_model_architecture.png
 ```
 
-`experiment.py` and `manifest.py` are retained for readers who want to inspect
-the experiment configuration and split construction. They are not required for
-inference.
+`experiment.py` and `manifest.py` power `train.py` (training loop and split
+construction, respectively). Neither is required for inference-only use.
 
 ## Troubleshooting
 

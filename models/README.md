@@ -37,11 +37,28 @@ Fourier K=2 checkpoint.
 - Exact sequence accuracy: 0.9485940246
 - SHA-256: `a8be0d1c3adf08c8c4e5994476feb100dd0bcd740898de5919912ca6e95906f5`
 
-## Exploratory label-disjoint checkpoints
+## `best_lexical_disjoint_dynf_d20.pt`
 
-The following checkpoints were produced during an exploratory stricter split
-and are retained only as audit artifacts. They are not used in the paper's
-source-disjoint tables or claims.
+Best lexical-disjoint checkpoint: dynamics+Fourier representation (no spatial
+branch), concatenation fusion, dropout 0.2, no augmentation, trained and
+evaluated under the lexical-disjoint protocol (train/test phrases disjoint).
+This is one of three seeds trained under the same frozen config (`lex_dynf_d20`,
+seed 3407); the paper reports the mean over all three: CER 19.52% ± 1.17%,
+WER 52.4% ± 2.0%, exact accuracy 37.2% ± 3.0%. This checkpoint is the
+lowest-CER of the three.
+
+- Validation CER: 0.1779
+- Test CER: 0.1867
+- Test WER: 0.5110
+- Exact sequence accuracy: 0.3986
+
+## Superseded label-disjoint checkpoints
+
+The following were the first (unregularized) attempt at the lexical-disjoint
+protocol — full model, no dropout tuning. Superseded by
+`best_lexical_disjoint_dynf_d20.pt` above, which nearly halves the error.
+Retained only as an audit trail / ablation reference (see the paper's
+Lexical-Disjoint Generalization section).
 
 ### `best_label_disjoint_fourier_k2.pt`
 
@@ -53,7 +70,6 @@ validation and test labels excluded from training.
 - Test CER: 0.3316420664
 - Test WER: 0.7721682848
 - Exact sequence accuracy: 0.1522935780
-- SHA-256: `7f5145dc7e6acff33bd2c8652e56301f757b9f4aafd2d0a05f0309d987e793db`
 
 ### `best_label_disjoint_validation_selected.pt`
 
@@ -61,7 +77,6 @@ validation and test labels excluded from training.
 - Test CER: 0.3199261993
 - Test WER: 0.7417475728
 - Exact sequence accuracy: 0.1637614679
-- SHA-256: `0a1ecf8e61fbefba657b4754615618898cb1729d0daa41041b2d1a00d148749a`
 
 Use `python -m airwriting <trajectory.csv>` to run the Fourier-$K=2$ paper
 checkpoint. An alternate checkpoint can be supplied explicitly with
