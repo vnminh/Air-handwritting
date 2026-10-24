@@ -15,6 +15,7 @@ while true; do
   rsync -az --exclude 'best.pt' --exclude '.cache/' -e "ssh -p $PORT -o ConnectTimeout=20" \
     "$REMOTE:$REMOTE_DIR" benchmarks/ 2>/dev/null
   completed=$(grep -l '"status": "complete"' benchmarks/*/*/seed_*/result.json 2>/dev/null | wc -l)
+  completed=$((completed + $(ls benchmarks/robustness/*.json 2>/dev/null | wc -l)))
   if [ "$completed" != "$last" ]; then
     git add benchmarks
     git diff --cached --quiet -- benchmarks \
