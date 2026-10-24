@@ -14,4 +14,5 @@
 | source | ours | all | 1,548,267 | 3 | 1.98 ± 0.16 | 5.94 ± 0.53 | 94.48 ± 0.35 |
 | source | spec_dyn_spec | dyn+spec | 1,585,128 | 1 | 1.20 | 3.77 | 95.69 |
 | source | spec_dynf | dyn+fourier | 1,579,368 | 1 | 1.76 | 5.49 | 94.42 |
+| source | spec_dynf_spec | dyn+fourier+spec | 1,602,920 | 1 | 0.87 | 2.94 | 96.49 |
 | source | spec_spec | spec | 1,550,952 | 1 | 3.03 | 9.20 | 91.87 |
