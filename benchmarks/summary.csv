@@ -5,6 +5,7 @@ lexical,alam_cnn,42,alam_cnn,xy,gated,1192152,119,1.3,79.44,83.32,100.45,0.0
 lexical,alam_lstm,2026,alam_lstm,xy,gated,277328,100,1.0,80.09,81.87,101.97,0.0
 lexical,alam_lstm,3407,alam_lstm,xy,gated,277328,91,1.1,81.48,83.29,100.16,0.0
 lexical,alam_lstm,42,alam_lstm,xy,gated,277328,99,0.9,80.51,81.63,99.35,0.0
+lexical,carbune_bilstm,2026,carbune_bilstm,delta,gated,443480,91,40.4,46.9,49.88,92.52,2.34
 lexical,carbune_bilstm,3407,carbune_bilstm,delta,gated,443480,100,68.8,71.41,74.7,100.0,0.0
 lexical,carbune_bilstm,42,carbune_bilstm,delta,gated,443480,100,74.5,53.42,59.91,98.77,2.02
 lexical,ott_cnn_bilstm,2026,ott_cnn_bilstm,xy,gated,225968,199,16.5,44.95,43.84,87.64,11.51

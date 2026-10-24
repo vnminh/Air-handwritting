@@ -1,0 +1,2180 @@
+{"path": "1_gram/bàn_w/0.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/1.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/10.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/11.csv", "reference": "bàn", "prediction": "rán"}
+{"path": "1_gram/bàn_w/12.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/13.csv", "reference": "bàn", "prediction": "lên"}
+{"path": "1_gram/bàn_w/14.csv", "reference": "bàn", "prediction": "lên"}
+{"path": "1_gram/bàn_w/15.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/16.csv", "reference": "bàn", "prediction": "bún"}
+{"path": "1_gram/bàn_w/17.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/18.csv", "reference": "bàn", "prediction": "bên"}
+{"path": "1_gram/bàn_w/19.csv", "reference": "bàn", "prediction": "bin"}
+{"path": "1_gram/bàn_w/2.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/20.csv", "reference": "bàn", "prediction": "bún"}
+{"path": "1_gram/bàn_w/21.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/22.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/23.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/24.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/25.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/26.csv", "reference": "bàn", "prediction": "bin"}
+{"path": "1_gram/bàn_w/27.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/28.csv", "reference": "bàn", "prediction": "bên"}
+{"path": "1_gram/bàn_w/29.csv", "reference": "bàn", "prediction": "bin"}
+{"path": "1_gram/bàn_w/3.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/30.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/31.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/32.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/33.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/34.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/35.csv", "reference": "bàn", "prediction": "bin"}
+{"path": "1_gram/bàn_w/36.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/37.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/38.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/39.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/4.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/40.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/41.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/42.csv", "reference": "bàn", "prediction": "bin"}
+{"path": "1_gram/bàn_w/43.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/44.csv", "reference": "bàn", "prediction": "hán"}
+{"path": "1_gram/bàn_w/45.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/46.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/47.csv", "reference": "bàn", "prediction": "hán"}
+{"path": "1_gram/bàn_w/48.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/49.csv", "reference": "bàn", "prediction": "bin"}
+{"path": "1_gram/bàn_w/5.csv", "reference": "bàn", "prediction": "lên"}
+{"path": "1_gram/bàn_w/6.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/7.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/8.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bàn_w/9.csv", "reference": "bàn", "prediction": "bán"}
+{"path": "1_gram/bền_w/0.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/1.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/10.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/11.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/12.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/13.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/14.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/15.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/16.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/17.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/18.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/19.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/2.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/20.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/21.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/22.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/23.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/24.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/25.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/26.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/27.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/28.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/29.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/3.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/30.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/31.csv", "reference": "bền", "prediction": "lẩn"}
+{"path": "1_gram/bền_w/32.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/33.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/34.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/35.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/36.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/37.csv", "reference": "bền", "prediction": "lẩn"}
+{"path": "1_gram/bền_w/38.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/39.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/4.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/40.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/41.csv", "reference": "bền", "prediction": "lẩn"}
+{"path": "1_gram/bền_w/42.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/43.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/44.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/45.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/46.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/47.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/48.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/49.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/5.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/6.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/7.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/bền_w/8.csv", "reference": "bền", "prediction": "bốn"}
+{"path": "1_gram/bền_w/9.csv", "reference": "bền", "prediction": "bẩn"}
+{"path": "1_gram/cháo_w/0.csv", "reference": "cháo", "prediction": "cáo"}
+{"path": "1_gram/cháo_w/1.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/10.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/11.csv", "reference": "cháo", "prediction": "cht"}
+{"path": "1_gram/cháo_w/12.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/13.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/14.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/15.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/16.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/17.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/18.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/19.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/2.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/20.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/21.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/22.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/23.csv", "reference": "cháo", "prediction": "cáo"}
+{"path": "1_gram/cháo_w/24.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/25.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/26.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/27.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/28.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/29.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/3.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/30.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/31.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/32.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/33.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/34.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/35.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/36.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/37.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/38.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/39.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/4.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/40.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/41.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/42.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/43.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/44.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/45.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/46.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/47.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/48.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/49.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/cháo_w/5.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/6.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/7.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/8.csv", "reference": "cháo", "prediction": "cho"}
+{"path": "1_gram/cháo_w/9.csv", "reference": "cháo", "prediction": "chc"}
+{"path": "1_gram/chín_w/0.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/1.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/10.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/11.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/12.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/13.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/14.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/15.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/16.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/17.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/18.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/19.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/2.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/20.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/21.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/22.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/23.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/24.csv", "reference": "chín", "prediction": "cúm"}
+{"path": "1_gram/chín_w/25.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/26.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/27.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/28.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/29.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/3.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/30.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/31.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/32.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/33.csv", "reference": "chín", "prediction": "chu"}
+{"path": "1_gram/chín_w/34.csv", "reference": "chín", "prediction": "chu"}
+{"path": "1_gram/chín_w/35.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/36.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/37.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/38.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/39.csv", "reference": "chín", "prediction": "chu"}
+{"path": "1_gram/chín_w/4.csv", "reference": "chín", "prediction": "chu"}
+{"path": "1_gram/chín_w/40.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/41.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/42.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/43.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/44.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/45.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/46.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/47.csv", "reference": "chín", "prediction": "chu"}
+{"path": "1_gram/chín_w/48.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/49.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/5.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/6.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/chín_w/7.csv", "reference": "chín", "prediction": "chu"}
+{"path": "1_gram/chín_w/8.csv", "reference": "chín", "prediction": "chn"}
+{"path": "1_gram/chín_w/9.csv", "reference": "chín", "prediction": "chm"}
+{"path": "1_gram/cơm_w/0.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/1.csv", "reference": "cơm", "prediction": "côn"}
+{"path": "1_gram/cơm_w/10.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/11.csv", "reference": "cơm", "prediction": "cảy"}
+{"path": "1_gram/cơm_w/12.csv", "reference": "cơm", "prediction": "cản"}
+{"path": "1_gram/cơm_w/13.csv", "reference": "cơm", "prediction": "cần"}
+{"path": "1_gram/cơm_w/14.csv", "reference": "cơm", "prediction": "cắn"}
+{"path": "1_gram/cơm_w/15.csv", "reference": "cơm", "prediction": "côn"}
+{"path": "1_gram/cơm_w/16.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/17.csv", "reference": "cơm", "prediction": "côn"}
+{"path": "1_gram/cơm_w/18.csv", "reference": "cơm", "prediction": "cản"}
+{"path": "1_gram/cơm_w/19.csv", "reference": "cơm", "prediction": "côn"}
+{"path": "1_gram/cơm_w/2.csv", "reference": "cơm", "prediction": "cắn"}
+{"path": "1_gram/cơm_w/20.csv", "reference": "cơm", "prediction": "côn"}
+{"path": "1_gram/cơm_w/21.csv", "reference": "cơm", "prediction": "cán"}
+{"path": "1_gram/cơm_w/22.csv", "reference": "cơm", "prediction": "côn"}
+{"path": "1_gram/cơm_w/23.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/24.csv", "reference": "cơm", "prediction": "cán"}
+{"path": "1_gram/cơm_w/25.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/26.csv", "reference": "cơm", "prediction": "cán"}
+{"path": "1_gram/cơm_w/27.csv", "reference": "cơm", "prediction": "côn"}
+{"path": "1_gram/cơm_w/28.csv", "reference": "cơm", "prediction": "côn"}
+{"path": "1_gram/cơm_w/29.csv", "reference": "cơm", "prediction": "côn"}
+{"path": "1_gram/cơm_w/3.csv", "reference": "cơm", "prediction": "cắn"}
+{"path": "1_gram/cơm_w/30.csv", "reference": "cơm", "prediction": "cản"}
+{"path": "1_gram/cơm_w/31.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/32.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/33.csv", "reference": "cơm", "prediction": "côn"}
+{"path": "1_gram/cơm_w/34.csv", "reference": "cơm", "prediction": "côn"}
+{"path": "1_gram/cơm_w/35.csv", "reference": "cơm", "prediction": "cản"}
+{"path": "1_gram/cơm_w/36.csv", "reference": "cơm", "prediction": "cán"}
+{"path": "1_gram/cơm_w/37.csv", "reference": "cơm", "prediction": "cán"}
+{"path": "1_gram/cơm_w/38.csv", "reference": "cơm", "prediction": "côn"}
+{"path": "1_gram/cơm_w/39.csv", "reference": "cơm", "prediction": "cản"}
+{"path": "1_gram/cơm_w/4.csv", "reference": "cơm", "prediction": "côn"}
+{"path": "1_gram/cơm_w/40.csv", "reference": "cơm", "prediction": "cản"}
+{"path": "1_gram/cơm_w/41.csv", "reference": "cơm", "prediction": "cản"}
+{"path": "1_gram/cơm_w/42.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/43.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/44.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/45.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/46.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/47.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/48.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/49.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/5.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/6.csv", "reference": "cơm", "prediction": "côn"}
+{"path": "1_gram/cơm_w/7.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cơm_w/8.csv", "reference": "cơm", "prediction": "côn"}
+{"path": "1_gram/cơm_w/9.csv", "reference": "cơm", "prediction": "cân"}
+{"path": "1_gram/cửa_w/0.csv", "reference": "cửa", "prediction": "của"}
+{"path": "1_gram/cửa_w/1.csv", "reference": "cửa", "prediction": "của"}
+{"path": "1_gram/cửa_w/10.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/11.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/12.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/13.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/14.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/15.csv", "reference": "cửa", "prediction": "cữi"}
+{"path": "1_gram/cửa_w/16.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/17.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/18.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/19.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/2.csv", "reference": "cửa", "prediction": "của"}
+{"path": "1_gram/cửa_w/20.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/21.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/22.csv", "reference": "cửa", "prediction": "ừa"}
+{"path": "1_gram/cửa_w/23.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/24.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/25.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/26.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/27.csv", "reference": "cửa", "prediction": "của"}
+{"path": "1_gram/cửa_w/28.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/29.csv", "reference": "cửa", "prediction": "của"}
+{"path": "1_gram/cửa_w/3.csv", "reference": "cửa", "prediction": "của"}
+{"path": "1_gram/cửa_w/30.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/31.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/32.csv", "reference": "cửa", "prediction": "cừa"}
+{"path": "1_gram/cửa_w/33.csv", "reference": "cửa", "prediction": "ấi"}
+{"path": "1_gram/cửa_w/34.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/35.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/36.csv", "reference": "cửa", "prediction": "cữa"}
+{"path": "1_gram/cửa_w/37.csv", "reference": "cửa", "prediction": "ừa"}
+{"path": "1_gram/cửa_w/38.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/39.csv", "reference": "cửa", "prediction": "của"}
+{"path": "1_gram/cửa_w/4.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/40.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/41.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/42.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/43.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/44.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/45.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/46.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/47.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/48.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/49.csv", "reference": "cửa", "prediction": "của"}
+{"path": "1_gram/cửa_w/5.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/6.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/7.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/8.csv", "reference": "cửa", "prediction": "cưa"}
+{"path": "1_gram/cửa_w/9.csv", "reference": "cửa", "prediction": "cưi"}
+{"path": "1_gram/hai_w/0.csv", "reference": "hai", "prediction": "hoi"}
+{"path": "1_gram/hai_w/1.csv", "reference": "hai", "prediction": "bii"}
+{"path": "1_gram/hai_w/10.csv", "reference": "hai", "prediction": "bai"}
+{"path": "1_gram/hai_w/11.csv", "reference": "hai", "prediction": "ha"}
+{"path": "1_gram/hai_w/12.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/13.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/14.csv", "reference": "hai", "prediction": "hoi"}
+{"path": "1_gram/hai_w/15.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/16.csv", "reference": "hai", "prediction": "hoi"}
+{"path": "1_gram/hai_w/17.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/18.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/19.csv", "reference": "hai", "prediction": "hoi"}
+{"path": "1_gram/hai_w/2.csv", "reference": "hai", "prediction": "kii"}
+{"path": "1_gram/hai_w/20.csv", "reference": "hai", "prediction": "hoi"}
+{"path": "1_gram/hai_w/21.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/22.csv", "reference": "hai", "prediction": "hoi"}
+{"path": "1_gram/hai_w/23.csv", "reference": "hai", "prediction": "ba"}
+{"path": "1_gram/hai_w/24.csv", "reference": "hai", "prediction": "ha"}
+{"path": "1_gram/hai_w/25.csv", "reference": "hai", "prediction": "ha"}
+{"path": "1_gram/hai_w/26.csv", "reference": "hai", "prediction": "bó"}
+{"path": "1_gram/hai_w/27.csv", "reference": "hai", "prediction": "hoi"}
+{"path": "1_gram/hai_w/28.csv", "reference": "hai", "prediction": "hoi"}
+{"path": "1_gram/hai_w/29.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/3.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/30.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/31.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/32.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/33.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/34.csv", "reference": "hai", "prediction": "bai"}
+{"path": "1_gram/hai_w/35.csv", "reference": "hai", "prediction": "ki"}
+{"path": "1_gram/hai_w/36.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/37.csv", "reference": "hai", "prediction": "hoi"}
+{"path": "1_gram/hai_w/38.csv", "reference": "hai", "prediction": "hoi"}
+{"path": "1_gram/hai_w/39.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/4.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/40.csv", "reference": "hai", "prediction": "ki"}
+{"path": "1_gram/hai_w/41.csv", "reference": "hai", "prediction": "hai"}
+{"path": "1_gram/hai_w/42.csv", "reference": "hai", "prediction": "hoi"}
+{"path": "1_gram/hai_w/43.csv", "reference": "hai", "prediction": "hoi"}
+{"path": "1_gram/hai_w/44.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/45.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/46.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/47.csv", "reference": "hai", "prediction": "ki"}
+{"path": "1_gram/hai_w/48.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/49.csv", "reference": "hai", "prediction": "hoi"}
+{"path": "1_gram/hai_w/5.csv", "reference": "hai", "prediction": "hot"}
+{"path": "1_gram/hai_w/6.csv", "reference": "hai", "prediction": "ho"}
+{"path": "1_gram/hai_w/7.csv", "reference": "hai", "prediction": "hoi"}
+{"path": "1_gram/hai_w/8.csv", "reference": "hai", "prediction": "hai"}
+{"path": "1_gram/hai_w/9.csv", "reference": "hai", "prediction": "bơi"}
+{"path": "1_gram/hấp_w/0.csv", "reference": "hấp", "prediction": "hảp"}
+{"path": "1_gram/hấp_w/1.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/10.csv", "reference": "hấp", "prediction": "hảp"}
+{"path": "1_gram/hấp_w/11.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/12.csv", "reference": "hấp", "prediction": "hẳp"}
+{"path": "1_gram/hấp_w/13.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/14.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/15.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/16.csv", "reference": "hấp", "prediction": "hảp"}
+{"path": "1_gram/hấp_w/17.csv", "reference": "hấp", "prediction": "hơp"}
+{"path": "1_gram/hấp_w/18.csv", "reference": "hấp", "prediction": "hấp"}
+{"path": "1_gram/hấp_w/19.csv", "reference": "hấp", "prediction": "hảp"}
+{"path": "1_gram/hấp_w/2.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/20.csv", "reference": "hấp", "prediction": "hất"}
+{"path": "1_gram/hấp_w/21.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/22.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/23.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/24.csv", "reference": "hấp", "prediction": "hất"}
+{"path": "1_gram/hấp_w/25.csv", "reference": "hấp", "prediction": "hấp"}
+{"path": "1_gram/hấp_w/26.csv", "reference": "hấp", "prediction": "hơp"}
+{"path": "1_gram/hấp_w/27.csv", "reference": "hấp", "prediction": "hảp"}
+{"path": "1_gram/hấp_w/28.csv", "reference": "hấp", "prediction": "hấp"}
+{"path": "1_gram/hấp_w/29.csv", "reference": "hấp", "prediction": "hất"}
+{"path": "1_gram/hấp_w/3.csv", "reference": "hấp", "prediction": "hát"}
+{"path": "1_gram/hấp_w/30.csv", "reference": "hấp", "prediction": "hảp"}
+{"path": "1_gram/hấp_w/31.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/32.csv", "reference": "hấp", "prediction": "hảp"}
+{"path": "1_gram/hấp_w/33.csv", "reference": "hấp", "prediction": "hất"}
+{"path": "1_gram/hấp_w/34.csv", "reference": "hấp", "prediction": "hát"}
+{"path": "1_gram/hấp_w/35.csv", "reference": "hấp", "prediction": "hơp"}
+{"path": "1_gram/hấp_w/36.csv", "reference": "hấp", "prediction": "hẳn"}
+{"path": "1_gram/hấp_w/37.csv", "reference": "hấp", "prediction": "hảp"}
+{"path": "1_gram/hấp_w/38.csv", "reference": "hấp", "prediction": "hơp"}
+{"path": "1_gram/hấp_w/39.csv", "reference": "hấp", "prediction": "hất"}
+{"path": "1_gram/hấp_w/4.csv", "reference": "hấp", "prediction": "hát"}
+{"path": "1_gram/hấp_w/40.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/41.csv", "reference": "hấp", "prediction": "hp"}
+{"path": "1_gram/hấp_w/42.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/43.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/44.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/45.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/46.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/47.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/48.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/49.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/5.csv", "reference": "hấp", "prediction": "hơp"}
+{"path": "1_gram/hấp_w/6.csv", "reference": "hấp", "prediction": "hảp"}
+{"path": "1_gram/hấp_w/7.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/8.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/hấp_w/9.csv", "reference": "hấp", "prediction": "háp"}
+{"path": "1_gram/học_w/0.csv", "reference": "học", "prediction": "ho"}
+{"path": "1_gram/học_w/1.csv", "reference": "học", "prediction": "hot"}
+{"path": "1_gram/học_w/10.csv", "reference": "học", "prediction": "ho"}
+{"path": "1_gram/học_w/11.csv", "reference": "học", "prediction": "hẹ"}
+{"path": "1_gram/học_w/12.csv", "reference": "học", "prediction": "hẹ"}
+{"path": "1_gram/học_w/13.csv", "reference": "học", "prediction": "ho"}
+{"path": "1_gram/học_w/14.csv", "reference": "học", "prediction": "hẹ"}
+{"path": "1_gram/học_w/15.csv", "reference": "học", "prediction": "hẹ"}
+{"path": "1_gram/học_w/16.csv", "reference": "học", "prediction": "kạ"}
+{"path": "1_gram/học_w/17.csv", "reference": "học", "prediction": "hẹt"}
+{"path": "1_gram/học_w/18.csv", "reference": "học", "prediction": "hẹt"}
+{"path": "1_gram/học_w/19.csv", "reference": "học", "prediction": "hẹt"}
+{"path": "1_gram/học_w/2.csv", "reference": "học", "prediction": "hẹ"}
+{"path": "1_gram/học_w/20.csv", "reference": "học", "prediction": "hẹt"}
+{"path": "1_gram/học_w/21.csv", "reference": "học", "prediction": "ho"}
+{"path": "1_gram/học_w/22.csv", "reference": "học", "prediction": "ho"}
+{"path": "1_gram/học_w/23.csv", "reference": "học", "prediction": "ko"}
+{"path": "1_gram/học_w/24.csv", "reference": "học", "prediction": "hẹ"}
+{"path": "1_gram/học_w/25.csv", "reference": "học", "prediction": "hot"}
+{"path": "1_gram/học_w/26.csv", "reference": "học", "prediction": "ho"}
+{"path": "1_gram/học_w/27.csv", "reference": "học", "prediction": "hẹ"}
+{"path": "1_gram/học_w/28.csv", "reference": "học", "prediction": "hot"}
+{"path": "1_gram/học_w/29.csv", "reference": "học", "prediction": "ho"}
+{"path": "1_gram/học_w/3.csv", "reference": "học", "prediction": "ho"}
+{"path": "1_gram/học_w/30.csv", "reference": "học", "prediction": "ho"}
+{"path": "1_gram/học_w/31.csv", "reference": "học", "prediction": "ho"}
+{"path": "1_gram/học_w/32.csv", "reference": "học", "prediction": "hẹ"}
+{"path": "1_gram/học_w/33.csv", "reference": "học", "prediction": "ho"}
+{"path": "1_gram/học_w/34.csv", "reference": "học", "prediction": "bại"}
+{"path": "1_gram/học_w/35.csv", "reference": "học", "prediction": "hẹc"}
+{"path": "1_gram/học_w/36.csv", "reference": "học", "prediction": "hoi"}
+{"path": "1_gram/học_w/37.csv", "reference": "học", "prediction": "hẹ"}
+{"path": "1_gram/học_w/38.csv", "reference": "học", "prediction": "hot"}
+{"path": "1_gram/học_w/39.csv", "reference": "học", "prediction": "hot"}
+{"path": "1_gram/học_w/4.csv", "reference": "học", "prediction": "hạ"}
+{"path": "1_gram/học_w/40.csv", "reference": "học", "prediction": "hẹ"}
+{"path": "1_gram/học_w/41.csv", "reference": "học", "prediction": "hẹ"}
+{"path": "1_gram/học_w/42.csv", "reference": "học", "prediction": "hẹ"}
+{"path": "1_gram/học_w/43.csv", "reference": "học", "prediction": "kot"}
+{"path": "1_gram/học_w/44.csv", "reference": "học", "prediction": "kot"}
+{"path": "1_gram/học_w/45.csv", "reference": "học", "prediction": "ho"}
+{"path": "1_gram/học_w/46.csv", "reference": "học", "prediction": "hẹ"}
+{"path": "1_gram/học_w/47.csv", "reference": "học", "prediction": "hot"}
+{"path": "1_gram/học_w/48.csv", "reference": "học", "prediction": "hẹ"}
+{"path": "1_gram/học_w/49.csv", "reference": "học", "prediction": "hẹ"}
+{"path": "1_gram/học_w/5.csv", "reference": "học", "prediction": "koi"}
+{"path": "1_gram/học_w/6.csv", "reference": "học", "prediction": "hẹt"}
+{"path": "1_gram/học_w/7.csv", "reference": "học", "prediction": "kẹt"}
+{"path": "1_gram/học_w/8.csv", "reference": "học", "prediction": "hẹt"}
+{"path": "1_gram/học_w/9.csv", "reference": "học", "prediction": "ho"}
+{"path": "1_gram/hộp_w/0.csv", "reference": "hộp", "prediction": "bấp"}
+{"path": "1_gram/hộp_w/1.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/10.csv", "reference": "hộp", "prediction": "bấp"}
+{"path": "1_gram/hộp_w/11.csv", "reference": "hộp", "prediction": "bấp"}
+{"path": "1_gram/hộp_w/12.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/13.csv", "reference": "hộp", "prediction": "bấp"}
+{"path": "1_gram/hộp_w/14.csv", "reference": "hộp", "prediction": "bấp"}
+{"path": "1_gram/hộp_w/15.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/16.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/17.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/18.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/19.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/2.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/20.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/21.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/22.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/23.csv", "reference": "hộp", "prediction": "bốp"}
+{"path": "1_gram/hộp_w/24.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/25.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/26.csv", "reference": "hộp", "prediction": "bấp"}
+{"path": "1_gram/hộp_w/27.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/28.csv", "reference": "hộp", "prediction": "bẳp"}
+{"path": "1_gram/hộp_w/29.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/3.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/30.csv", "reference": "hộp", "prediction": "bấp"}
+{"path": "1_gram/hộp_w/31.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/32.csv", "reference": "hộp", "prediction": "bấp"}
+{"path": "1_gram/hộp_w/33.csv", "reference": "hộp", "prediction": "bấp"}
+{"path": "1_gram/hộp_w/34.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/35.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/36.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/37.csv", "reference": "hộp", "prediction": "bhp"}
+{"path": "1_gram/hộp_w/38.csv", "reference": "hộp", "prediction": "bhp"}
+{"path": "1_gram/hộp_w/39.csv", "reference": "hộp", "prediction": "bẳp"}
+{"path": "1_gram/hộp_w/4.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/40.csv", "reference": "hộp", "prediction": "bhp"}
+{"path": "1_gram/hộp_w/41.csv", "reference": "hộp", "prediction": "bấp"}
+{"path": "1_gram/hộp_w/42.csv", "reference": "hộp", "prediction": "bấp"}
+{"path": "1_gram/hộp_w/43.csv", "reference": "hộp", "prediction": "bựp"}
+{"path": "1_gram/hộp_w/44.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/45.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/46.csv", "reference": "hộp", "prediction": "bấp"}
+{"path": "1_gram/hộp_w/47.csv", "reference": "hộp", "prediction": "bấp"}
+{"path": "1_gram/hộp_w/48.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/49.csv", "reference": "hộp", "prediction": "bẩp"}
+{"path": "1_gram/hộp_w/5.csv", "reference": "hộp", "prediction": "bhp"}
+{"path": "1_gram/hộp_w/6.csv", "reference": "hộp", "prediction": "bhp"}
+{"path": "1_gram/hộp_w/7.csv", "reference": "hộp", "prediction": "bhp"}
+{"path": "1_gram/hộp_w/8.csv", "reference": "hộp", "prediction": "hp"}
+{"path": "1_gram/hộp_w/9.csv", "reference": "hộp", "prediction": "bấp"}
+{"path": "1_gram/khô_w/0.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/1.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/10.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/11.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/12.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/13.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/14.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/15.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/16.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/17.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/18.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/19.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/2.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/20.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/21.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/22.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/23.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/24.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/25.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/26.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/27.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/28.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/29.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/3.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/30.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/31.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/32.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/33.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/34.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/35.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/36.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/37.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/38.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/39.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/4.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/40.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/41.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/42.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/43.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/44.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/45.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/46.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/47.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/48.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/49.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/5.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/6.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/7.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/8.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/khô_w/9.csv", "reference": "khô", "prediction": "kh"}
+{"path": "1_gram/là_w/0.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/1.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/10.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/11.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/12.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/13.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/14.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/15.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/16.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/17.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/18.csv", "reference": "là", "prediction": "bé"}
+{"path": "1_gram/là_w/19.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/2.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/20.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/21.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/22.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/23.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/24.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/25.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/26.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/27.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/28.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/29.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/3.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/30.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/31.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/32.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/33.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/34.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/35.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/36.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/37.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/38.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/39.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/4.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/40.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/41.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/42.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/43.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/44.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/45.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/46.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/47.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/48.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/là_w/49.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/5.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/6.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/7.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/8.csv", "reference": "là", "prediction": "bà"}
+{"path": "1_gram/là_w/9.csv", "reference": "là", "prediction": "là"}
+{"path": "1_gram/miến_w/0.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/1.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/10.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/11.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/12.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/13.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/14.csv", "reference": "miến", "prediction": "nưn"}
+{"path": "1_gram/miến_w/15.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/16.csv", "reference": "miến", "prediction": "mến"}
+{"path": "1_gram/miến_w/17.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/18.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/19.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/2.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/20.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/21.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/22.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/23.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/24.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/25.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/26.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/27.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/28.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/29.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/3.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/30.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/31.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/32.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/33.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/34.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/35.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/36.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/37.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/38.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/39.csv", "reference": "miến", "prediction": "mến"}
+{"path": "1_gram/miến_w/4.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/40.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/41.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/42.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/43.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/44.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/45.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/46.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/47.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/48.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/49.csv", "reference": "miến", "prediction": "mến"}
+{"path": "1_gram/miến_w/5.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/6.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/7.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/8.csv", "reference": "miến", "prediction": "mưn"}
+{"path": "1_gram/miến_w/9.csv", "reference": "miến", "prediction": "mến"}
+{"path": "1_gram/mà_w/0.csv", "reference": "mà", "prediction": "mè"}
+{"path": "1_gram/mà_w/1.csv", "reference": "mà", "prediction": "mè"}
+{"path": "1_gram/mà_w/10.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/11.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/12.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/13.csv", "reference": "mà", "prediction": "nà"}
+{"path": "1_gram/mà_w/14.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/15.csv", "reference": "mà", "prediction": "nù"}
+{"path": "1_gram/mà_w/16.csv", "reference": "mà", "prediction": "mùa"}
+{"path": "1_gram/mà_w/17.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/18.csv", "reference": "mà", "prediction": "nù"}
+{"path": "1_gram/mà_w/19.csv", "reference": "mà", "prediction": "nù"}
+{"path": "1_gram/mà_w/2.csv", "reference": "mà", "prediction": "nù"}
+{"path": "1_gram/mà_w/20.csv", "reference": "mà", "prediction": "mè"}
+{"path": "1_gram/mà_w/21.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/22.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/23.csv", "reference": "mà", "prediction": "mà"}
+{"path": "1_gram/mà_w/24.csv", "reference": "mà", "prediction": "mà"}
+{"path": "1_gram/mà_w/25.csv", "reference": "mà", "prediction": "nà"}
+{"path": "1_gram/mà_w/26.csv", "reference": "mà", "prediction": "mè"}
+{"path": "1_gram/mà_w/27.csv", "reference": "mà", "prediction": "mà"}
+{"path": "1_gram/mà_w/28.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/29.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/3.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/30.csv", "reference": "mà", "prediction": "mè"}
+{"path": "1_gram/mà_w/31.csv", "reference": "mà", "prediction": "mè"}
+{"path": "1_gram/mà_w/32.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/33.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/34.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/35.csv", "reference": "mà", "prediction": "mè"}
+{"path": "1_gram/mà_w/36.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/37.csv", "reference": "mà", "prediction": "nè"}
+{"path": "1_gram/mà_w/38.csv", "reference": "mà", "prediction": "nà"}
+{"path": "1_gram/mà_w/39.csv", "reference": "mà", "prediction": "nó"}
+{"path": "1_gram/mà_w/4.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/40.csv", "reference": "mà", "prediction": "nà"}
+{"path": "1_gram/mà_w/41.csv", "reference": "mà", "prediction": "mà"}
+{"path": "1_gram/mà_w/42.csv", "reference": "mà", "prediction": "nó"}
+{"path": "1_gram/mà_w/43.csv", "reference": "mà", "prediction": "nà"}
+{"path": "1_gram/mà_w/44.csv", "reference": "mà", "prediction": "mè"}
+{"path": "1_gram/mà_w/45.csv", "reference": "mà", "prediction": "mà"}
+{"path": "1_gram/mà_w/46.csv", "reference": "mà", "prediction": "mà"}
+{"path": "1_gram/mà_w/47.csv", "reference": "mà", "prediction": "mà"}
+{"path": "1_gram/mà_w/48.csv", "reference": "mà", "prediction": "nà"}
+{"path": "1_gram/mà_w/49.csv", "reference": "mà", "prediction": "nà"}
+{"path": "1_gram/mà_w/5.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/6.csv", "reference": "mà", "prediction": "mờ"}
+{"path": "1_gram/mà_w/7.csv", "reference": "mà", "prediction": "mè"}
+{"path": "1_gram/mà_w/8.csv", "reference": "mà", "prediction": "mù"}
+{"path": "1_gram/mà_w/9.csv", "reference": "mà", "prediction": "mè"}
+{"path": "1_gram/mướp_w/0.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/1.csv", "reference": "mướp", "prediction": "nưc"}
+{"path": "1_gram/mướp_w/10.csv", "reference": "mướp", "prediction": "nưc"}
+{"path": "1_gram/mướp_w/11.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/12.csv", "reference": "mướp", "prediction": "nưc"}
+{"path": "1_gram/mướp_w/13.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/14.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/15.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/16.csv", "reference": "mướp", "prediction": "nưc"}
+{"path": "1_gram/mướp_w/17.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/18.csv", "reference": "mướp", "prediction": "nưc"}
+{"path": "1_gram/mướp_w/19.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/2.csv", "reference": "mướp", "prediction": "nup"}
+{"path": "1_gram/mướp_w/20.csv", "reference": "mướp", "prediction": "nưn"}
+{"path": "1_gram/mướp_w/21.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/22.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/23.csv", "reference": "mướp", "prediction": "nưng"}
+{"path": "1_gram/mướp_w/24.csv", "reference": "mướp", "prediction": "nưc"}
+{"path": "1_gram/mướp_w/25.csv", "reference": "mướp", "prediction": "nưc"}
+{"path": "1_gram/mướp_w/26.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/27.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/28.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/29.csv", "reference": "mướp", "prediction": "mup"}
+{"path": "1_gram/mướp_w/3.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/30.csv", "reference": "mướp", "prediction": "mưp"}
+{"path": "1_gram/mướp_w/31.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/32.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/33.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/34.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/35.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/36.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/37.csv", "reference": "mướp", "prediction": "nưc"}
+{"path": "1_gram/mướp_w/38.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/39.csv", "reference": "mướp", "prediction": "nưc"}
+{"path": "1_gram/mướp_w/4.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/40.csv", "reference": "mướp", "prediction": "nưc"}
+{"path": "1_gram/mướp_w/41.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/42.csv", "reference": "mướp", "prediction": "ngp"}
+{"path": "1_gram/mướp_w/43.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/44.csv", "reference": "mướp", "prediction": "nưc"}
+{"path": "1_gram/mướp_w/45.csv", "reference": "mướp", "prediction": "nup"}
+{"path": "1_gram/mướp_w/46.csv", "reference": "mướp", "prediction": "mưng"}
+{"path": "1_gram/mướp_w/47.csv", "reference": "mướp", "prediction": "mưp"}
+{"path": "1_gram/mướp_w/48.csv", "reference": "mướp", "prediction": "nưny"}
+{"path": "1_gram/mướp_w/49.csv", "reference": "mướp", "prediction": "nưc"}
+{"path": "1_gram/mướp_w/5.csv", "reference": "mướp", "prediction": "nưc"}
+{"path": "1_gram/mướp_w/6.csv", "reference": "mướp", "prediction": "nưc"}
+{"path": "1_gram/mướp_w/7.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mướp_w/8.csv", "reference": "mướp", "prediction": "nưc"}
+{"path": "1_gram/mướp_w/9.csv", "reference": "mướp", "prediction": "nưp"}
+{"path": "1_gram/mười_w/0.csv", "reference": "mười", "prediction": "mưi"}
+{"path": "1_gram/mười_w/1.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/10.csv", "reference": "mười", "prediction": "mữi"}
+{"path": "1_gram/mười_w/11.csv", "reference": "mười", "prediction": "nữi"}
+{"path": "1_gram/mười_w/12.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/13.csv", "reference": "mười", "prediction": "mưi"}
+{"path": "1_gram/mười_w/14.csv", "reference": "mười", "prediction": "nữi"}
+{"path": "1_gram/mười_w/15.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/16.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/17.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/18.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/19.csv", "reference": "mười", "prediction": "mưi"}
+{"path": "1_gram/mười_w/2.csv", "reference": "mười", "prediction": "nữi"}
+{"path": "1_gram/mười_w/20.csv", "reference": "mười", "prediction": "mưi"}
+{"path": "1_gram/mười_w/21.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/22.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/23.csv", "reference": "mười", "prediction": "mưi"}
+{"path": "1_gram/mười_w/24.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/25.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/26.csv", "reference": "mười", "prediction": "nữi"}
+{"path": "1_gram/mười_w/27.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/28.csv", "reference": "mười", "prediction": "mới"}
+{"path": "1_gram/mười_w/29.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/3.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/30.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/31.csv", "reference": "mười", "prediction": "mới"}
+{"path": "1_gram/mười_w/32.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/33.csv", "reference": "mười", "prediction": "nữa"}
+{"path": "1_gram/mười_w/34.csv", "reference": "mười", "prediction": "cưi"}
+{"path": "1_gram/mười_w/35.csv", "reference": "mười", "prediction": "mưi"}
+{"path": "1_gram/mười_w/36.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/37.csv", "reference": "mười", "prediction": "mữi"}
+{"path": "1_gram/mười_w/38.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/39.csv", "reference": "mười", "prediction": "nữi"}
+{"path": "1_gram/mười_w/4.csv", "reference": "mười", "prediction": "mưi"}
+{"path": "1_gram/mười_w/40.csv", "reference": "mười", "prediction": "mới"}
+{"path": "1_gram/mười_w/41.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/42.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/43.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/44.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/45.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/46.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/47.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/48.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/49.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/5.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/6.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/7.csv", "reference": "mười", "prediction": "mữi"}
+{"path": "1_gram/mười_w/8.csv", "reference": "mười", "prediction": "nưi"}
+{"path": "1_gram/mười_w/9.csv", "reference": "mười", "prediction": "mới"}
+{"path": "1_gram/mềm_w/0.csv", "reference": "mềm", "prediction": "nếm"}
+{"path": "1_gram/mềm_w/1.csv", "reference": "mềm", "prediction": "nưm"}
+{"path": "1_gram/mềm_w/10.csv", "reference": "mềm", "prediction": "nếm"}
+{"path": "1_gram/mềm_w/11.csv", "reference": "mềm", "prediction": "mậm"}
+{"path": "1_gram/mềm_w/12.csv", "reference": "mềm", "prediction": "mến"}
+{"path": "1_gram/mềm_w/13.csv", "reference": "mềm", "prediction": "nấu"}
+{"path": "1_gram/mềm_w/14.csv", "reference": "mềm", "prediction": "nưn"}
+{"path": "1_gram/mềm_w/15.csv", "reference": "mềm", "prediction": "nếm"}
+{"path": "1_gram/mềm_w/16.csv", "reference": "mềm", "prediction": "nấu"}
+{"path": "1_gram/mềm_w/17.csv", "reference": "mềm", "prediction": "mưm"}
+{"path": "1_gram/mềm_w/18.csv", "reference": "mềm", "prediction": "nếm"}
+{"path": "1_gram/mềm_w/19.csv", "reference": "mềm", "prediction": "nận"}
+{"path": "1_gram/mềm_w/2.csv", "reference": "mềm", "prediction": "nấm"}
+{"path": "1_gram/mềm_w/20.csv", "reference": "mềm", "prediction": "nưu"}
+{"path": "1_gram/mềm_w/21.csv", "reference": "mềm", "prediction": "nấu"}
+{"path": "1_gram/mềm_w/22.csv", "reference": "mềm", "prediction": "nưu"}
+{"path": "1_gram/mềm_w/23.csv", "reference": "mềm", "prediction": "nếm"}
+{"path": "1_gram/mềm_w/24.csv", "reference": "mềm", "prediction": "nếu"}
+{"path": "1_gram/mềm_w/25.csv", "reference": "mềm", "prediction": "nưm"}
+{"path": "1_gram/mềm_w/26.csv", "reference": "mềm", "prediction": "nếu"}
+{"path": "1_gram/mềm_w/27.csv", "reference": "mềm", "prediction": "nếu"}
+{"path": "1_gram/mềm_w/28.csv", "reference": "mềm", "prediction": "nấm"}
+{"path": "1_gram/mềm_w/29.csv", "reference": "mềm", "prediction": "nến"}
+{"path": "1_gram/mềm_w/3.csv", "reference": "mềm", "prediction": "mậm"}
+{"path": "1_gram/mềm_w/30.csv", "reference": "mềm", "prediction": "nếu"}
+{"path": "1_gram/mềm_w/31.csv", "reference": "mềm", "prediction": "nưu"}
+{"path": "1_gram/mềm_w/32.csv", "reference": "mềm", "prediction": "nếm"}
+{"path": "1_gram/mềm_w/33.csv", "reference": "mềm", "prediction": "nấm"}
+{"path": "1_gram/mềm_w/34.csv", "reference": "mềm", "prediction": "nưn"}
+{"path": "1_gram/mềm_w/35.csv", "reference": "mềm", "prediction": "nến"}
+{"path": "1_gram/mềm_w/36.csv", "reference": "mềm", "prediction": "nếu"}
+{"path": "1_gram/mềm_w/37.csv", "reference": "mềm", "prediction": "nưm"}
+{"path": "1_gram/mềm_w/38.csv", "reference": "mềm", "prediction": "nến"}
+{"path": "1_gram/mềm_w/39.csv", "reference": "mềm", "prediction": "nấn"}
+{"path": "1_gram/mềm_w/4.csv", "reference": "mềm", "prediction": "nưn"}
+{"path": "1_gram/mềm_w/40.csv", "reference": "mềm", "prediction": "nếm"}
+{"path": "1_gram/mềm_w/41.csv", "reference": "mềm", "prediction": "nưn"}
+{"path": "1_gram/mềm_w/42.csv", "reference": "mềm", "prediction": "nếm"}
+{"path": "1_gram/mềm_w/43.csv", "reference": "mềm", "prediction": "nưu"}
+{"path": "1_gram/mềm_w/44.csv", "reference": "mềm", "prediction": "nến"}
+{"path": "1_gram/mềm_w/45.csv", "reference": "mềm", "prediction": "nếm"}
+{"path": "1_gram/mềm_w/46.csv", "reference": "mềm", "prediction": "nấm"}
+{"path": "1_gram/mềm_w/47.csv", "reference": "mềm", "prediction": "nến"}
+{"path": "1_gram/mềm_w/48.csv", "reference": "mềm", "prediction": "nếm"}
+{"path": "1_gram/mềm_w/49.csv", "reference": "mềm", "prediction": "nưu"}
+{"path": "1_gram/mềm_w/5.csv", "reference": "mềm", "prediction": "nếm"}
+{"path": "1_gram/mềm_w/6.csv", "reference": "mềm", "prediction": "mếm"}
+{"path": "1_gram/mềm_w/7.csv", "reference": "mềm", "prediction": "nến"}
+{"path": "1_gram/mềm_w/8.csv", "reference": "mềm", "prediction": "nến"}
+{"path": "1_gram/mềm_w/9.csv", "reference": "mềm", "prediction": "nến"}
+{"path": "1_gram/nắng_w/0.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/1.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/10.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/11.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/12.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/13.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/14.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/15.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/16.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/17.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/18.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/19.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/2.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/20.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/21.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/22.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/23.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/24.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/25.csv", "reference": "nắng", "prediction": "rống"}
+{"path": "1_gram/nắng_w/26.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/27.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/28.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/29.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/3.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/30.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/31.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/32.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/33.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/34.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/35.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/36.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/37.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/38.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/39.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/4.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/40.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/41.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/42.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/43.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/44.csv", "reference": "nắng", "prediction": "rộng"}
+{"path": "1_gram/nắng_w/45.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/46.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/47.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/48.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/49.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/5.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/6.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nắng_w/7.csv", "reference": "nắng", "prediction": "rộng"}
+{"path": "1_gram/nắng_w/8.csv", "reference": "nắng", "prediction": "rằng"}
+{"path": "1_gram/nắng_w/9.csv", "reference": "nắng", "prediction": "uống"}
+{"path": "1_gram/nặng_w/0.csv", "reference": "nặng", "prediction": "vậy"}
+{"path": "1_gram/nặng_w/1.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/10.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/11.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/12.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/13.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/14.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/15.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/16.csv", "reference": "nặng", "prediction": "vậng"}
+{"path": "1_gram/nặng_w/17.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/18.csv", "reference": "nặng", "prediction": "nộng"}
+{"path": "1_gram/nặng_w/19.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/2.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/20.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/21.csv", "reference": "nặng", "prediction": "vậng"}
+{"path": "1_gram/nặng_w/22.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/23.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/24.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/25.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/26.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/27.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/28.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/29.csv", "reference": "nặng", "prediction": "vộng"}
+{"path": "1_gram/nặng_w/3.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/30.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/31.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/32.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/33.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/34.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/35.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/36.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/37.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/38.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/39.csv", "reference": "nặng", "prediction": "vậng"}
+{"path": "1_gram/nặng_w/4.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/40.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/41.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/42.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/43.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/44.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/45.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/46.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/47.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/48.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/49.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/5.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/6.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/7.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/8.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/nặng_w/9.csv", "reference": "nặng", "prediction": "rộng"}
+{"path": "1_gram/rồi_w/0.csv", "reference": "rồi", "prediction": "rới"}
+{"path": "1_gram/rồi_w/1.csv", "reference": "rồi", "prediction": "sới"}
+{"path": "1_gram/rồi_w/10.csv", "reference": "rồi", "prediction": "rới"}
+{"path": "1_gram/rồi_w/11.csv", "reference": "rồi", "prediction": "rơi"}
+{"path": "1_gram/rồi_w/12.csv", "reference": "rồi", "prediction": "rơi"}
+{"path": "1_gram/rồi_w/13.csv", "reference": "rồi", "prediction": "tối"}
+{"path": "1_gram/rồi_w/14.csv", "reference": "rồi", "prediction": "bơi"}
+{"path": "1_gram/rồi_w/15.csv", "reference": "rồi", "prediction": "tối"}
+{"path": "1_gram/rồi_w/16.csv", "reference": "rồi", "prediction": "bối"}
+{"path": "1_gram/rồi_w/17.csv", "reference": "rồi", "prediction": "sới"}
+{"path": "1_gram/rồi_w/18.csv", "reference": "rồi", "prediction": "rới"}
+{"path": "1_gram/rồi_w/19.csv", "reference": "rồi", "prediction": "sới"}
+{"path": "1_gram/rồi_w/2.csv", "reference": "rồi", "prediction": "tối"}
+{"path": "1_gram/rồi_w/20.csv", "reference": "rồi", "prediction": "sới"}
+{"path": "1_gram/rồi_w/21.csv", "reference": "rồi", "prediction": "nới"}
+{"path": "1_gram/rồi_w/22.csv", "reference": "rồi", "prediction": "tối"}
+{"path": "1_gram/rồi_w/23.csv", "reference": "rồi", "prediction": "tối"}
+{"path": "1_gram/rồi_w/24.csv", "reference": "rồi", "prediction": "rới"}
+{"path": "1_gram/rồi_w/25.csv", "reference": "rồi", "prediction": "rới"}
+{"path": "1_gram/rồi_w/26.csv", "reference": "rồi", "prediction": "sới"}
+{"path": "1_gram/rồi_w/27.csv", "reference": "rồi", "prediction": "rối"}
+{"path": "1_gram/rồi_w/28.csv", "reference": "rồi", "prediction": "tối"}
+{"path": "1_gram/rồi_w/29.csv", "reference": "rồi", "prediction": "sới"}
+{"path": "1_gram/rồi_w/3.csv", "reference": "rồi", "prediction": "nữi"}
+{"path": "1_gram/rồi_w/30.csv", "reference": "rồi", "prediction": "rới"}
+{"path": "1_gram/rồi_w/31.csv", "reference": "rồi", "prediction": "rơi"}
+{"path": "1_gram/rồi_w/32.csv", "reference": "rồi", "prediction": "rơi"}
+{"path": "1_gram/rồi_w/33.csv", "reference": "rồi", "prediction": "rơi"}
+{"path": "1_gram/rồi_w/34.csv", "reference": "rồi", "prediction": "tối"}
+{"path": "1_gram/rồi_w/35.csv", "reference": "rồi", "prediction": "sới"}
+{"path": "1_gram/rồi_w/36.csv", "reference": "rồi", "prediction": "sới"}
+{"path": "1_gram/rồi_w/37.csv", "reference": "rồi", "prediction": "tối"}
+{"path": "1_gram/rồi_w/38.csv", "reference": "rồi", "prediction": "nới"}
+{"path": "1_gram/rồi_w/39.csv", "reference": "rồi", "prediction": "sới"}
+{"path": "1_gram/rồi_w/4.csv", "reference": "rồi", "prediction": "sới"}
+{"path": "1_gram/rồi_w/40.csv", "reference": "rồi", "prediction": "tối"}
+{"path": "1_gram/rồi_w/41.csv", "reference": "rồi", "prediction": "nơi"}
+{"path": "1_gram/rồi_w/42.csv", "reference": "rồi", "prediction": "tối"}
+{"path": "1_gram/rồi_w/43.csv", "reference": "rồi", "prediction": "sới"}
+{"path": "1_gram/rồi_w/44.csv", "reference": "rồi", "prediction": "rới"}
+{"path": "1_gram/rồi_w/45.csv", "reference": "rồi", "prediction": "tối"}
+{"path": "1_gram/rồi_w/46.csv", "reference": "rồi", "prediction": "bối"}
+{"path": "1_gram/rồi_w/47.csv", "reference": "rồi", "prediction": "tơi"}
+{"path": "1_gram/rồi_w/48.csv", "reference": "rồi", "prediction": "rơi"}
+{"path": "1_gram/rồi_w/49.csv", "reference": "rồi", "prediction": "sới"}
+{"path": "1_gram/rồi_w/5.csv", "reference": "rồi", "prediction": "rơi"}
+{"path": "1_gram/rồi_w/6.csv", "reference": "rồi", "prediction": "tới"}
+{"path": "1_gram/rồi_w/7.csv", "reference": "rồi", "prediction": "tối"}
+{"path": "1_gram/rồi_w/8.csv", "reference": "rồi", "prediction": "nới"}
+{"path": "1_gram/rồi_w/9.csv", "reference": "rồi", "prediction": "sới"}
+{"path": "1_gram/sách_w/0.csv", "reference": "sách", "prediction": "rái"}
+{"path": "1_gram/sách_w/1.csv", "reference": "sách", "prediction": "sái"}
+{"path": "1_gram/sách_w/10.csv", "reference": "sách", "prediction": "rái"}
+{"path": "1_gram/sách_w/11.csv", "reference": "sách", "prediction": "sác"}
+{"path": "1_gram/sách_w/12.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/13.csv", "reference": "sách", "prediction": "sái"}
+{"path": "1_gram/sách_w/14.csv", "reference": "sách", "prediction": "sái"}
+{"path": "1_gram/sách_w/15.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/16.csv", "reference": "sách", "prediction": "rán"}
+{"path": "1_gram/sách_w/17.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/18.csv", "reference": "sách", "prediction": "rán"}
+{"path": "1_gram/sách_w/19.csv", "reference": "sách", "prediction": "sáh"}
+{"path": "1_gram/sách_w/2.csv", "reference": "sách", "prediction": "sái"}
+{"path": "1_gram/sách_w/20.csv", "reference": "sách", "prediction": "tánh"}
+{"path": "1_gram/sách_w/21.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/22.csv", "reference": "sách", "prediction": "xái"}
+{"path": "1_gram/sách_w/23.csv", "reference": "sách", "prediction": "xái"}
+{"path": "1_gram/sách_w/24.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/25.csv", "reference": "sách", "prediction": "sái"}
+{"path": "1_gram/sách_w/26.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/27.csv", "reference": "sách", "prediction": "xái"}
+{"path": "1_gram/sách_w/28.csv", "reference": "sách", "prediction": "tánh"}
+{"path": "1_gram/sách_w/29.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/3.csv", "reference": "sách", "prediction": "sài"}
+{"path": "1_gram/sách_w/30.csv", "reference": "sách", "prediction": "sái"}
+{"path": "1_gram/sách_w/31.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/32.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/33.csv", "reference": "sách", "prediction": "sái"}
+{"path": "1_gram/sách_w/34.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/35.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/36.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/37.csv", "reference": "sách", "prediction": "sái"}
+{"path": "1_gram/sách_w/38.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/39.csv", "reference": "sách", "prediction": "tái"}
+{"path": "1_gram/sách_w/4.csv", "reference": "sách", "prediction": "sái"}
+{"path": "1_gram/sách_w/40.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/41.csv", "reference": "sách", "prediction": "sái"}
+{"path": "1_gram/sách_w/42.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/43.csv", "reference": "sách", "prediction": "sốa"}
+{"path": "1_gram/sách_w/44.csv", "reference": "sách", "prediction": "sái"}
+{"path": "1_gram/sách_w/45.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/46.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/47.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/48.csv", "reference": "sách", "prediction": "sánh"}
+{"path": "1_gram/sách_w/49.csv", "reference": "sách", "prediction": "sá"}
+{"path": "1_gram/sách_w/5.csv", "reference": "sách", "prediction": "sái"}
+{"path": "1_gram/sách_w/6.csv", "reference": "sách", "prediction": "sáo"}
+{"path": "1_gram/sách_w/7.csv", "reference": "sách", "prediction": "sái"}
+{"path": "1_gram/sách_w/8.csv", "reference": "sách", "prediction": "ràa"}
+{"path": "1_gram/sách_w/9.csv", "reference": "sách", "prediction": "sá"}
+{"path": "1_gram/sáu_w/0.csv", "reference": "sáu", "prediction": "sái"}
+{"path": "1_gram/sáu_w/1.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/10.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/11.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/12.csv", "reference": "sáu", "prediction": "sắn"}
+{"path": "1_gram/sáu_w/13.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/14.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/15.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/16.csv", "reference": "sáu", "prediction": "sắi"}
+{"path": "1_gram/sáu_w/17.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/18.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/19.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/2.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/20.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/21.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/22.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/23.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/24.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/25.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/26.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/27.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/28.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/29.csv", "reference": "sáu", "prediction": "sắu"}
+{"path": "1_gram/sáu_w/3.csv", "reference": "sáu", "prediction": "sắn"}
+{"path": "1_gram/sáu_w/30.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/31.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/32.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/33.csv", "reference": "sáu", "prediction": "sáa"}
+{"path": "1_gram/sáu_w/34.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/35.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/36.csv", "reference": "sáu", "prediction": "sái"}
+{"path": "1_gram/sáu_w/37.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/38.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/39.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/4.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/40.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/41.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/42.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/43.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/44.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/45.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/46.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/47.csv", "reference": "sáu", "prediction": "sắn"}
+{"path": "1_gram/sáu_w/48.csv", "reference": "sáu", "prediction": "sắu"}
+{"path": "1_gram/sáu_w/49.csv", "reference": "sáu", "prediction": "sán"}
+{"path": "1_gram/sáu_w/5.csv", "reference": "sáu", "prediction": "sáu"}
+{"path": "1_gram/sáu_w/6.csv", "reference": "sáu", "prediction": "sắi"}
+{"path": "1_gram/sáu_w/7.csv", "reference": "sáu", "prediction": "sắn"}
+{"path": "1_gram/sáu_w/8.csv", "reference": "sáu", "prediction": "sôu"}
+{"path": "1_gram/sáu_w/9.csv", "reference": "sáu", "prediction": "sắn"}
+{"path": "1_gram/sạch_w/0.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/1.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/10.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/11.csv", "reference": "sạch", "prediction": "sạn"}
+{"path": "1_gram/sạch_w/12.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/13.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/14.csv", "reference": "sạch", "prediction": "sại"}
+{"path": "1_gram/sạch_w/15.csv", "reference": "sạch", "prediction": "sai"}
+{"path": "1_gram/sạch_w/16.csv", "reference": "sạch", "prediction": "sai"}
+{"path": "1_gram/sạch_w/17.csv", "reference": "sạch", "prediction": "sạn"}
+{"path": "1_gram/sạch_w/18.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/19.csv", "reference": "sạch", "prediction": "sái"}
+{"path": "1_gram/sạch_w/2.csv", "reference": "sạch", "prediction": "sánh"}
+{"path": "1_gram/sạch_w/20.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/21.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/22.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/23.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/24.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/25.csv", "reference": "sạch", "prediction": "sánh"}
+{"path": "1_gram/sạch_w/26.csv", "reference": "sạch", "prediction": "sán"}
+{"path": "1_gram/sạch_w/27.csv", "reference": "sạch", "prediction": "sại"}
+{"path": "1_gram/sạch_w/28.csv", "reference": "sạch", "prediction": "sánh"}
+{"path": "1_gram/sạch_w/29.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/3.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/30.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/31.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/32.csv", "reference": "sạch", "prediction": "sai"}
+{"path": "1_gram/sạch_w/33.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/34.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/35.csv", "reference": "sạch", "prediction": "sanh"}
+{"path": "1_gram/sạch_w/36.csv", "reference": "sạch", "prediction": "sại"}
+{"path": "1_gram/sạch_w/37.csv", "reference": "sạch", "prediction": "sai"}
+{"path": "1_gram/sạch_w/38.csv", "reference": "sạch", "prediction": "sán"}
+{"path": "1_gram/sạch_w/39.csv", "reference": "sạch", "prediction": "sại"}
+{"path": "1_gram/sạch_w/4.csv", "reference": "sạch", "prediction": "sanh"}
+{"path": "1_gram/sạch_w/40.csv", "reference": "sạch", "prediction": "sán"}
+{"path": "1_gram/sạch_w/41.csv", "reference": "sạch", "prediction": "sại"}
+{"path": "1_gram/sạch_w/42.csv", "reference": "sạch", "prediction": "sạn"}
+{"path": "1_gram/sạch_w/43.csv", "reference": "sạch", "prediction": "sai"}
+{"path": "1_gram/sạch_w/44.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/45.csv", "reference": "sạch", "prediction": "sai"}
+{"path": "1_gram/sạch_w/46.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/47.csv", "reference": "sạch", "prediction": "sánh"}
+{"path": "1_gram/sạch_w/48.csv", "reference": "sạch", "prediction": "sạn"}
+{"path": "1_gram/sạch_w/49.csv", "reference": "sạch", "prediction": "sánh"}
+{"path": "1_gram/sạch_w/5.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/6.csv", "reference": "sạch", "prediction": "sạn"}
+{"path": "1_gram/sạch_w/7.csv", "reference": "sạch", "prediction": "sạn"}
+{"path": "1_gram/sạch_w/8.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạch_w/9.csv", "reference": "sạch", "prediction": "sạnh"}
+{"path": "1_gram/sạm_w/0.csv", "reference": "sạm", "prediction": "san"}
+{"path": "1_gram/sạm_w/1.csv", "reference": "sạm", "prediction": "sạny"}
+{"path": "1_gram/sạm_w/10.csv", "reference": "sạm", "prediction": "tạn"}
+{"path": "1_gram/sạm_w/11.csv", "reference": "sạm", "prediction": "sán"}
+{"path": "1_gram/sạm_w/12.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/13.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/14.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/15.csv", "reference": "sạm", "prediction": "sán"}
+{"path": "1_gram/sạm_w/16.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/17.csv", "reference": "sạm", "prediction": "sán"}
+{"path": "1_gram/sạm_w/18.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/19.csv", "reference": "sạm", "prediction": "tạn"}
+{"path": "1_gram/sạm_w/2.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/20.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/21.csv", "reference": "sạm", "prediction": "san"}
+{"path": "1_gram/sạm_w/22.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/23.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/24.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/25.csv", "reference": "sạm", "prediction": "sán"}
+{"path": "1_gram/sạm_w/26.csv", "reference": "sạm", "prediction": "sạny"}
+{"path": "1_gram/sạm_w/27.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/28.csv", "reference": "sạm", "prediction": "san"}
+{"path": "1_gram/sạm_w/29.csv", "reference": "sạm", "prediction": "sạny"}
+{"path": "1_gram/sạm_w/3.csv", "reference": "sạm", "prediction": "san"}
+{"path": "1_gram/sạm_w/30.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/31.csv", "reference": "sạm", "prediction": "sán"}
+{"path": "1_gram/sạm_w/32.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/33.csv", "reference": "sạm", "prediction": "sány"}
+{"path": "1_gram/sạm_w/34.csv", "reference": "sạm", "prediction": "san"}
+{"path": "1_gram/sạm_w/35.csv", "reference": "sạm", "prediction": "san"}
+{"path": "1_gram/sạm_w/36.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/37.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/38.csv", "reference": "sạm", "prediction": "sán"}
+{"path": "1_gram/sạm_w/39.csv", "reference": "sạm", "prediction": "san"}
+{"path": "1_gram/sạm_w/4.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/40.csv", "reference": "sạm", "prediction": "sạny"}
+{"path": "1_gram/sạm_w/41.csv", "reference": "sạm", "prediction": "sany"}
+{"path": "1_gram/sạm_w/42.csv", "reference": "sạm", "prediction": "san"}
+{"path": "1_gram/sạm_w/43.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/44.csv", "reference": "sạm", "prediction": "san"}
+{"path": "1_gram/sạm_w/45.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/46.csv", "reference": "sạm", "prediction": "san"}
+{"path": "1_gram/sạm_w/47.csv", "reference": "sạm", "prediction": "sán"}
+{"path": "1_gram/sạm_w/48.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/49.csv", "reference": "sạm", "prediction": "san"}
+{"path": "1_gram/sạm_w/5.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/6.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/7.csv", "reference": "sạm", "prediction": "sạn"}
+{"path": "1_gram/sạm_w/8.csv", "reference": "sạm", "prediction": "sạny"}
+{"path": "1_gram/sạm_w/9.csv", "reference": "sạm", "prediction": "tạn"}
+{"path": "1_gram/thu_w/0.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/1.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/10.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/11.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/12.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/13.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/14.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/15.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/16.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/17.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/18.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/19.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/2.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/20.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/21.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/22.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/23.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/24.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/25.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/26.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/27.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/28.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/29.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/3.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/30.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/31.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/32.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/33.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/34.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/35.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/36.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/37.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/38.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/39.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/4.csv", "reference": "thu", "prediction": "tạ"}
+{"path": "1_gram/thu_w/40.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/41.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/42.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/43.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/44.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/45.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/46.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/47.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/48.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/49.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/5.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/6.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/7.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/8.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/thu_w/9.csv", "reference": "thu", "prediction": "th"}
+{"path": "1_gram/trời_w/0.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/1.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/10.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/11.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/12.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/13.csv", "reference": "trời", "prediction": "từi"}
+{"path": "1_gram/trời_w/14.csv", "reference": "trời", "prediction": "tri"}
+{"path": "1_gram/trời_w/15.csv", "reference": "trời", "prediction": "từi"}
+{"path": "1_gram/trời_w/16.csv", "reference": "trời", "prediction": "từi"}
+{"path": "1_gram/trời_w/17.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/18.csv", "reference": "trời", "prediction": "tưi"}
+{"path": "1_gram/trời_w/19.csv", "reference": "trời", "prediction": "tưi"}
+{"path": "1_gram/trời_w/2.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/20.csv", "reference": "trời", "prediction": "tri"}
+{"path": "1_gram/trời_w/21.csv", "reference": "trời", "prediction": "cưi"}
+{"path": "1_gram/trời_w/22.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/23.csv", "reference": "trời", "prediction": "tưi"}
+{"path": "1_gram/trời_w/24.csv", "reference": "trời", "prediction": "từi"}
+{"path": "1_gram/trời_w/25.csv", "reference": "trời", "prediction": "từi"}
+{"path": "1_gram/trời_w/26.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/27.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/28.csv", "reference": "trời", "prediction": "tưi"}
+{"path": "1_gram/trời_w/29.csv", "reference": "trời", "prediction": "từi"}
+{"path": "1_gram/trời_w/3.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/30.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/31.csv", "reference": "trời", "prediction": "từi"}
+{"path": "1_gram/trời_w/32.csv", "reference": "trời", "prediction": "tri"}
+{"path": "1_gram/trời_w/33.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/34.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/35.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/36.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/37.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/38.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/39.csv", "reference": "trời", "prediction": "tưi"}
+{"path": "1_gram/trời_w/4.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/40.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/41.csv", "reference": "trời", "prediction": "tưi"}
+{"path": "1_gram/trời_w/42.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/43.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/44.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/45.csv", "reference": "trời", "prediction": "từi"}
+{"path": "1_gram/trời_w/46.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/47.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/48.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/49.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/5.csv", "reference": "trời", "prediction": "tưi"}
+{"path": "1_gram/trời_w/6.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/7.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/8.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/trời_w/9.csv", "reference": "trời", "prediction": "tối"}
+{"path": "1_gram/túy_w/0.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/1.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/10.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/11.csv", "reference": "túy", "prediction": "try"}
+{"path": "1_gram/túy_w/12.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/13.csv", "reference": "túy", "prediction": "try"}
+{"path": "1_gram/túy_w/14.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/15.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/16.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/17.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/18.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/19.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/2.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/20.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/21.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/22.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/23.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/24.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/25.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/26.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/27.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/28.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/29.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/3.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/30.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/31.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/32.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/33.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/34.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/35.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/36.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/37.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/38.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/39.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/4.csv", "reference": "túy", "prediction": "try"}
+{"path": "1_gram/túy_w/40.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/41.csv", "reference": "túy", "prediction": "try"}
+{"path": "1_gram/túy_w/42.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/43.csv", "reference": "túy", "prediction": "try"}
+{"path": "1_gram/túy_w/44.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/45.csv", "reference": "túy", "prediction": "try"}
+{"path": "1_gram/túy_w/46.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/47.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/48.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/49.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/5.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/6.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/7.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/8.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/túy_w/9.csv", "reference": "túy", "prediction": "táy"}
+{"path": "1_gram/tờ_w/0.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/1.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/10.csv", "reference": "tờ", "prediction": "tỏ"}
+{"path": "1_gram/tờ_w/11.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/12.csv", "reference": "tờ", "prediction": "tỏ"}
+{"path": "1_gram/tờ_w/13.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/14.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/15.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/16.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/17.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/18.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/19.csv", "reference": "tờ", "prediction": "tỏ"}
+{"path": "1_gram/tờ_w/2.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/20.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/21.csv", "reference": "tờ", "prediction": "tỏ"}
+{"path": "1_gram/tờ_w/22.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/23.csv", "reference": "tờ", "prediction": "tỗ"}
+{"path": "1_gram/tờ_w/24.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/25.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/26.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/27.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/28.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/29.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/3.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/30.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/31.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/32.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/33.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/34.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/35.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/36.csv", "reference": "tờ", "prediction": "tỏ"}
+{"path": "1_gram/tờ_w/37.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/38.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/39.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/4.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/40.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/41.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/42.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/43.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/44.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/45.csv", "reference": "tờ", "prediction": "tổ"}
+{"path": "1_gram/tờ_w/46.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/47.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/48.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/49.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/5.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/6.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/7.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/8.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/tờ_w/9.csv", "reference": "tờ", "prediction": "từ"}
+{"path": "1_gram/voi_w/0.csv", "reference": "voi", "prediction": "re"}
+{"path": "1_gram/voi_w/1.csv", "reference": "voi", "prediction": "ra"}
+{"path": "1_gram/voi_w/10.csv", "reference": "voi", "prediction": "re"}
+{"path": "1_gram/voi_w/11.csv", "reference": "voi", "prediction": "ra"}
+{"path": "1_gram/voi_w/12.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/13.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/14.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/15.csv", "reference": "voi", "prediction": "xe"}
+{"path": "1_gram/voi_w/16.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/17.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/18.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/19.csv", "reference": "voi", "prediction": "xe"}
+{"path": "1_gram/voi_w/2.csv", "reference": "voi", "prediction": "ra"}
+{"path": "1_gram/voi_w/20.csv", "reference": "voi", "prediction": "re"}
+{"path": "1_gram/voi_w/21.csv", "reference": "voi", "prediction": "ra"}
+{"path": "1_gram/voi_w/22.csv", "reference": "voi", "prediction": "xe"}
+{"path": "1_gram/voi_w/23.csv", "reference": "voi", "prediction": "xe"}
+{"path": "1_gram/voi_w/24.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/25.csv", "reference": "voi", "prediction": "ra"}
+{"path": "1_gram/voi_w/26.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/27.csv", "reference": "voi", "prediction": "ra"}
+{"path": "1_gram/voi_w/28.csv", "reference": "voi", "prediction": "xe"}
+{"path": "1_gram/voi_w/29.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/3.csv", "reference": "voi", "prediction": "re"}
+{"path": "1_gram/voi_w/30.csv", "reference": "voi", "prediction": "xe"}
+{"path": "1_gram/voi_w/31.csv", "reference": "voi", "prediction": "xe"}
+{"path": "1_gram/voi_w/32.csv", "reference": "voi", "prediction": "re"}
+{"path": "1_gram/voi_w/33.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/34.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/35.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/36.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/37.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/38.csv", "reference": "voi", "prediction": "ra"}
+{"path": "1_gram/voi_w/39.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/4.csv", "reference": "voi", "prediction": "ra"}
+{"path": "1_gram/voi_w/40.csv", "reference": "voi", "prediction": "ra"}
+{"path": "1_gram/voi_w/41.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/42.csv", "reference": "voi", "prediction": "xa"}
+{"path": "1_gram/voi_w/43.csv", "reference": "voi", "prediction": "xe"}
+{"path": "1_gram/voi_w/44.csv", "reference": "voi", "prediction": "xe"}
+{"path": "1_gram/voi_w/45.csv", "reference": "voi", "prediction": "ra"}
+{"path": "1_gram/voi_w/46.csv", "reference": "voi", "prediction": "ra"}
+{"path": "1_gram/voi_w/47.csv", "reference": "voi", "prediction": "ra"}
+{"path": "1_gram/voi_w/48.csv", "reference": "voi", "prediction": "re"}
+{"path": "1_gram/voi_w/49.csv", "reference": "voi", "prediction": "ra"}
+{"path": "1_gram/voi_w/5.csv", "reference": "voi", "prediction": "ra"}
+{"path": "1_gram/voi_w/6.csv", "reference": "voi", "prediction": "ra"}
+{"path": "1_gram/voi_w/7.csv", "reference": "voi", "prediction": "re"}
+{"path": "1_gram/voi_w/8.csv", "reference": "voi", "prediction": "re"}
+{"path": "1_gram/voi_w/9.csv", "reference": "voi", "prediction": "re"}
+{"path": "1_gram/vui_w/0.csv", "reference": "vui", "prediction": "kh"}
+{"path": "1_gram/vui_w/1.csv", "reference": "vui", "prediction": "mẹhh"}
+{"path": "1_gram/vui_w/10.csv", "reference": "vui", "prediction": "kh nh"}
+{"path": "1_gram/vui_w/11.csv", "reference": "vui", "prediction": "vẹ vi"}
+{"path": "1_gram/vui_w/12.csv", "reference": "vui", "prediction": "kh"}
+{"path": "1_gram/vui_w/13.csv", "reference": "vui", "prediction": "mẹ vi"}
+{"path": "1_gram/vui_w/14.csv", "reference": "vui", "prediction": "kh"}
+{"path": "1_gram/vui_w/15.csv", "reference": "vui", "prediction": "nh"}
+{"path": "1_gram/vui_w/16.csv", "reference": "vui", "prediction": "ph"}
+{"path": "1_gram/vui_w/17.csv", "reference": "vui", "prediction": "phi"}
+{"path": "1_gram/vui_w/18.csv", "reference": "vui", "prediction": "vẹ vi"}
+{"path": "1_gram/vui_w/19.csv", "reference": "vui", "prediction": "kh"}
+{"path": "1_gram/vui_w/2.csv", "reference": "vui", "prediction": "vẹ"}
+{"path": "1_gram/vui_w/20.csv", "reference": "vui", "prediction": "hẹ "}
+{"path": "1_gram/vui_w/21.csv", "reference": "vui", "prediction": "kh"}
+{"path": "1_gram/vui_w/22.csv", "reference": "vui", "prediction": "hẹ"}
+{"path": "1_gram/vui_w/23.csv", "reference": "vui", "prediction": "kh"}
+{"path": "1_gram/vui_w/24.csv", "reference": "vui", "prediction": "vị"}
+{"path": "1_gram/vui_w/25.csv", "reference": "vui", "prediction": "kh"}
+{"path": "1_gram/vui_w/26.csv", "reference": "vui", "prediction": "phv"}
+{"path": "1_gram/vui_w/27.csv", "reference": "vui", "prediction": "ph"}
+{"path": "1_gram/vui_w/28.csv", "reference": "vui", "prediction": "nẹ v"}
+{"path": "1_gram/vui_w/29.csv", "reference": "vui", "prediction": "kh"}
+{"path": "1_gram/vui_w/3.csv", "reference": "vui", "prediction": "qu "}
+{"path": "1_gram/vui_w/30.csv", "reference": "vui", "prediction": "họ"}
+{"path": "1_gram/vui_w/31.csv", "reference": "vui", "prediction": "khi"}
+{"path": "1_gram/vui_w/32.csv", "reference": "vui", "prediction": "nhi"}
+{"path": "1_gram/vui_w/33.csv", "reference": "vui", "prediction": "mẹi"}
+{"path": "1_gram/vui_w/34.csv", "reference": "vui", "prediction": "mẹi"}
+{"path": "1_gram/vui_w/35.csv", "reference": "vui", "prediction": "bo vi"}
+{"path": "1_gram/vui_w/36.csv", "reference": "vui", "prediction": "bẹvi"}
+{"path": "1_gram/vui_w/37.csv", "reference": "vui", "prediction": "vẹ vi"}
+{"path": "1_gram/vui_w/38.csv", "reference": "vui", "prediction": "kh"}
+{"path": "1_gram/vui_w/39.csv", "reference": "vui", "prediction": "mị i"}
+{"path": "1_gram/vui_w/4.csv", "reference": "vui", "prediction": "kh"}
+{"path": "1_gram/vui_w/40.csv", "reference": "vui", "prediction": "khi"}
+{"path": "1_gram/vui_w/41.csv", "reference": "vui", "prediction": "mẹ i"}
+{"path": "1_gram/vui_w/42.csv", "reference": "vui", "prediction": "kh vi"}
+{"path": "1_gram/vui_w/43.csv", "reference": "vui", "prediction": "vo vi"}
+{"path": "1_gram/vui_w/44.csv", "reference": "vui", "prediction": "vẹvi"}
+{"path": "1_gram/vui_w/45.csv", "reference": "vui", "prediction": "hẹ"}
+{"path": "1_gram/vui_w/46.csv", "reference": "vui", "prediction": "vẹ  vi"}
+{"path": "1_gram/vui_w/47.csv", "reference": "vui", "prediction": "kh vi"}
+{"path": "1_gram/vui_w/48.csv", "reference": "vui", "prediction": "xoi"}
+{"path": "1_gram/vui_w/49.csv", "reference": "vui", "prediction": "bo vi"}
+{"path": "1_gram/vui_w/5.csv", "reference": "vui", "prediction": "nẹ"}
+{"path": "1_gram/vui_w/6.csv", "reference": "vui", "prediction": "hi"}
+{"path": "1_gram/vui_w/7.csv", "reference": "vui", "prediction": "vẹi"}
+{"path": "1_gram/vui_w/8.csv", "reference": "vui", "prediction": "hộ "}
+{"path": "1_gram/vui_w/9.csv", "reference": "vui", "prediction": "mẹi"}
+{"path": "1_gram/ở_w/0.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/1.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/10.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/11.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/12.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/13.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/14.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/15.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/16.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/17.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/18.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/19.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/2.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/20.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/21.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/22.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/23.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/24.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/25.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/26.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/27.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/28.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/29.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/3.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/30.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/31.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/32.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/33.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/34.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/35.csv", "reference": "ở", "prediction": "ơ"}
+{"path": "1_gram/ở_w/36.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/37.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/38.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/39.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/4.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/40.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/41.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/42.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/43.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/44.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/45.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/46.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/47.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/48.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/49.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/5.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/6.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/7.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/8.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "1_gram/ở_w/9.csv", "reference": "ở", "prediction": "ồ"}
+{"path": "2_grams/biển rộng_w/0.csv", "reference": "biển rộng", "prediction": "bấ vng"}
+{"path": "2_grams/biển rộng_w/1.csv", "reference": "biển rộng", "prediction": "bấ vậng"}
+{"path": "2_grams/biển rộng_w/2.csv", "reference": "biển rộng", "prediction": "bấ vng"}
+{"path": "2_grams/biển rộng_w/3.csv", "reference": "biển rộng", "prediction": "bấ vng"}
+{"path": "2_grams/biển rộng_w/4.csv", "reference": "biển rộng", "prediction": "bấ vng"}
+{"path": "2_grams/biển rộng_w/5.csv", "reference": "biển rộng", "prediction": "bấ mng"}
+{"path": "2_grams/biển rộng_w/6.csv", "reference": "biển rộng", "prediction": "bấ ung"}
+{"path": "2_grams/biển rộng_w/7.csv", "reference": "biển rộng", "prediction": "bấ vng"}
+{"path": "2_grams/biển rộng_w/8.csv", "reference": "biển rộng", "prediction": "bấ mng"}
+{"path": "2_grams/biển rộng_w/9.csv", "reference": "biển rộng", "prediction": "bấ ung"}
+{"path": "2_grams/bàn ăn_w/0.csv", "reference": "bàn ăn", "prediction": "bán"}
+{"path": "2_grams/bàn ăn_w/1.csv", "reference": "bàn ăn", "prediction": "bản ên"}
+{"path": "2_grams/bàn ăn_w/10.csv", "reference": "bàn ăn", "prediction": "bản ên"}
+{"path": "2_grams/bàn ăn_w/11.csv", "reference": "bàn ăn", "prediction": "bản cn"}
+{"path": "2_grams/bàn ăn_w/12.csv", "reference": "bàn ăn", "prediction": "bản cên"}
+{"path": "2_grams/bàn ăn_w/13.csv", "reference": "bàn ăn", "prediction": "bà cn"}
+{"path": "2_grams/bàn ăn_w/14.csv", "reference": "bàn ăn", "prediction": "bán cn"}
+{"path": "2_grams/bàn ăn_w/15.csv", "reference": "bàn ăn", "prediction": "bản cên"}
+{"path": "2_grams/bàn ăn_w/16.csv", "reference": "bàn ăn", "prediction": "bả ên"}
+{"path": "2_grams/bàn ăn_w/17.csv", "reference": "bàn ăn", "prediction": "bàn"}
+{"path": "2_grams/bàn ăn_w/18.csv", "reference": "bàn ăn", "prediction": "bản ên"}
+{"path": "2_grams/bàn ăn_w/19.csv", "reference": "bàn ăn", "prediction": "bả cên"}
+{"path": "2_grams/bàn ăn_w/2.csv", "reference": "bàn ăn", "prediction": "bản cên"}
+{"path": "2_grams/bàn ăn_w/20.csv", "reference": "bàn ăn", "prediction": "bản cên"}
+{"path": "2_grams/bàn ăn_w/21.csv", "reference": "bàn ăn", "prediction": "bản cên"}
+{"path": "2_grams/bàn ăn_w/22.csv", "reference": "bàn ăn", "prediction": "bả cn"}
+{"path": "2_grams/bàn ăn_w/23.csv", "reference": "bàn ăn", "prediction": "bàn ên"}
+{"path": "2_grams/bàn ăn_w/24.csv", "reference": "bàn ăn", "prediction": "bản ên"}
+{"path": "2_grams/bàn ăn_w/25.csv", "reference": "bàn ăn", "prediction": "bàn cên"}
+{"path": "2_grams/bàn ăn_w/26.csv", "reference": "bàn ăn", "prediction": "bả cên"}
+{"path": "2_grams/bàn ăn_w/27.csv", "reference": "bàn ăn", "prediction": "bàn n"}
+{"path": "2_grams/bàn ăn_w/28.csv", "reference": "bàn ăn", "prediction": "bản sn"}
+{"path": "2_grams/bàn ăn_w/29.csv", "reference": "bàn ăn", "prediction": "bả sên"}
+{"path": "2_grams/bàn ăn_w/3.csv", "reference": "bàn ăn", "prediction": "bản ên"}
+{"path": "2_grams/bàn ăn_w/30.csv", "reference": "bàn ăn", "prediction": "bả ên"}
+{"path": "2_grams/bàn ăn_w/31.csv", "reference": "bàn ăn", "prediction": "bản ên"}
+{"path": "2_grams/bàn ăn_w/32.csv", "reference": "bàn ăn", "prediction": "bá n"}
+{"path": "2_grams/bàn ăn_w/33.csv", "reference": "bàn ăn", "prediction": "bàu"}
+{"path": "2_grams/bàn ăn_w/34.csv", "reference": "bàn ăn", "prediction": "bản sn"}
+{"path": "2_grams/bàn ăn_w/35.csv", "reference": "bàn ăn", "prediction": "bàn"}
+{"path": "2_grams/bàn ăn_w/36.csv", "reference": "bàn ăn", "prediction": "bả ên"}
+{"path": "2_grams/bàn ăn_w/37.csv", "reference": "bàn ăn", "prediction": "bả cên"}
+{"path": "2_grams/bàn ăn_w/38.csv", "reference": "bàn ăn", "prediction": "bản cn"}
+{"path": "2_grams/bàn ăn_w/39.csv", "reference": "bàn ăn", "prediction": "bả cên"}
+{"path": "2_grams/bàn ăn_w/4.csv", "reference": "bàn ăn", "prediction": "bà n"}
+{"path": "2_grams/bàn ăn_w/40.csv", "reference": "bàn ăn", "prediction": "bản cên"}
+{"path": "2_grams/bàn ăn_w/41.csv", "reference": "bàn ăn", "prediction": "bả cên"}
+{"path": "2_grams/bàn ăn_w/42.csv", "reference": "bàn ăn", "prediction": "bả ên"}
+{"path": "2_grams/bàn ăn_w/43.csv", "reference": "bàn ăn", "prediction": "bả ên"}
+{"path": "2_grams/bàn ăn_w/44.csv", "reference": "bàn ăn", "prediction": "bản ên"}
+{"path": "2_grams/bàn ăn_w/45.csv", "reference": "bàn ăn", "prediction": "bả cên"}
+{"path": "2_grams/bàn ăn_w/46.csv", "reference": "bàn ăn", "prediction": "bá n"}
+{"path": "2_grams/bàn ăn_w/47.csv", "reference": "bàn ăn", "prediction": "bả ên"}
+{"path": "2_grams/bàn ăn_w/48.csv", "reference": "bàn ăn", "prediction": "bàn cên"}
+{"path": "2_grams/bàn ăn_w/49.csv", "reference": "bàn ăn", "prediction": "bàn cn"}
+{"path": "2_grams/bàn ăn_w/5.csv", "reference": "bàn ăn", "prediction": "bả ấn"}
+{"path": "2_grams/bàn ăn_w/6.csv", "reference": "bàn ăn", "prediction": "bả ên"}
+{"path": "2_grams/bàn ăn_w/7.csv", "reference": "bàn ăn", "prediction": "bản sên"}
+{"path": "2_grams/bàn ăn_w/8.csv", "reference": "bàn ăn", "prediction": "bả cên"}
+{"path": "2_grams/bàn ăn_w/9.csv", "reference": "bàn ăn", "prediction": "bả sên"}
+{"path": "2_grams/bộ lạc_w/0.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/1.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/10.csv", "reference": "bộ lạc", "prediction": "bộ ki"}
+{"path": "2_grams/bộ lạc_w/11.csv", "reference": "bộ lạc", "prediction": "bộ ki"}
+{"path": "2_grams/bộ lạc_w/12.csv", "reference": "bộ lạc", "prediction": "bộ khi"}
+{"path": "2_grams/bộ lạc_w/13.csv", "reference": "bộ lạc", "prediction": "bộ ki"}
+{"path": "2_grams/bộ lạc_w/14.csv", "reference": "bộ lạc", "prediction": "bộ ki"}
+{"path": "2_grams/bộ lạc_w/15.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/16.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/17.csv", "reference": "bộ lạc", "prediction": "bộ ki"}
+{"path": "2_grams/bộ lạc_w/18.csv", "reference": "bộ lạc", "prediction": "bộ ki"}
+{"path": "2_grams/bộ lạc_w/19.csv", "reference": "bộ lạc", "prediction": "bộ ki"}
+{"path": "2_grams/bộ lạc_w/2.csv", "reference": "bộ lạc", "prediction": "bộ khi"}
+{"path": "2_grams/bộ lạc_w/20.csv", "reference": "bộ lạc", "prediction": "bộ ki"}
+{"path": "2_grams/bộ lạc_w/21.csv", "reference": "bộ lạc", "prediction": "bộ bi"}
+{"path": "2_grams/bộ lạc_w/22.csv", "reference": "bộ lạc", "prediction": "bộ ki"}
+{"path": "2_grams/bộ lạc_w/23.csv", "reference": "bộ lạc", "prediction": "bộ khi"}
+{"path": "2_grams/bộ lạc_w/24.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/25.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/26.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/27.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/28.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/29.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/3.csv", "reference": "bộ lạc", "prediction": "bộ ki"}
+{"path": "2_grams/bộ lạc_w/30.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/31.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/32.csv", "reference": "bộ lạc", "prediction": "bộ khi"}
+{"path": "2_grams/bộ lạc_w/33.csv", "reference": "bộ lạc", "prediction": "bộ khi"}
+{"path": "2_grams/bộ lạc_w/34.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/35.csv", "reference": "bộ lạc", "prediction": "bộ ki"}
+{"path": "2_grams/bộ lạc_w/36.csv", "reference": "bộ lạc", "prediction": "bộ khi"}
+{"path": "2_grams/bộ lạc_w/37.csv", "reference": "bộ lạc", "prediction": "bộ khi"}
+{"path": "2_grams/bộ lạc_w/38.csv", "reference": "bộ lạc", "prediction": "bộ ki"}
+{"path": "2_grams/bộ lạc_w/39.csv", "reference": "bộ lạc", "prediction": "bộ khi"}
+{"path": "2_grams/bộ lạc_w/4.csv", "reference": "bộ lạc", "prediction": "bộ kbi"}
+{"path": "2_grams/bộ lạc_w/40.csv", "reference": "bộ lạc", "prediction": "bộ khi"}
+{"path": "2_grams/bộ lạc_w/41.csv", "reference": "bộ lạc", "prediction": "bạ ki"}
+{"path": "2_grams/bộ lạc_w/42.csv", "reference": "bộ lạc", "prediction": "bộ ại"}
+{"path": "2_grams/bộ lạc_w/43.csv", "reference": "bộ lạc", "prediction": "bộ bhi"}
+{"path": "2_grams/bộ lạc_w/44.csv", "reference": "bộ lạc", "prediction": "bộ khi"}
+{"path": "2_grams/bộ lạc_w/45.csv", "reference": "bộ lạc", "prediction": "bộ khi"}
+{"path": "2_grams/bộ lạc_w/46.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/47.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/48.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/49.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/5.csv", "reference": "bộ lạc", "prediction": "bộ ki"}
+{"path": "2_grams/bộ lạc_w/6.csv", "reference": "bộ lạc", "prediction": "bộ khi"}
+{"path": "2_grams/bộ lạc_w/7.csv", "reference": "bộ lạc", "prediction": "bộ ki"}
+{"path": "2_grams/bộ lạc_w/8.csv", "reference": "bộ lạc", "prediction": "bộ hi"}
+{"path": "2_grams/bộ lạc_w/9.csv", "reference": "bộ lạc", "prediction": "bộ ki"}
+{"path": "2_grams/bộ sách_w/0.csv", "reference": "bộ sách", "prediction": "bộ vnh"}
+{"path": "2_grams/bộ sách_w/1.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/10.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/11.csv", "reference": "bộ sách", "prediction": "bộ vnh"}
+{"path": "2_grams/bộ sách_w/12.csv", "reference": "bộ sách", "prediction": "bộ srnh"}
+{"path": "2_grams/bộ sách_w/13.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/14.csv", "reference": "bộ sách", "prediction": "bộ crnh"}
+{"path": "2_grams/bộ sách_w/15.csv", "reference": "bộ sách", "prediction": "bộ srnh"}
+{"path": "2_grams/bộ sách_w/16.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/17.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/18.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/19.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/2.csv", "reference": "bộ sách", "prediction": "bộ vsnh"}
+{"path": "2_grams/bộ sách_w/20.csv", "reference": "bộ sách", "prediction": "bộ sinh"}
+{"path": "2_grams/bộ sách_w/21.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/22.csv", "reference": "bộ sách", "prediction": "bộ csnh"}
+{"path": "2_grams/bộ sách_w/23.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/24.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/25.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/26.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/27.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/28.csv", "reference": "bộ sách", "prediction": "bộ vnh"}
+{"path": "2_grams/bộ sách_w/29.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/3.csv", "reference": "bộ sách", "prediction": "bộ sình"}
+{"path": "2_grams/bộ sách_w/30.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/31.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/32.csv", "reference": "bộ sách", "prediction": "bộ vnh"}
+{"path": "2_grams/bộ sách_w/33.csv", "reference": "bộ sách", "prediction": "bộ mnh"}
+{"path": "2_grams/bộ sách_w/34.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/35.csv", "reference": "bộ sách", "prediction": "bộ sônh"}
+{"path": "2_grams/bộ sách_w/36.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/37.csv", "reference": "bộ sách", "prediction": "bằ vnh"}
+{"path": "2_grams/bộ sách_w/38.csv", "reference": "bộ sách", "prediction": "bộ srnh"}
+{"path": "2_grams/bộ sách_w/39.csv", "reference": "bộ sách", "prediction": "bộ srnh"}
+{"path": "2_grams/bộ sách_w/4.csv", "reference": "bộ sách", "prediction": "bộ srnh"}
+{"path": "2_grams/bộ sách_w/40.csv", "reference": "bộ sách", "prediction": "bộ sinh"}
+{"path": "2_grams/bộ sách_w/41.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/42.csv", "reference": "bộ sách", "prediction": "bộ vnh"}
+{"path": "2_grams/bộ sách_w/43.csv", "reference": "bộ sách", "prediction": "bộ csrnh"}
+{"path": "2_grams/bộ sách_w/44.csv", "reference": "bộ sách", "prediction": "bộ srnh"}
+{"path": "2_grams/bộ sách_w/45.csv", "reference": "bộ sách", "prediction": "bộ vnh"}
+{"path": "2_grams/bộ sách_w/46.csv", "reference": "bộ sách", "prediction": "bộ srnh"}
+{"path": "2_grams/bộ sách_w/47.csv", "reference": "bộ sách", "prediction": "bộ vnh"}
+{"path": "2_grams/bộ sách_w/48.csv", "reference": "bộ sách", "prediction": "bộ csnh"}
+{"path": "2_grams/bộ sách_w/49.csv", "reference": "bộ sách", "prediction": "bộ sônh"}
+{"path": "2_grams/bộ sách_w/5.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/6.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/7.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/bộ sách_w/8.csv", "reference": "bộ sách", "prediction": "bộ vnh"}
+{"path": "2_grams/bộ sách_w/9.csv", "reference": "bộ sách", "prediction": "bộ snh"}
+{"path": "2_grams/có vẻ_w/0.csv", "reference": "có vẻ", "prediction": "có v"}
+{"path": "2_grams/có vẻ_w/1.csv", "reference": "có vẻ", "prediction": "cóe"}
+{"path": "2_grams/có vẻ_w/10.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/11.csv", "reference": "có vẻ", "prediction": "che"}
+{"path": "2_grams/có vẻ_w/12.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/13.csv", "reference": "có vẻ", "prediction": "cá ve"}
+{"path": "2_grams/có vẻ_w/14.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/15.csv", "reference": "có vẻ", "prediction": "che"}
+{"path": "2_grams/có vẻ_w/16.csv", "reference": "có vẻ", "prediction": "chv"}
+{"path": "2_grams/có vẻ_w/17.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/18.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/19.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/2.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/20.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/21.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/22.csv", "reference": "có vẻ", "prediction": "co"}
+{"path": "2_grams/có vẻ_w/23.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/24.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/25.csv", "reference": "có vẻ", "prediction": "có v"}
+{"path": "2_grams/có vẻ_w/26.csv", "reference": "có vẻ", "prediction": "có v"}
+{"path": "2_grams/có vẻ_w/27.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/28.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/29.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/3.csv", "reference": "có vẻ", "prediction": "có v"}
+{"path": "2_grams/có vẻ_w/30.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/31.csv", "reference": "có vẻ", "prediction": "có v"}
+{"path": "2_grams/có vẻ_w/32.csv", "reference": "có vẻ", "prediction": "ch ve"}
+{"path": "2_grams/có vẻ_w/33.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/34.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/35.csv", "reference": "có vẻ", "prediction": "ch v"}
+{"path": "2_grams/có vẻ_w/36.csv", "reference": "có vẻ", "prediction": "có "}
+{"path": "2_grams/có vẻ_w/37.csv", "reference": "có vẻ", "prediction": "có v"}
+{"path": "2_grams/có vẻ_w/38.csv", "reference": "có vẻ", "prediction": "có ve"}
+{"path": "2_grams/có vẻ_w/39.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/4.csv", "reference": "có vẻ", "prediction": "co"}
+{"path": "2_grams/có vẻ_w/40.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/41.csv", "reference": "có vẻ", "prediction": "ch v"}
+{"path": "2_grams/có vẻ_w/42.csv", "reference": "có vẻ", "prediction": "chv"}
+{"path": "2_grams/có vẻ_w/43.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/44.csv", "reference": "có vẻ", "prediction": "có v"}
+{"path": "2_grams/có vẻ_w/45.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/46.csv", "reference": "có vẻ", "prediction": "chv"}
+{"path": "2_grams/có vẻ_w/47.csv", "reference": "có vẻ", "prediction": "ch v"}
+{"path": "2_grams/có vẻ_w/48.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/49.csv", "reference": "có vẻ", "prediction": "có "}
+{"path": "2_grams/có vẻ_w/5.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/6.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/7.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/8.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/có vẻ_w/9.csv", "reference": "có vẻ", "prediction": "ch"}
+{"path": "2_grams/công ty_w/0.csv", "reference": "công ty", "prediction": "công ạy"}
+{"path": "2_grams/công ty_w/1.csv", "reference": "công ty", "prediction": "công sạy"}
+{"path": "2_grams/công ty_w/10.csv", "reference": "công ty", "prediction": "công mạy"}
+{"path": "2_grams/công ty_w/11.csv", "reference": "công ty", "prediction": "công ạy"}
+{"path": "2_grams/công ty_w/12.csv", "reference": "công ty", "prediction": "công vng"}
+{"path": "2_grams/công ty_w/13.csv", "reference": "công ty", "prediction": "công sạy"}
+{"path": "2_grams/công ty_w/14.csv", "reference": "công ty", "prediction": "công sạy"}
+{"path": "2_grams/công ty_w/15.csv", "reference": "công ty", "prediction": "công ạy"}
+{"path": "2_grams/công ty_w/16.csv", "reference": "công ty", "prediction": "công ạy"}
+{"path": "2_grams/công ty_w/17.csv", "reference": "công ty", "prediction": "công y"}
+{"path": "2_grams/công ty_w/18.csv", "reference": "công ty", "prediction": "công y"}
+{"path": "2_grams/công ty_w/19.csv", "reference": "công ty", "prediction": "cô"}
+{"path": "2_grams/công ty_w/2.csv", "reference": "công ty", "prediction": "công sạy"}
+{"path": "2_grams/công ty_w/20.csv", "reference": "công ty", "prediction": "công y"}
+{"path": "2_grams/công ty_w/21.csv", "reference": "công ty", "prediction": "công sạy"}
+{"path": "2_grams/công ty_w/22.csv", "reference": "công ty", "prediction": "công sạy"}
+{"path": "2_grams/công ty_w/23.csv", "reference": "công ty", "prediction": "công y"}
+{"path": "2_grams/công ty_w/24.csv", "reference": "công ty", "prediction": "công vy"}
+{"path": "2_grams/công ty_w/25.csv", "reference": "công ty", "prediction": "công vy"}
+{"path": "2_grams/công ty_w/26.csv", "reference": "công ty", "prediction": "công ạy"}
+{"path": "2_grams/công ty_w/27.csv", "reference": "công ty", "prediction": "công vy"}
+{"path": "2_grams/công ty_w/28.csv", "reference": "công ty", "prediction": "công mạy"}
+{"path": "2_grams/công ty_w/29.csv", "reference": "công ty", "prediction": "công sạy"}
+{"path": "2_grams/công ty_w/3.csv", "reference": "công ty", "prediction": "công sạy"}
+{"path": "2_grams/công ty_w/30.csv", "reference": "công ty", "prediction": "công ạy"}
+{"path": "2_grams/công ty_w/31.csv", "reference": "công ty", "prediction": "công sạy"}
+{"path": "2_grams/công ty_w/32.csv", "reference": "công ty", "prediction": "công sạy"}
+{"path": "2_grams/công ty_w/33.csv", "reference": "công ty", "prediction": "công y"}
+{"path": "2_grams/công ty_w/34.csv", "reference": "công ty", "prediction": "công ạy"}
+{"path": "2_grams/công ty_w/35.csv", "reference": "công ty", "prediction": "công sạy"}
+{"path": "2_grams/công ty_w/36.csv", "reference": "công ty", "prediction": "công vy"}
+{"path": "2_grams/công ty_w/37.csv", "reference": "công ty", "prediction": "công sạy"}
+{"path": "2_grams/công ty_w/38.csv", "reference": "công ty", "prediction": "công sạy"}
+{"path": "2_grams/công ty_w/39.csv", "reference": "công ty", "prediction": "công ạy"}
+{"path": "2_grams/công ty_w/4.csv", "reference": "công ty", "prediction": "công "}
+{"path": "2_grams/công ty_w/40.csv", "reference": "công ty", "prediction": "công ạy"}
+{"path": "2_grams/công ty_w/41.csv", "reference": "công ty", "prediction": "công sy"}
+{"path": "2_grams/công ty_w/42.csv", "reference": "công ty", "prediction": "công ạy"}
+{"path": "2_grams/công ty_w/43.csv", "reference": "công ty", "prediction": "công ạy"}
+{"path": "2_grams/công ty_w/44.csv", "reference": "công ty", "prediction": "công sạy"}
+{"path": "2_grams/công ty_w/45.csv", "reference": "công ty", "prediction": "công sạy"}
+{"path": "2_grams/công ty_w/46.csv", "reference": "công ty", "prediction": "cộng "}
+{"path": "2_grams/công ty_w/47.csv", "reference": "công ty", "prediction": "công ạy"}
+{"path": "2_grams/công ty_w/48.csv", "reference": "công ty", "prediction": "công "}
+{"path": "2_grams/công ty_w/49.csv", "reference": "công ty", "prediction": "công ạy"}
+{"path": "2_grams/công ty_w/5.csv", "reference": "công ty", "prediction": "công ạy"}
+{"path": "2_grams/công ty_w/6.csv", "reference": "công ty", "prediction": "công ạ"}
+{"path": "2_grams/công ty_w/7.csv", "reference": "công ty", "prediction": "công ạy"}
+{"path": "2_grams/công ty_w/8.csv", "reference": "công ty", "prediction": "công sạy"}
+{"path": "2_grams/công ty_w/9.csv", "reference": "công ty", "prediction": "công mạy"}
+{"path": "2_grams/dẻo dai_w/0.csv", "reference": "dẻo dai", "prediction": "dầ ch"}
+{"path": "2_grams/dẻo dai_w/1.csv", "reference": "dẻo dai", "prediction": "dù ch"}
+{"path": "2_grams/dẻo dai_w/2.csv", "reference": "dẻo dai", "prediction": "dấ t"}
+{"path": "2_grams/dẻo dai_w/3.csv", "reference": "dẻo dai", "prediction": "dù k"}
+{"path": "2_grams/dẻo dai_w/4.csv", "reference": "dẻo dai", "prediction": "dị t"}
+{"path": "2_grams/dẻo dai_w/5.csv", "reference": "dẻo dai", "prediction": "dù th"}
+{"path": "2_grams/dẻo dai_w/6.csv", "reference": "dẻo dai", "prediction": "dù thng"}
+{"path": "2_grams/dẻo dai_w/7.csv", "reference": "dẻo dai", "prediction": "dù th"}
+{"path": "2_grams/dẻo dai_w/8.csv", "reference": "dẻo dai", "prediction": "dù th"}
+{"path": "2_grams/dẻo dai_w/9.csv", "reference": "dẻo dai", "prediction": "dù ch"}
+{"path": "2_grams/dễ dàng_w/0.csv", "reference": "dễ dàng", "prediction": "sộ chng"}
+{"path": "2_grams/dễ dàng_w/1.csv", "reference": "dễ dàng", "prediction": "sứ thng"}
+{"path": "2_grams/dễ dàng_w/2.csv", "reference": "dễ dàng", "prediction": "dộ nhng"}
+{"path": "2_grams/dễ dàng_w/3.csv", "reference": "dễ dàng", "prediction": "dứ thng"}
+{"path": "2_grams/dễ dàng_w/4.csv", "reference": "dễ dàng", "prediction": "dị thng"}
+{"path": "2_grams/dễ dàng_w/5.csv", "reference": "dễ dàng", "prediction": "dộ phng"}
+{"path": "2_grams/dễ dàng_w/6.csv", "reference": "dễ dàng", "prediction": "dộ nhng"}
+{"path": "2_grams/dễ dàng_w/7.csv", "reference": "dễ dàng", "prediction": "dứ chng"}
+{"path": "2_grams/dễ dàng_w/8.csv", "reference": "dễ dàng", "prediction": "dứ chng"}
+{"path": "2_grams/dễ dàng_w/9.csv", "reference": "dễ dàng", "prediction": "sộ thng"}
+{"path": "2_grams/giao tiếp_w/0.csv", "reference": "giao tiếp", "prediction": "gi cấp"}
+{"path": "2_grams/giao tiếp_w/1.csv", "reference": "giao tiếp", "prediction": "gi cp"}
+{"path": "2_grams/giao tiếp_w/10.csv", "reference": "giao tiếp", "prediction": "gi cấp"}
+{"path": "2_grams/giao tiếp_w/11.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/12.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/13.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/14.csv", "reference": "giao tiếp", "prediction": "gi cp"}
+{"path": "2_grams/giao tiếp_w/15.csv", "reference": "giao tiếp", "prediction": "gi cp"}
+{"path": "2_grams/giao tiếp_w/16.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/17.csv", "reference": "giao tiếp", "prediction": "gi thp"}
+{"path": "2_grams/giao tiếp_w/18.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/19.csv", "reference": "giao tiếp", "prediction": "si cấp"}
+{"path": "2_grams/giao tiếp_w/2.csv", "reference": "giao tiếp", "prediction": "gi thp"}
+{"path": "2_grams/giao tiếp_w/20.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/21.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/22.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/23.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/24.csv", "reference": "giao tiếp", "prediction": "gi chp"}
+{"path": "2_grams/giao tiếp_w/25.csv", "reference": "giao tiếp", "prediction": "gi cp"}
+{"path": "2_grams/giao tiếp_w/26.csv", "reference": "giao tiếp", "prediction": "gi cấp"}
+{"path": "2_grams/giao tiếp_w/27.csv", "reference": "giao tiếp", "prediction": "gi cấp"}
+{"path": "2_grams/giao tiếp_w/28.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/29.csv", "reference": "giao tiếp", "prediction": "gi cp"}
+{"path": "2_grams/giao tiếp_w/3.csv", "reference": "giao tiếp", "prediction": "gic cấp"}
+{"path": "2_grams/giao tiếp_w/30.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/31.csv", "reference": "giao tiếp", "prediction": "gi cấp"}
+{"path": "2_grams/giao tiếp_w/32.csv", "reference": "giao tiếp", "prediction": "gi tđp"}
+{"path": "2_grams/giao tiếp_w/33.csv", "reference": "giao tiếp", "prediction": "gi cp"}
+{"path": "2_grams/giao tiếp_w/34.csv", "reference": "giao tiếp", "prediction": "gi cp"}
+{"path": "2_grams/giao tiếp_w/35.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/36.csv", "reference": "giao tiếp", "prediction": "gi đp"}
+{"path": "2_grams/giao tiếp_w/37.csv", "reference": "giao tiếp", "prediction": "si tp"}
+{"path": "2_grams/giao tiếp_w/38.csv", "reference": "giao tiếp", "prediction": "gi cp"}
+{"path": "2_grams/giao tiếp_w/39.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/4.csv", "reference": "giao tiếp", "prediction": "gi cấp"}
+{"path": "2_grams/giao tiếp_w/40.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/41.csv", "reference": "giao tiếp", "prediction": "gi chp"}
+{"path": "2_grams/giao tiếp_w/42.csv", "reference": "giao tiếp", "prediction": "gi tđp"}
+{"path": "2_grams/giao tiếp_w/43.csv", "reference": "giao tiếp", "prediction": "gi cp"}
+{"path": "2_grams/giao tiếp_w/44.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/45.csv", "reference": "giao tiếp", "prediction": "si cp"}
+{"path": "2_grams/giao tiếp_w/46.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/47.csv", "reference": "giao tiếp", "prediction": "gi cấp"}
+{"path": "2_grams/giao tiếp_w/48.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/49.csv", "reference": "giao tiếp", "prediction": "gi tp"}
+{"path": "2_grams/giao tiếp_w/5.csv", "reference": "giao tiếp", "prediction": "gi cp"}
+{"path": "2_grams/giao tiếp_w/6.csv", "reference": "giao tiếp", "prediction": "gi cp"}
+{"path": "2_grams/giao tiếp_w/7.csv", "reference": "giao tiếp", "prediction": "gi cp"}
+{"path": "2_grams/giao tiếp_w/8.csv", "reference": "giao tiếp", "prediction": "gi cấp"}
+{"path": "2_grams/giao tiếp_w/9.csv", "reference": "giao tiếp", "prediction": "gi cấp"}
+{"path": "2_grams/mềm mại_w/0.csv", "reference": "mềm mại", "prediction": "nu xachi"}
+{"path": "2_grams/mềm mại_w/1.csv", "reference": "mềm mại", "prediction": "mu xai"}
+{"path": "2_grams/mềm mại_w/2.csv", "reference": "mềm mại", "prediction": "mg vi"}
+{"path": "2_grams/mềm mại_w/3.csv", "reference": "mềm mại", "prediction": "mặ hn"}
+{"path": "2_grams/mềm mại_w/4.csv", "reference": "mềm mại", "prediction": "mù rn"}
+{"path": "2_grams/mềm mại_w/5.csv", "reference": "mềm mại", "prediction": "mu rn"}
+{"path": "2_grams/mềm mại_w/6.csv", "reference": "mềm mại", "prediction": "mù bun"}
+{"path": "2_grams/mềm mại_w/7.csv", "reference": "mềm mại", "prediction": "bu ac"}
+{"path": "2_grams/mềm mại_w/8.csv", "reference": "mềm mại", "prediction": "mạ rc"}
+{"path": "2_grams/mềm mại_w/9.csv", "reference": "mềm mại", "prediction": "mu ran"}
+{"path": "2_grams/nghề nghiệp_w/0.csv", "reference": "nghề nghiệp", "prediction": "ng nghp"}
+{"path": "2_grams/nghề nghiệp_w/1.csv", "reference": "nghề nghiệp", "prediction": "ng nghp"}
+{"path": "2_grams/nghề nghiệp_w/2.csv", "reference": "nghề nghiệp", "prediction": "nghnghp"}
+{"path": "2_grams/nghề nghiệp_w/3.csv", "reference": "nghề nghiệp", "prediction": "ng nghp"}
+{"path": "2_grams/nghề nghiệp_w/4.csv", "reference": "nghề nghiệp", "prediction": "ngnghp"}
+{"path": "2_grams/nghề nghiệp_w/5.csv", "reference": "nghề nghiệp", "prediction": "ng nghp"}
+{"path": "2_grams/nghề nghiệp_w/6.csv", "reference": "nghề nghiệp", "prediction": "ng nghp"}
+{"path": "2_grams/nghề nghiệp_w/7.csv", "reference": "nghề nghiệp", "prediction": "ng t nghp"}
+{"path": "2_grams/nghề nghiệp_w/8.csv", "reference": "nghề nghiệp", "prediction": "ng nghp"}
+{"path": "2_grams/nghề nghiệp_w/9.csv", "reference": "nghề nghiệp", "prediction": "ng nghp"}
+{"path": "2_grams/như vậy_w/0.csv", "reference": "như vậy", "prediction": "nh vậy"}
+{"path": "2_grams/như vậy_w/1.csv", "reference": "như vậy", "prediction": "nh vậy"}
+{"path": "2_grams/như vậy_w/2.csv", "reference": "như vậy", "prediction": "nh vậy"}
+{"path": "2_grams/như vậy_w/3.csv", "reference": "như vậy", "prediction": "nh vậy"}
+{"path": "2_grams/như vậy_w/4.csv", "reference": "như vậy", "prediction": "nh vậy"}
+{"path": "2_grams/như vậy_w/5.csv", "reference": "như vậy", "prediction": "nh vậy"}
+{"path": "2_grams/như vậy_w/6.csv", "reference": "như vậy", "prediction": "nhậy"}
+{"path": "2_grams/như vậy_w/7.csv", "reference": "như vậy", "prediction": "nh ậy"}
+{"path": "2_grams/như vậy_w/8.csv", "reference": "như vậy", "prediction": "nh ậy"}
+{"path": "2_grams/như vậy_w/9.csv", "reference": "như vậy", "prediction": "nh ậy"}
+{"path": "2_grams/nên rằng_w/0.csv", "reference": "nên rằng", "prediction": "mư ưng"}
+{"path": "2_grams/nên rằng_w/1.csv", "reference": "nên rằng", "prediction": "mư ưng"}
+{"path": "2_grams/nên rằng_w/2.csv", "reference": "nên rằng", "prediction": "vì ưng"}
+{"path": "2_grams/nên rằng_w/3.csv", "reference": "nên rằng", "prediction": "mư ng"}
+{"path": "2_grams/nên rằng_w/4.csv", "reference": "nên rằng", "prediction": "mư ưng"}
+{"path": "2_grams/nên rằng_w/5.csv", "reference": "nên rằng", "prediction": "mư ưng"}
+{"path": "2_grams/nên rằng_w/6.csv", "reference": "nên rằng", "prediction": "vư ưng"}
+{"path": "2_grams/nên rằng_w/7.csv", "reference": "nên rằng", "prediction": "mư cưng"}
+{"path": "2_grams/nên rằng_w/8.csv", "reference": "nên rằng", "prediction": "mư ưng"}
+{"path": "2_grams/nên rằng_w/9.csv", "reference": "nên rằng", "prediction": "mư ưng"}
+{"path": "2_grams/quá khứ_w/0.csv", "reference": "quá khứ", "prediction": "gi kh"}
+{"path": "2_grams/quá khứ_w/1.csv", "reference": "quá khứ", "prediction": "gi kh"}
+{"path": "2_grams/quá khứ_w/2.csv", "reference": "quá khứ", "prediction": "gi kh"}
+{"path": "2_grams/quá khứ_w/3.csv", "reference": "quá khứ", "prediction": "gi kh"}
+{"path": "2_grams/quá khứ_w/4.csv", "reference": "quá khứ", "prediction": "gi kh"}
+{"path": "2_grams/quá khứ_w/5.csv", "reference": "quá khứ", "prediction": "gi kh"}
+{"path": "2_grams/quá khứ_w/6.csv", "reference": "quá khứ", "prediction": "gi kh"}
+{"path": "2_grams/quá khứ_w/7.csv", "reference": "quá khứ", "prediction": "gi kh"}
+{"path": "2_grams/quá khứ_w/8.csv", "reference": "quá khứ", "prediction": "gi kh"}
+{"path": "2_grams/quá khứ_w/9.csv", "reference": "quá khứ", "prediction": "gi kh"}
+{"path": "2_grams/quá trình_w/0.csv", "reference": "quá trình", "prediction": "gi trnh"}
+{"path": "2_grams/quá trình_w/1.csv", "reference": "quá trình", "prediction": "gi trnh"}
+{"path": "2_grams/quá trình_w/2.csv", "reference": "quá trình", "prediction": "gi trnh"}
+{"path": "2_grams/quá trình_w/3.csv", "reference": "quá trình", "prediction": "gá trnh"}
+{"path": "2_grams/quá trình_w/4.csv", "reference": "quá trình", "prediction": "gi tình"}
+{"path": "2_grams/quá trình_w/5.csv", "reference": "quá trình", "prediction": "gi tnh"}
+{"path": "2_grams/quá trình_w/6.csv", "reference": "quá trình", "prediction": "gi tnh"}
+{"path": "2_grams/quá trình_w/7.csv", "reference": "quá trình", "prediction": "gi trnh"}
+{"path": "2_grams/quá trình_w/8.csv", "reference": "quá trình", "prediction": "gi trnh"}
+{"path": "2_grams/quá trình_w/9.csv", "reference": "quá trình", "prediction": "gin trnh"}
+{"path": "2_grams/rau củ_w/0.csv", "reference": "rau củ", "prediction": "xai"}
+{"path": "2_grams/rau củ_w/1.csv", "reference": "rau củ", "prediction": "rai"}
+{"path": "2_grams/rau củ_w/10.csv", "reference": "rau củ", "prediction": "rai"}
+{"path": "2_grams/rau củ_w/11.csv", "reference": "rau củ", "prediction": "ra"}
+{"path": "2_grams/rau củ_w/12.csv", "reference": "rau củ", "prediction": "ra"}
+{"path": "2_grams/rau củ_w/13.csv", "reference": "rau củ", "prediction": "ra "}
+{"path": "2_grams/rau củ_w/14.csv", "reference": "rau củ", "prediction": "rai"}
+{"path": "2_grams/rau củ_w/15.csv", "reference": "rau củ", "prediction": "rai"}
+{"path": "2_grams/rau củ_w/16.csv", "reference": "rau củ", "prediction": "xui"}
+{"path": "2_grams/rau củ_w/17.csv", "reference": "rau củ", "prediction": "rai"}
+{"path": "2_grams/rau củ_w/18.csv", "reference": "rau củ", "prediction": "xai"}
+{"path": "2_grams/rau củ_w/19.csv", "reference": "rau củ", "prediction": "ra"}
+{"path": "2_grams/rau củ_w/2.csv", "reference": "rau củ", "prediction": "va vi"}
+{"path": "2_grams/rau củ_w/20.csv", "reference": "rau củ", "prediction": "ra m"}
+{"path": "2_grams/rau củ_w/21.csv", "reference": "rau củ", "prediction": "sa"}
+{"path": "2_grams/rau củ_w/22.csv", "reference": "rau củ", "prediction": "ran"}
+{"path": "2_grams/rau củ_w/23.csv", "reference": "rau củ", "prediction": "ra"}
+{"path": "2_grams/rau củ_w/24.csv", "reference": "rau củ", "prediction": "ra"}
+{"path": "2_grams/rau củ_w/25.csv", "reference": "rau củ", "prediction": "vu n"}
+{"path": "2_grams/rau củ_w/26.csv", "reference": "rau củ", "prediction": "ra  v"}
+{"path": "2_grams/rau củ_w/27.csv", "reference": "rau củ", "prediction": "sai"}
+{"path": "2_grams/rau củ_w/28.csv", "reference": "rau củ", "prediction": "sa v"}
+{"path": "2_grams/rau củ_w/29.csv", "reference": "rau củ", "prediction": "ran vỏ"}
+{"path": "2_grams/rau củ_w/3.csv", "reference": "rau củ", "prediction": "ra v"}
+{"path": "2_grams/rau củ_w/30.csv", "reference": "rau củ", "prediction": "ra "}
+{"path": "2_grams/rau củ_w/31.csv", "reference": "rau củ", "prediction": "ra"}
+{"path": "2_grams/rau củ_w/32.csv", "reference": "rau củ", "prediction": "ra v"}
+{"path": "2_grams/rau củ_w/33.csv", "reference": "rau củ", "prediction": "ra e"}
+{"path": "2_grams/rau củ_w/34.csv", "reference": "rau củ", "prediction": "ra nv"}
+{"path": "2_grams/rau củ_w/35.csv", "reference": "rau củ", "prediction": "ra m"}
+{"path": "2_grams/rau củ_w/36.csv", "reference": "rau củ", "prediction": "rai"}
+{"path": "2_grams/rau củ_w/37.csv", "reference": "rau củ", "prediction": "ra vi"}
+{"path": "2_grams/rau củ_w/38.csv", "reference": "rau củ", "prediction": "binv"}
+{"path": "2_grams/rau củ_w/39.csv", "reference": "rau củ", "prediction": "rane"}
+{"path": "2_grams/rau củ_w/4.csv", "reference": "rau củ", "prediction": "va"}
+{"path": "2_grams/rau củ_w/40.csv", "reference": "rau củ", "prediction": "sa v"}
+{"path": "2_grams/rau củ_w/41.csv", "reference": "rau củ", "prediction": "ra n"}
+{"path": "2_grams/rau củ_w/42.csv", "reference": "rau củ", "prediction": "sa n v"}
+{"path": "2_grams/rau củ_w/43.csv", "reference": "rau củ", "prediction": "sai"}
+{"path": "2_grams/rau củ_w/44.csv", "reference": "rau củ", "prediction": "xa "}
+{"path": "2_grams/rau củ_w/45.csv", "reference": "rau củ", "prediction": "ra nh"}
+{"path": "2_grams/rau củ_w/46.csv", "reference": "rau củ", "prediction": "xai"}
+{"path": "2_grams/rau củ_w/47.csv", "reference": "rau củ", "prediction": "ran"}
+{"path": "2_grams/rau củ_w/48.csv", "reference": "rau củ", "prediction": "ra"}
+{"path": "2_grams/rau củ_w/49.csv", "reference": "rau củ", "prediction": "rai"}
+{"path": "2_grams/rau củ_w/5.csv", "reference": "rau củ", "prediction": "rai"}
+{"path": "2_grams/rau củ_w/6.csv", "reference": "rau củ", "prediction": "ra"}
+{"path": "2_grams/rau củ_w/7.csv", "reference": "rau củ", "prediction": "rai"}
+{"path": "2_grams/rau củ_w/8.csv", "reference": "rau củ", "prediction": "ra i"}
+{"path": "2_grams/rau củ_w/9.csv", "reference": "rau củ", "prediction": "ra i"}
+{"path": "2_grams/sinh hoạt_w/0.csv", "reference": "sinh hoạt", "prediction": "sánh lạnh"}
+{"path": "2_grams/sinh hoạt_w/1.csv", "reference": "sinh hoạt", "prediction": "sanh dht"}
+{"path": "2_grams/sinh hoạt_w/2.csv", "reference": "sinh hoạt", "prediction": "sinh dh"}
+{"path": "2_grams/sinh hoạt_w/3.csv", "reference": "sinh hoạt", "prediction": "sanh hh"}
+{"path": "2_grams/sinh hoạt_w/4.csv", "reference": "sinh hoạt", "prediction": "sánh bhnh"}
+{"path": "2_grams/sinh hoạt_w/5.csv", "reference": "sinh hoạt", "prediction": "si khih"}
+{"path": "2_grams/sinh hoạt_w/6.csv", "reference": "sinh hoạt", "prediction": "sinh hnh"}
+{"path": "2_grams/sinh hoạt_w/7.csv", "reference": "sinh hoạt", "prediction": "sinh hnh"}
+{"path": "2_grams/sinh hoạt_w/8.csv", "reference": "sinh hoạt", "prediction": "sinh hnh"}
+{"path": "2_grams/sinh hoạt_w/9.csv", "reference": "sinh hoạt", "prediction": "sinhnh"}
+{"path": "2_grams/thường xuyên_w/0.csv", "reference": "thường xuyên", "prediction": "thng nut"}
+{"path": "2_grams/thường xuyên_w/1.csv", "reference": "thường xuyên", "prediction": "thng tr"}
+{"path": "2_grams/thường xuyên_w/2.csv", "reference": "thường xuyên", "prediction": "thng nu"}
+{"path": "2_grams/thường xuyên_w/3.csv", "reference": "thường xuyên", "prediction": "thng ng"}
+{"path": "2_grams/thường xuyên_w/4.csv", "reference": "thường xuyên", "prediction": "thng nut"}
+{"path": "2_grams/thường xuyên_w/5.csv", "reference": "thường xuyên", "prediction": "chng ngn"}
+{"path": "2_grams/thường xuyên_w/6.csv", "reference": "thường xuyên", "prediction": "thng nu"}
+{"path": "2_grams/thường xuyên_w/7.csv", "reference": "thường xuyên", "prediction": "chng nan"}
+{"path": "2_grams/thường xuyên_w/8.csv", "reference": "thường xuyên", "prediction": "thng nun"}
+{"path": "2_grams/thường xuyên_w/9.csv", "reference": "thường xuyên", "prediction": "thng nut"}
+{"path": "2_grams/thời gian_w/0.csv", "reference": "thời gian", "prediction": "th qu"}
+{"path": "2_grams/thời gian_w/1.csv", "reference": "thời gian", "prediction": "th qa"}
+{"path": "2_grams/thời gian_w/2.csv", "reference": "thời gian", "prediction": "th qu"}
+{"path": "2_grams/thời gian_w/3.csv", "reference": "thời gian", "prediction": "th qua"}
+{"path": "2_grams/thời gian_w/4.csv", "reference": "thời gian", "prediction": "th qu"}
+{"path": "2_grams/thời gian_w/5.csv", "reference": "thời gian", "prediction": "th qu"}
+{"path": "2_grams/thời gian_w/6.csv", "reference": "thời gian", "prediction": "th qua"}
+{"path": "2_grams/thời gian_w/7.csv", "reference": "thời gian", "prediction": "th ngm"}
+{"path": "2_grams/thời gian_w/8.csv", "reference": "thời gian", "prediction": "th qua"}
+{"path": "2_grams/thời gian_w/9.csv", "reference": "thời gian", "prediction": "th q"}
+{"path": "2_grams/ở đâu_w/0.csv", "reference": "ở đâu", "prediction": "đú đm"}
+{"path": "2_grams/ở đâu_w/1.csv", "reference": "ở đâu", "prediction": "đú đm"}
+{"path": "2_grams/ở đâu_w/2.csv", "reference": "ở đâu", "prediction": "đị đm"}
+{"path": "2_grams/ở đâu_w/3.csv", "reference": "ở đâu", "prediction": "đim"}
+{"path": "2_grams/ở đâu_w/4.csv", "reference": "ở đâu", "prediction": "đin"}
+{"path": "2_grams/ở đâu_w/5.csv", "reference": "ở đâu", "prediction": "đúm"}
+{"path": "2_grams/ở đâu_w/6.csv", "reference": "ở đâu", "prediction": "địđm"}
+{"path": "2_grams/ở đâu_w/7.csv", "reference": "ở đâu", "prediction": "đim"}
+{"path": "2_grams/ở đâu_w/8.csv", "reference": "ở đâu", "prediction": "đị đn"}
+{"path": "2_grams/ở đâu_w/9.csv", "reference": "ở đâu", "prediction": "đút sm"}
+{"path": "3_grams/dòng sông uốn_w/0.csv", "reference": "dòng sông uốn", "prediction": "dòng srng u"}
+{"path": "3_grams/dòng sông uốn_w/1.csv", "reference": "dòng sông uốn", "prediction": "dòng sông mm"}
+{"path": "3_grams/dòng sông uốn_w/2.csv", "reference": "dòng sông uốn", "prediction": "dàng sông nu"}
+{"path": "3_grams/dòng sông uốn_w/3.csv", "reference": "dòng sông uốn", "prediction": "dòng sáng nu"}
+{"path": "3_grams/dòng sông uốn_w/4.csv", "reference": "dòng sông uốn", "prediction": "dòng sáng mm"}
+{"path": "3_grams/dòng sông uốn_w/5.csv", "reference": "dòng sông uốn", "prediction": "dòng crng nu"}
+{"path": "3_grams/dòng sông uốn_w/6.csv", "reference": "dòng sông uốn", "prediction": "dàng cáng nm"}
+{"path": "3_grams/dòng sông uốn_w/7.csv", "reference": "dòng sông uốn", "prediction": "dàng srng nm"}
+{"path": "3_grams/dòng sông uốn_w/8.csv", "reference": "dòng sông uốn", "prediction": "dòng sông mn"}
+{"path": "3_grams/dòng sông uốn_w/9.csv", "reference": "dòng sông uốn", "prediction": "dàng sông n"}
+{"path": "3_grams/làn gió thoảng_w/0.csv", "reference": "làn gió thoảng", "prediction": "là gê thng"}
+{"path": "3_grams/làn gió thoảng_w/1.csv", "reference": "làn gió thoảng", "prediction": "là gê thng"}
+{"path": "3_grams/làn gió thoảng_w/2.csv", "reference": "làn gió thoảng", "prediction": "bà g thng"}
+{"path": "3_grams/làn gió thoảng_w/3.csv", "reference": "làn gió thoảng", "prediction": "kà t thng"}
+{"path": "3_grams/làn gió thoảng_w/4.csv", "reference": "làn gió thoảng", "prediction": "là gê thng"}
+{"path": "3_grams/làn gió thoảng_w/5.csv", "reference": "làn gió thoảng", "prediction": "bà ng thng"}
+{"path": "3_grams/làn gió thoảng_w/6.csv", "reference": "làn gió thoảng", "prediction": "bà gê thng"}
+{"path": "3_grams/làn gió thoảng_w/7.csv", "reference": "làn gió thoảng", "prediction": "bà ê thng"}
+{"path": "3_grams/làn gió thoảng_w/8.csv", "reference": "làn gió thoảng", "prediction": "bà gê thng"}
+{"path": "3_grams/làn gió thoảng_w/9.csv", "reference": "làn gió thoảng", "prediction": "là g thng"}
+{"path": "3_grams/làn khói bay_w/0.csv", "reference": "làn khói bay", "prediction": "bà kh hy"}
+{"path": "3_grams/làn khói bay_w/1.csv", "reference": "làn khói bay", "prediction": "bi khh hy"}
+{"path": "3_grams/làn khói bay_w/2.csv", "reference": "làn khói bay", "prediction": "bi h by"}
+{"path": "3_grams/làn khói bay_w/3.csv", "reference": "làn khói bay", "prediction": "bi kh hy"}
+{"path": "3_grams/làn khói bay_w/4.csv", "reference": "làn khói bay", "prediction": "bà kh b"}
+{"path": "3_grams/làn khói bay_w/5.csv", "reference": "làn khói bay", "prediction": "bi khh hy"}
+{"path": "3_grams/làn khói bay_w/6.csv", "reference": "làn khói bay", "prediction": "bà h hy"}
+{"path": "3_grams/làn khói bay_w/7.csv", "reference": "làn khói bay", "prediction": "bà kh bhy"}
+{"path": "3_grams/làn khói bay_w/8.csv", "reference": "làn khói bay", "prediction": "bi khh by"}
+{"path": "3_grams/làn khói bay_w/9.csv", "reference": "làn khói bay", "prediction": "bà hh hy"}
+{"path": "3_grams/ánh chiều tà_w/0.csv", "reference": "ánh chiều tà", "prediction": "sánh h s"}
+{"path": "3_grams/ánh chiều tà_w/1.csv", "reference": "ánh chiều tà", "prediction": "cánh ch sà"}
+{"path": "3_grams/ánh chiều tà_w/2.csv", "reference": "ánh chiều tà", "prediction": "cánh h t"}
+{"path": "3_grams/ánh chiều tà_w/3.csv", "reference": "ánh chiều tà", "prediction": "cánh ch t"}
+{"path": "3_grams/ánh chiều tà_w/4.csv", "reference": "ánh chiều tà", "prediction": "cánh ch tì"}
+{"path": "3_grams/ánh chiều tà_w/5.csv", "reference": "ánh chiều tà", "prediction": "cánh ch "}
+{"path": "3_grams/ánh chiều tà_w/6.csv", "reference": "ánh chiều tà", "prediction": "nánh ch t"}
+{"path": "3_grams/ánh chiều tà_w/7.csv", "reference": "ánh chiều tà", "prediction": "cánh h s"}
+{"path": "3_grams/ánh chiều tà_w/8.csv", "reference": "ánh chiều tà", "prediction": "cánh ch ê"}
+{"path": "3_grams/ánh chiều tà_w/9.csv", "reference": "ánh chiều tà", "prediction": "tánh ch t"}
+{"path": "3_grams/đồi thông xanh_w/0.csv", "reference": "đồi thông xanh", "prediction": "đi thng xanh"}
+{"path": "3_grams/đồi thông xanh_w/1.csv", "reference": "đồi thông xanh", "prediction": "đi th xanh"}
+{"path": "3_grams/đồi thông xanh_w/2.csv", "reference": "đồi thông xanh", "prediction": "đi thng manh"}
+{"path": "3_grams/đồi thông xanh_w/3.csv", "reference": "đồi thông xanh", "prediction": "đi thng manh"}
+{"path": "3_grams/đồi thông xanh_w/4.csv", "reference": "đồi thông xanh", "prediction": "đi thng xanh"}
+{"path": "3_grams/đồi thông xanh_w/5.csv", "reference": "đồi thông xanh", "prediction": "đi thng xanh"}
+{"path": "3_grams/đồi thông xanh_w/6.csv", "reference": "đồi thông xanh", "prediction": "đi thng manh"}
+{"path": "3_grams/đồi thông xanh_w/7.csv", "reference": "đồi thông xanh", "prediction": "đi thng rnh"}
+{"path": "3_grams/đồi thông xanh_w/8.csv", "reference": "đồi thông xanh", "prediction": "đi thng xonh"}
+{"path": "3_grams/đồi thông xanh_w/9.csv", "reference": "đồi thông xanh", "prediction": "đi hng xnh"}
+{"path": "n_grams/cây cổ thụ rợp bóng_w/0.csv", "reference": "cây cổ thụ rợp bóng", "prediction": "cáng trth  hng"}
+{"path": "n_grams/cây cổ thụ rợp bóng_w/1.csv", "reference": "cây cổ thụ rợp bóng", "prediction": "cá t s hng"}
+{"path": "n_grams/cây cổ thụ rợp bóng_w/2.csv", "reference": "cây cổ thụ rợp bóng", "prediction": "cá tr  s bng"}
+{"path": "n_grams/cây cổ thụ rợp bóng_w/3.csv", "reference": "cây cổ thụ rợp bóng", "prediction": "cá tr  s hng"}
+{"path": "n_grams/cây cổ thụ rợp bóng_w/4.csv", "reference": "cây cổ thụ rợp bóng", "prediction": "cág t th s hng"}
+{"path": "n_grams/cây cổ thụ rợp bóng_w/5.csv", "reference": "cây cổ thụ rợp bóng", "prediction": "công tđ th s bng"}
+{"path": "n_grams/cây cổ thụ rợp bóng_w/6.csv", "reference": "cây cổ thụ rợp bóng", "prediction": "công tđ th  bng"}
+{"path": "n_grams/cây cổ thụ rợp bóng_w/7.csv", "reference": "cây cổ thụ rợp bóng", "prediction": "cá t t  bng"}
+{"path": "n_grams/cây cổ thụ rợp bóng_w/8.csv", "reference": "cây cổ thụ rợp bóng", "prediction": "cág r tr  bng"}
+{"path": "n_grams/cây cổ thụ rợp bóng_w/9.csv", "reference": "cây cổ thụ rợp bóng", "prediction": "cáng t th  bng"}
+{"path": "n_grams/hương hoa thoang thoảng_w/0.csv", "reference": "hương hoa thoang thoảng", "prediction": "bàng h xag hng"}
+{"path": "n_grams/hương hoa thoang thoảng_w/1.csv", "reference": "hương hoa thoang thoảng", "prediction": "sông bh hng hng"}
+{"path": "n_grams/hương hoa thoang thoảng_w/2.csv", "reference": "hương hoa thoang thoảng", "prediction": "bàng bh xa hng"}
+{"path": "n_grams/hương hoa thoang thoảng_w/3.csv", "reference": "hương hoa thoang thoảng", "prediction": "bàng h h hng"}
+{"path": "n_grams/hương hoa thoang thoảng_w/4.csv", "reference": "hương hoa thoang thoảng", "prediction": "lầng br a nhng"}
+{"path": "n_grams/hương hoa thoang thoảng_w/5.csv", "reference": "hương hoa thoang thoảng", "prediction": "bàng ha hg hng"}
+{"path": "n_grams/hương hoa thoang thoảng_w/6.csv", "reference": "hương hoa thoang thoảng", "prediction": "bàng ha h hng"}
+{"path": "n_grams/hương hoa thoang thoảng_w/7.csv", "reference": "hương hoa thoang thoảng", "prediction": "làng h h khng"}
+{"path": "n_grams/hương hoa thoang thoảng_w/8.csv", "reference": "hương hoa thoang thoảng", "prediction": "bàng hch  khng"}
+{"path": "n_grams/hương hoa thoang thoảng_w/9.csv", "reference": "hương hoa thoang thoảng", "prediction": "bàng kh h hng"}
+{"path": "n_grams/ngọn núi phủ sương mù_w/0.csv", "reference": "ngọn núi phủ sương mù", "prediction": "ng ph sng tỏ"}
+{"path": "n_grams/ngọn núi phủ sương mù_w/1.csv", "reference": "ngọn núi phủ sương mù", "prediction": "ng nh rưng tỏ"}
+{"path": "n_grams/ngọn núi phủ sương mù_w/2.csv", "reference": "ngọn núi phủ sương mù", "prediction": "ng th sng tỏ"}
+{"path": "n_grams/ngọn núi phủ sương mù_w/3.csv", "reference": "ngọn núi phủ sương mù", "prediction": "no  h rng á"}
+{"path": "n_grams/ngọn núi phủ sương mù_w/4.csv", "reference": "ngọn núi phủ sương mù", "prediction": "ng th sng ơỏ"}
+{"path": "n_grams/ngọn núi phủ sương mù_w/5.csv", "reference": "ngọn núi phủ sương mù", "prediction": "ng thh ng r"}
+{"path": "n_grams/ngọn núi phủ sương mù_w/6.csv", "reference": "ngọn núi phủ sương mù", "prediction": "ng h sng mỏ"}
+{"path": "n_grams/ngọn núi phủ sương mù_w/7.csv", "reference": "ngọn núi phủ sương mù", "prediction": "ng th mrng mỏ"}
+{"path": "n_grams/ngọn núi phủ sương mù_w/8.csv", "reference": "ngọn núi phủ sương mù", "prediction": "ng h sng á"}
+{"path": "n_grams/ngọn núi phủ sương mù_w/9.csv", "reference": "ngọn núi phủ sương mù", "prediction": "ng th sng tì"}
+{"path": "n_grams/ngọn đồi thoai thoải_w/0.csv", "reference": "ngọn đồi thoai thoải", "prediction": "ng đ th h"}
+{"path": "n_grams/ngọn đồi thoai thoải_w/1.csv", "reference": "ngọn đồi thoai thoải", "prediction": "ng đ th h"}
+{"path": "n_grams/ngọn đồi thoai thoải_w/2.csv", "reference": "ngọn đồi thoai thoải", "prediction": "ng đ th hc"}
+{"path": "n_grams/ngọn đồi thoai thoải_w/3.csv", "reference": "ngọn đồi thoai thoải", "prediction": "ng đ th ch"}
+{"path": "n_grams/ngọn đồi thoai thoải_w/4.csv", "reference": "ngọn đồi thoai thoải", "prediction": "ng đ th chn"}
+{"path": "n_grams/ngọn đồi thoai thoải_w/5.csv", "reference": "ngọn đồi thoai thoải", "prediction": "ng đ th ch"}
+{"path": "n_grams/ngọn đồi thoai thoải_w/6.csv", "reference": "ngọn đồi thoai thoải", "prediction": "ng đ th nh"}
+{"path": "n_grams/ngọn đồi thoai thoải_w/7.csv", "reference": "ngọn đồi thoai thoải", "prediction": "ng đ th th"}
+{"path": "n_grams/ngọn đồi thoai thoải_w/8.csv", "reference": "ngọn đồi thoai thoải", "prediction": "ng đ th h"}
+{"path": "n_grams/ngọn đồi thoai thoải_w/9.csv", "reference": "ngọn đồi thoai thoải", "prediction": "ng đ th ch"}
+{"path": "n_grams/sông dài trôi mãi_w/0.csv", "reference": "sông dài trôi mãi", "prediction": "làng bh đ m"}
+{"path": "n_grams/sông dài trôi mãi_w/1.csv", "reference": "sông dài trôi mãi", "prediction": "sông h tr má"}
+{"path": "n_grams/sông dài trôi mãi_w/2.csv", "reference": "sông dài trôi mãi", "prediction": "sông h tr m"}
+{"path": "n_grams/sông dài trôi mãi_w/3.csv", "reference": "sông dài trôi mãi", "prediction": "mưng th tr má"}
+{"path": "n_grams/sông dài trôi mãi_w/4.csv", "reference": "sông dài trôi mãi", "prediction": "sưng h tr m"}
+{"path": "n_grams/sông dài trôi mãi_w/5.csv", "reference": "sông dài trôi mãi", "prediction": "sông tr t m"}
+{"path": "n_grams/sông dài trôi mãi_w/6.csv", "reference": "sông dài trôi mãi", "prediction": "sông ch tr má"}
+{"path": "n_grams/sông dài trôi mãi_w/7.csv", "reference": "sông dài trôi mãi", "prediction": "sông h tr má"}
+{"path": "n_grams/sông dài trôi mãi_w/8.csv", "reference": "sông dài trôi mãi", "prediction": "làng h t m"}
+{"path": "n_grams/sông dài trôi mãi_w/9.csv", "reference": "sông dài trôi mãi", "prediction": "sông h tr mà"}
+{"path": "n_grams/tiếng nước chảy róc rách_w/0.csv", "reference": "tiếng nước chảy róc rách", "prediction": "công mư h r mánh"}
+{"path": "n_grams/tiếng nước chảy róc rách_w/1.csv", "reference": "tiếng nước chảy róc rách", "prediction": "công mư lả m máh"}
+{"path": "n_grams/tiếng nước chảy róc rách_w/2.csv", "reference": "tiếng nước chảy róc rách", "prediction": "tông mư h t mánh"}
+{"path": "n_grams/tiếng nước chảy róc rách_w/3.csv", "reference": "tiếng nước chảy róc rách", "prediction": "tông mư lng r mánh"}
+{"path": "n_grams/tiếng nước chảy róc rách_w/4.csv", "reference": "tiếng nước chảy róc rách", "prediction": "tông mư là m rc"}
+{"path": "n_grams/tiếng nước chảy róc rách_w/5.csv", "reference": "tiếng nước chảy róc rách", "prediction": "công mư l r mnh"}
+{"path": "n_grams/tiếng nước chảy róc rách_w/6.csv", "reference": "tiếng nước chảy róc rách", "prediction": "tông mư h má mrnh"}
+{"path": "n_grams/tiếng nước chảy róc rách_w/7.csv", "reference": "tiếng nước chảy róc rách", "prediction": "tông m h m mánh"}
+{"path": "n_grams/tiếng nước chảy róc rách_w/8.csv", "reference": "tiếng nước chảy róc rách", "prediction": "tông mư lông r mách"}
+{"path": "n_grams/tiếng nước chảy róc rách_w/9.csv", "reference": "tiếng nước chảy róc rách", "prediction": "công m bh t mnh"}
+{"path": "n_grams/vườn hoa khoe sắc_w/0.csv", "reference": "vườn hoa khoe sắc", "prediction": "mưc hah kh gc"}
+{"path": "n_grams/vườn hoa khoe sắc_w/1.csv", "reference": "vườn hoa khoe sắc", "prediction": "mư h h ch ln"}
+{"path": "n_grams/vườn hoa khoe sắc_w/2.csv", "reference": "vườn hoa khoe sắc", "prediction": "mộ crnh kh "}
+{"path": "n_grams/vườn hoa khoe sắc_w/3.csv", "reference": "vườn hoa khoe sắc", "prediction": "mư hh h m"}
+{"path": "n_grams/vườn hoa khoe sắc_w/4.csv", "reference": "vườn hoa khoe sắc", "prediction": "mưc kah kh v"}
+{"path": "n_grams/vườn hoa khoe sắc_w/5.csv", "reference": "vườn hoa khoe sắc", "prediction": "mưc bach kh vn"}
+{"path": "n_grams/vườn hoa khoe sắc_w/6.csv", "reference": "vườn hoa khoe sắc", "prediction": "mư kah h mi"}
+{"path": "n_grams/vườn hoa khoe sắc_w/7.csv", "reference": "vườn hoa khoe sắc", "prediction": "mưc cah ra li"}
+{"path": "n_grams/vườn hoa khoe sắc_w/8.csv", "reference": "vườn hoa khoe sắc", "prediction": "mưc hnh h m"}
+{"path": "n_grams/vườn hoa khoe sắc_w/9.csv", "reference": "vườn hoa khoe sắc", "prediction": "mưc hh kh nn"}
+{"path": "n_grams/ánh mắt ngơ ngác_w/0.csv", "reference": "ánh mắt ngơ ngác", "prediction": "ánh mt ng ngc"}
+{"path": "n_grams/ánh mắt ngơ ngác_w/1.csv", "reference": "ánh mắt ngơ ngác", "prediction": "cánh mưt ngg"}
+{"path": "n_grams/ánh mắt ngơ ngác_w/2.csv", "reference": "ánh mắt ngơ ngác", "prediction": "cánh mt ng ng"}
+{"path": "n_grams/ánh mắt ngơ ngác_w/3.csv", "reference": "ánh mắt ngơ ngác", "prediction": "cánh mưt ngng"}
+{"path": "n_grams/ánh mắt ngơ ngác_w/4.csv", "reference": "ánh mắt ngơ ngác", "prediction": "cánh mưt ngng "}
+{"path": "n_grams/ánh mắt ngơ ngác_w/5.csv", "reference": "ánh mắt ngơ ngác", "prediction": "cánh mưt nug "}
+{"path": "n_grams/ánh mắt ngơ ngác_w/6.csv", "reference": "ánh mắt ngơ ngác", "prediction": "cánh mưt ng"}
+{"path": "n_grams/ánh mắt ngơ ngác_w/7.csv", "reference": "ánh mắt ngơ ngác", "prediction": "cánh mt ngg"}
+{"path": "n_grams/ánh mắt ngơ ngác_w/8.csv", "reference": "ánh mắt ngơ ngác", "prediction": "cánh mưt ng ng"}
+{"path": "n_grams/ánh mắt ngơ ngác_w/9.csv", "reference": "ánh mắt ngơ ngác", "prediction": "cánh mưt ng"}
+{"path": "n_grams/ánh nắng buổi sáng_w/0.csv", "reference": "ánh nắng buổi sáng", "prediction": "cánh sắng r máng"}
+{"path": "n_grams/ánh nắng buổi sáng_w/1.csv", "reference": "ánh nắng buổi sáng", "prediction": "nánh nng r máng"}
+{"path": "n_grams/ánh nắng buổi sáng_w/2.csv", "reference": "ánh nắng buổi sáng", "prediction": "nánh ng bh rng"}
+{"path": "n_grams/ánh nắng buổi sáng_w/3.csv", "reference": "ánh nắng buổi sáng", "prediction": "cánh mờng b trng"}
+{"path": "n_grams/ánh nắng buổi sáng_w/4.csv", "reference": "ánh nắng buổi sáng", "prediction": "cánh nờng h rng"}
+{"path": "n_grams/ánh nắng buổi sáng_w/5.csv", "reference": "ánh nắng buổi sáng", "prediction": "ánh nờng h máng"}
+{"path": "n_grams/ánh nắng buổi sáng_w/6.csv", "reference": "ánh nắng buổi sáng", "prediction": "ánh mờng h rng"}
+{"path": "n_grams/ánh nắng buổi sáng_w/7.csv", "reference": "ánh nắng buổi sáng", "prediction": "nánh nng h ráng"}
+{"path": "n_grams/ánh nắng buổi sáng_w/8.csv", "reference": "ánh nắng buổi sáng", "prediction": "cánh nưng bư máng"}
+{"path": "n_grams/ánh nắng buổi sáng_w/9.csv", "reference": "ánh nắng buổi sáng", "prediction": "ánh ng th mrng"}
+{"path": "n_grams/đêm đông lạnh giá_w/0.csv", "reference": "đêm đông lạnh giá", "prediction": "đi đng sánh g"}
+{"path": "n_grams/đêm đông lạnh giá_w/1.csv", "reference": "đêm đông lạnh giá", "prediction": "đô đng hánh s"}
+{"path": "n_grams/đêm đông lạnh giá_w/2.csv", "reference": "đêm đông lạnh giá", "prediction": "đi đng sánh si"}
+{"path": "n_grams/đêm đông lạnh giá_w/3.csv", "reference": "đêm đông lạnh giá", "prediction": "đi đng ránh á"}
+{"path": "n_grams/đêm đông lạnh giá_w/4.csv", "reference": "đêm đông lạnh giá", "prediction": "đô tng ánh s"}
+{"path": "n_grams/đêm đông lạnh giá_w/5.csv", "reference": "đêm đông lạnh giá", "prediction": "đi đng hnh u"}
+{"path": "n_grams/đêm đông lạnh giá_w/6.csv", "reference": "đêm đông lạnh giá", "prediction": "đô đng srng sá"}
+{"path": "n_grams/đêm đông lạnh giá_w/7.csv", "reference": "đêm đông lạnh giá", "prediction": "đê đng rnh s"}
+{"path": "n_grams/đêm đông lạnh giá_w/8.csv", "reference": "đêm đông lạnh giá", "prediction": "đê đng sáng s"}
+{"path": "n_grams/đêm đông lạnh giá_w/9.csv", "reference": "đêm đông lạnh giá", "prediction": "đô đng lánh s"}

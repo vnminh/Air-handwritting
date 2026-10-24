@@ -1,0 +1,7 @@
+{"run": "spec_dynf", "epoch": 1, "train_loss": 18.222795678509605, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0002857142857142857}
+{"run": "spec_dynf", "epoch": 2, "train_loss": 4.041682389047411, "val_cer": 0.97880268278546, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.00042857142857142855}
+{"run": "spec_dynf", "epoch": 3, "train_loss": 3.2427488697899713, "val_cer": 0.7191355469073445, "val_wer": 1.0060711188204683, "val_exact_accuracy": 0.0, "learning_rate": 0.0005714285714285714}
+{"run": "spec_dynf", "epoch": 4, "train_loss": 2.193952692879571, "val_cer": 0.5195826778173387, "val_wer": 0.9762937265105521, "val_exact_accuracy": 0.02816309373686423, "learning_rate": 0.0007142857142857143}
+{"run": "spec_dynf", "epoch": 5, "train_loss": 1.3616280630230904, "val_cer": 0.46129005547735363, "val_wer": 0.9442035270309338, "val_exact_accuracy": 0.05422446406052964, "learning_rate": 0.0008571428571428571}
+{"run": "spec_dynf", "epoch": 6, "train_loss": 0.8165629572338529, "val_cer": 0.4207998675167674, "val_wer": 0.8814686325527609, "val_exact_accuracy": 0.12063892391761244, "learning_rate": 0.001}
+{"run": "spec_dynf", "epoch": 7, "train_loss": 0.5234599519107077, "val_cer": 0.3720294775192515, "val_wer": 0.8294304712344608, "val_exact_accuracy": 0.16057166876839007, "learning_rate": 0.001}
