@@ -7,6 +7,7 @@
 | lexical | ours | dynamics_fourier | 1,580,392 | 3 | 20.56 ± 0.94 | 55.62 ± 1.43 | 33.23 ± 3.20 |
 | lexical | spec_dyn_spec | dyn+spec | 1,585,128 | 1 | 28.19 | 67.38 | 19.68 |
 | lexical | spec_dynf | dyn+fourier | 1,580,392 | 1 | 21.14 | 55.76 | 34.72 |
+| lexical | spec_dynf_spec | dyn+fourier+spec | 1,603,944 | 1 | 18.03 | 49.55 | 41.56 |
 | lexical | spec_spec | spec | 1,550,952 | 1 | 37.54 | 81.49 | 11.83 |
 | source | alam_cnn | xy | 1,209,180 | 3 | 9.19 ± 5.26 | 11.52 ± 5.74 | 89.78 ± 3.59 |
 | source | alam_lstm | xy | 311,252 | 3 | 19.34 ± 2.40 | 24.23 ± 3.08 | 78.90 ± 2.97 |
