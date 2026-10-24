@@ -17,14 +17,14 @@ import pickle
 import subprocess
 import sys
 import time
-from dataclasses import asdict
+from dataclasses import asdict, replace
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from airwriting.data import PreprocessConfig, load_coordinates, preprocess_trajectory  # noqa: E402
-from airwriting.experiment import ExperimentConfig, run_experiment  # noqa: E402
+from airwriting.experiment import ExperimentConfig, run_experiment, run_robustness  # noqa: E402
 
 DATA_ROOT = ROOT / "Vni_air_writing" / "VNI_airwriting"
 OUTPUT = ROOT / "benchmarks"
@@ -115,9 +115,35 @@ def phase_jobs(phase: str) -> list[tuple[str, ExperimentConfig]]:
             for backbone in ("carbune_bilstm", "ott_cnn_bilstm"):
                 recipe = dict(BASELINE_RECIPES[backbone], representation="dyn+fourier", fourier_scales=OURS[protocol]["fourier_scales"])
                 jobs.append((protocol, _config(protocol, f"{backbone}_dynf", 42, backbone=backbone, **recipe)))
+    elif phase == "followup":
+        # Longest jobs first: the published recipes for Carbune and the Alam
+        # CNN had not converged within their original epoch caps.
+        for seed in SEEDS:
+            for protocol in ("source", "lexical"):
+                for backbone, epochs in (("carbune_bilstm", 300), ("alam_cnn", 400)):
+                    recipe = dict(BASELINE_RECIPES[backbone], epochs=epochs, patience=50)
+                    jobs.append((protocol, _config(protocol, f"{backbone}_long", seed, backbone=backbone, **recipe)))
+        # Remaining seeds for the selected spectral model and Ott + D+F.
+        seed42 = {(p, c.name): c for p, c in phase_jobs("spectral") + phase_jobs("transfer")}
+        for seed in SEEDS[1:]:
+            for protocol in ("source", "lexical"):
+                for name in ("spec_dynf_spec", "ott_cnn_bilstm_dynf"):
+                    jobs.append((protocol, replace(seed42[(protocol, name)], seed=seed)))
     else:
         raise ValueError(f"Unknown phase: {phase}")
     return jobs
+
+
+def run_robustness_suite(names: list[str]) -> None:
+    """Perturbation sweep (rotation, noise, scale, time warp) on source test."""
+    manifest = json.loads(MANIFESTS["source"].read_text(encoding="utf-8"))
+    cache = _point_cache()
+    for name in names:
+        for seed in SEEDS:
+            checkpoint = OUTPUT / "source" / name / f"seed_{seed}" / "best.pt"
+            target = OUTPUT / "robustness" / f"{name}_seed_{seed}.json"
+            if checkpoint.exists() and not target.exists():
+                run_robustness(checkpoint, DATA_ROOT, manifest, target, cache)
 
 
 def _result_path(protocol: str, config: ExperimentConfig) -> Path:
@@ -250,6 +276,8 @@ def main() -> None:
     listing = commands.add_parser("list")
     listing.add_argument("--phase", required=True)
     commands.add_parser("summary")
+    robust = commands.add_parser("robust")
+    robust.add_argument("names", nargs="+")
     args = parser.parse_args()
     if args.command == "run":
         run_phase(args.phase, args.workers)
@@ -258,6 +286,8 @@ def main() -> None:
     elif args.command == "list":
         for protocol, config in phase_jobs(args.phase):
             print(protocol, json.dumps(asdict(config)))
+    elif args.command == "robust":
+        run_robustness_suite(args.names)
     else:
         write_summary()
 
