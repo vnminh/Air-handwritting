@@ -90,3 +90,11 @@
 {"run": "carbune_bilstm", "epoch": 90, "train_loss": 1.1272355850450284, "val_cer": 0.7876956197731224, "val_wer": 0.9994217982075745, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
 {"run": "carbune_bilstm", "epoch": 91, "train_loss": 1.1083422556290259, "val_cer": 0.7771797631862217, "val_wer": 0.9991326973113617, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
 {"run": "carbune_bilstm", "epoch": 92, "train_loss": 1.0973919085093906, "val_cer": 0.7652562722530429, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "carbune_bilstm", "epoch": 93, "train_loss": 1.0825252716095892, "val_cer": 0.7746957025751429, "val_wer": 0.9991326973113617, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "carbune_bilstm", "epoch": 94, "train_loss": 1.0680811342826257, "val_cer": 0.7593773288068228, "val_wer": 0.9988435964151489, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "carbune_bilstm", "epoch": 95, "train_loss": 1.0581988086281242, "val_cer": 0.7466258176699512, "val_wer": 0.9991326973113617, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "carbune_bilstm", "epoch": 96, "train_loss": 1.0470744337092388, "val_cer": 0.742402914631117, "val_wer": 0.9985544955189362, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "carbune_bilstm", "epoch": 97, "train_loss": 1.0299790913718088, "val_cer": 0.735447544920096, "val_wer": 0.9988435964151489, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "carbune_bilstm", "epoch": 98, "train_loss": 1.0141288631040972, "val_cer": 0.7230272418647015, "val_wer": 0.9997108991037872, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "carbune_bilstm", "epoch": 99, "train_loss": 0.9985154725431086, "val_cer": 0.7236896580276558, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "carbune_bilstm", "epoch": 100, "train_loss": 0.9894139959916963, "val_cer": 0.7140846236648174, "val_wer": 0.9985544955189362, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
