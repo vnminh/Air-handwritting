@@ -1,0 +1,9 @@
+/venv/main/lib/python3.12/site-packages/torch/nn/modules/conv.py:370: UserWarning: Using padding='same' with even kernel lengths and odd dilation may require a zero-padded copy of the input be created (Triggered internally at /pytorch/aten/src/ATen/native/Convolution.cpp:1024.)
+  return F.conv1d(
+{"run": "ott_cnn_bilstm", "epoch": 1, "train_loss": 19.15606317258861, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 2, "train_loss": 4.339539573617177, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 3, "train_loss": 4.224085000443132, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 4, "train_loss": 4.126566854894977, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 5, "train_loss": 4.042632895953035, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 6, "train_loss": 3.9698755930547844, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 7, "train_loss": 3.8994769207418782, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
