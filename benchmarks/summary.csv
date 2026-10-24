@@ -38,3 +38,4 @@ source,spec_dynf,42,conformer,dyn+fourier,concat,1579368,40,19.9,1.92,1.76,5.49,
 source,spec_dynf_gspec,42,conformer,dyn+fourier+gspec,concat,1600232,40,20.1,1.83,1.59,4.85,95.39
 source,spec_dynf_spec,42,conformer,dyn+fourier+spec,concat,1602920,40,20.3,0.87,0.87,2.94,96.49
 source,spec_spec,42,conformer,spec,concat,1550952,40,19.8,3.12,3.03,9.2,91.87
+source,spec_xy_spec,42,conformer,xy+spec,concat,1584488,40,19.9,1.29,1.07,3.68,95.87

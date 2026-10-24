@@ -19,3 +19,4 @@
 | source | spec_dynf_gspec | dyn+fourier+gspec | 1,600,232 | 1 | 1.59 | 4.85 | 95.39 |
 | source | spec_dynf_spec | dyn+fourier+spec | 1,602,920 | 1 | 0.87 | 2.94 | 96.49 |
 | source | spec_spec | spec | 1,550,952 | 1 | 3.03 | 9.20 | 91.87 |
+| source | spec_xy_spec | xy+spec | 1,584,488 | 1 | 1.07 | 3.68 | 95.87 |
