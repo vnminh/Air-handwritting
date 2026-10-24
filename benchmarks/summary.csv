@@ -10,8 +10,10 @@ lexical,ours,3407,conformer,dynamics_fourier,concat,1580392,42,10.6,18.02,20.61,
 lexical,ours,42,conformer,dynamics_fourier,concat,1580392,70,15.1,18.31,21.47,57.12,29.59
 source,alam_cnn,3407,alam_cnn,xy,gated,1209180,200,1.8,8.05,8.72,11.38,89.41
 source,alam_cnn,42,alam_cnn,xy,gated,1209180,195,2.7,14.69,14.67,17.33,86.38
+source,alam_lstm,2026,alam_lstm,xy,gated,311252,98,1.0,16.53,16.57,20.67,82.29
 source,alam_lstm,3407,alam_lstm,xy,gated,311252,97,1.0,18.63,20.63,25.91,77.64
 source,alam_lstm,42,alam_lstm,xy,gated,311252,100,1.4,18.08,20.81,26.1,76.76
+source,carbune_bilstm,3407,carbune_bilstm,delta,gated,443480,99,70.7,3.21,3.2,9.17,92.05
 source,carbune_bilstm,42,carbune_bilstm,delta,gated,443480,9,24.0,91.17,91.14,100.0,0.0
 source,ott_cnn_bilstm,3407,ott_cnn_bilstm,xy,gated,225968,200,22.5,7.15,6.65,16.34,89.02
 source,ott_cnn_bilstm,42,ott_cnn_bilstm,xy,gated,225968,200,28.0,5.2,5.45,14.26,88.58
