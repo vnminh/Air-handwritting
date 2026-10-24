@@ -5,11 +5,13 @@
 | lexical | carbune_bilstm | delta | 443,480 | 3 | 61.50 ± 12.49 | 97.10 ± 4.01 | 1.45 ± 1.27 |
 | lexical | ott_cnn_bilstm | xy | 225,968 | 3 | 45.89 ± 4.61 | 87.82 ± 3.45 | 11.10 ± 0.39 |
 | lexical | ours | dynamics_fourier | 1,580,392 | 3 | 20.56 ± 0.94 | 55.62 ± 1.43 | 33.23 ± 3.20 |
+| lexical | spec_all_gated | xy+dyn+fourier+spec | 1,557,356 | 1 | 20.90 | 55.08 | 33.53 |
 | lexical | spec_dyn_spec | dyn+spec | 1,585,128 | 1 | 28.19 | 67.38 | 19.68 |
 | lexical | spec_dynf | dyn+fourier | 1,580,392 | 1 | 21.14 | 55.76 | 34.72 |
 | lexical | spec_dynf_gspec | dyn+fourier+gspec | 1,601,256 | 1 | 21.02 | 54.01 | 36.74 |
 | lexical | spec_dynf_spec | dyn+fourier+spec | 1,603,944 | 1 | 18.03 | 49.55 | 41.56 |
 | lexical | spec_spec | spec | 1,550,952 | 1 | 37.54 | 81.49 | 11.83 |
+| lexical | spec_xy_spec | xy+spec | 1,584,488 | 1 | 31.27 | 72.85 | 17.84 |
 | source | alam_cnn | xy | 1,209,180 | 3 | 9.19 ± 5.26 | 11.52 ± 5.74 | 89.78 ± 3.59 |
 | source | alam_lstm | xy | 311,252 | 3 | 19.34 ± 2.40 | 24.23 ± 3.08 | 78.90 ± 2.97 |
 | source | carbune_bilstm | delta | 443,480 | 3 | 41.18 ± 45.18 | 56.94 ± 45.60 | 44.11 ± 46.14 |

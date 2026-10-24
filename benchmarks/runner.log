@@ -1,0 +1,5 @@
+transfer: 4 pending jobs
+started source/carbune_bilstm_dynf/seed_42
+started source/ott_cnn_bilstm_dynf/seed_42
+started lexical/carbune_bilstm_dynf/seed_42
+started lexical/ott_cnn_bilstm_dynf/seed_42
