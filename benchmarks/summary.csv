@@ -19,6 +19,7 @@ source,alam_cnn,42,alam_cnn,xy,gated,1209180,195,2.7,14.69,14.67,17.33,86.38
 source,alam_lstm,2026,alam_lstm,xy,gated,311252,98,1.0,16.53,16.57,20.67,82.29
 source,alam_lstm,3407,alam_lstm,xy,gated,311252,97,1.0,18.63,20.63,25.91,77.64
 source,alam_lstm,42,alam_lstm,xy,gated,311252,100,1.4,18.08,20.81,26.1,76.76
+source,carbune_bilstm,2026,carbune_bilstm,delta,gated,443480,100,53.6,29.03,29.2,61.64,40.29
 source,carbune_bilstm,3407,carbune_bilstm,delta,gated,443480,99,70.7,3.21,3.2,9.17,92.05
 source,carbune_bilstm,42,carbune_bilstm,delta,gated,443480,9,24.0,91.17,91.14,100.0,0.0
 source,ott_cnn_bilstm,2026,ott_cnn_bilstm,xy,gated,225968,196,19.7,9.04,9.27,19.14,87.96
