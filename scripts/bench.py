@@ -129,6 +129,14 @@ def phase_jobs(phase: str) -> list[tuple[str, ExperimentConfig]]:
             for protocol in ("source", "lexical"):
                 for name in ("spec_dynf_spec", "ott_cnn_bilstm_dynf"):
                     jobs.append((protocol, replace(seed42[(protocol, name)], seed=seed)))
+    elif phase == "long":
+        # Our models under the same epoch budget as the long baselines.
+        seed42 = {(p, c.name): c for p, c in phase_jobs("compare") + phase_jobs("spectral") if c.seed == 42}
+        for seed in SEEDS:
+            for protocol in ("source", "lexical"):
+                for name in ("ours", "spec_dynf_spec"):
+                    config = replace(seed42[(protocol, name)], name=f"{name}_long", seed=seed, epochs=300, patience=50)
+                    jobs.append((protocol, config))
     else:
         raise ValueError(f"Unknown phase: {phase}")
     return jobs
