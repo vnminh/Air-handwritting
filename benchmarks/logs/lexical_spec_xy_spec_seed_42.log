@@ -1,0 +1,2 @@
+{"run": "spec_xy_spec", "epoch": 1, "train_loss": 14.79211994012197, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0002857142857142857}
+{"run": "spec_xy_spec", "epoch": 2, "train_loss": 4.024472094244427, "val_cer": 0.940630951395214, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.00042857142857142855}
