@@ -189,3 +189,12 @@
 {"run": "alam_cnn", "epoch": 189, "train_loss": 1.4035601649019454, "val_cer": 0.050166368057332995, "val_wer": 0.0683839313094143, "val_exact_accuracy": 0.9345342706502636, "learning_rate": 0.0001}
 {"run": "alam_cnn", "epoch": 190, "train_loss": 1.4084702274865575, "val_cer": 0.049739783294940706, "val_wer": 0.0671573137074517, "val_exact_accuracy": 0.9362917398945518, "learning_rate": 0.0001}
 {"run": "alam_cnn", "epoch": 191, "train_loss": 1.3972074190775554, "val_cer": 0.050678269772203736, "val_wer": 0.06777062250843299, "val_exact_accuracy": 0.9362917398945518, "learning_rate": 0.0001}
+{"run": "alam_cnn", "epoch": 192, "train_loss": 1.3905788908402126, "val_cer": 0.04939851548502688, "val_wer": 0.0665440049064704, "val_exact_accuracy": 0.9358523725834798, "learning_rate": 0.0001}
+{"run": "alam_cnn", "epoch": 193, "train_loss": 1.399211714665095, "val_cer": 0.0479481272928931, "val_wer": 0.06562404170499847, "val_exact_accuracy": 0.9349736379613357, "learning_rate": 0.0001}
+{"run": "alam_cnn", "epoch": 194, "train_loss": 1.3933683103985257, "val_cer": 0.052469925774251344, "val_wer": 0.07145047531432076, "val_exact_accuracy": 0.9305799648506151, "learning_rate": 0.0001}
+{"run": "alam_cnn", "epoch": 195, "train_loss": 1.3977203137344785, "val_cer": 0.04786281034041464, "val_wer": 0.06409076970254524, "val_exact_accuracy": 0.93804920913884, "learning_rate": 0.0001}
+{"run": "alam_cnn", "epoch": 196, "train_loss": 1.3987286057737138, "val_cer": 0.053152461394079004, "val_wer": 0.07022385771235817, "val_exact_accuracy": 0.9349736379613357, "learning_rate": 0.0001}
+{"run": "alam_cnn", "epoch": 197, "train_loss": 1.3733772320879831, "val_cer": 0.052299291869294426, "val_wer": 0.06991720331186753, "val_exact_accuracy": 0.9349736379613357, "learning_rate": 0.0001}
+{"run": "alam_cnn", "epoch": 198, "train_loss": 1.3740569684240553, "val_cer": 0.050763586724682196, "val_wer": 0.06807727690892364, "val_exact_accuracy": 0.9362917398945518, "learning_rate": 0.0001}
+{"run": "alam_cnn", "epoch": 199, "train_loss": 1.3799787147177591, "val_cer": 0.04752154253050081, "val_wer": 0.06317080650107329, "val_exact_accuracy": 0.9402460456942003, "learning_rate": 0.0001}
+{"run": "alam_cnn", "epoch": 200, "train_loss": 1.3743008540736303, "val_cer": 0.04863066291272076, "val_wer": 0.06409076970254524, "val_exact_accuracy": 0.9406854130052724, "learning_rate": 0.0001}
