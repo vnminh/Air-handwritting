@@ -1,0 +1,21 @@
+/venv/main/lib/python3.12/site-packages/torch/nn/modules/conv.py:370: UserWarning: Using padding='same' with even kernel lengths and odd dilation may require a zero-padded copy of the input be created (Triggered internally at /pytorch/aten/src/ATen/native/Convolution.cpp:1024.)
+  return F.conv1d(
+{"run": "ott_cnn_bilstm", "epoch": 1, "train_loss": 19.087345534628565, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 2, "train_loss": 4.337504259832612, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 3, "train_loss": 4.215830387649955, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 4, "train_loss": 4.107395824495253, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 5, "train_loss": 4.004982341776837, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 6, "train_loss": 3.9226387536132727, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 7, "train_loss": 3.844200850188077, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 8, "train_loss": 3.757629304796785, "val_cer": 1.0, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 9, "train_loss": 3.657436570623419, "val_cer": 0.9988407717148299, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 10, "train_loss": 3.544411158823705, "val_cer": 0.9905605696779002, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 11, "train_loss": 3.4144597623374437, "val_cer": 0.9619938726504926, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 12, "train_loss": 3.2657772918323893, "val_cer": 0.9133890866937153, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 13, "train_loss": 3.1014443786589654, "val_cer": 0.8780326239960256, "val_wer": 1.0, "val_exact_accuracy": 0.0, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 14, "train_loss": 2.931249947338314, "val_cer": 0.848637906764925, "val_wer": 0.9881468632552761, "val_exact_accuracy": 0.017234131988230348, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 15, "train_loss": 2.765890731916323, "val_cer": 0.8211476360023184, "val_wer": 0.9893032668401271, "val_exact_accuracy": 0.015552753257671291, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 16, "train_loss": 2.6130983403750827, "val_cer": 0.8108801854765256, "val_wer": 0.9921942758022549, "val_exact_accuracy": 0.011349306431273645, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 17, "train_loss": 2.4678285043318193, "val_cer": 0.7992879026248241, "val_wer": 0.9855449551893611, "val_exact_accuracy": 0.021017234131988232, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 18, "train_loss": 2.3298172931094747, "val_cer": 0.7838867268361348, "val_wer": 0.9959525874530211, "val_exact_accuracy": 0.0058848255569567045, "learning_rate": 0.0001}
+{"run": "ott_cnn_bilstm", "epoch": 19, "train_loss": 2.206639507314661, "val_cer": 0.7593773288068228, "val_wer": 0.9936397802833189, "val_exact_accuracy": 0.009247583018074821, "learning_rate": 0.0001}
