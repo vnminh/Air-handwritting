@@ -47,3 +47,5 @@
 {"run": "spec_dynf", "epoch": 47, "train_loss": 0.00682164073158573, "val_cer": 0.1967376003974497, "val_wer": 0.5617230413414281, "val_exact_accuracy": 0.32828919714165616, "learning_rate": 0.00031581277801012367}
 {"run": "spec_dynf", "epoch": 48, "train_loss": 0.007292448297246463, "val_cer": 0.19582677817338742, "val_wer": 0.5536282162474704, "val_exact_accuracy": 0.3312316099201345, "learning_rate": 0.0002944815677977366}
 {"run": "spec_dynf", "epoch": 49, "train_loss": 0.011383410226294978, "val_cer": 0.19773122464188125, "val_wer": 0.5466897947383637, "val_exact_accuracy": 0.34258091635140814, "learning_rate": 0.00027374209509469297}
+{"run": "spec_dynf", "epoch": 50, "train_loss": 0.007396155984477243, "val_cer": 0.19764842262151197, "val_wer": 0.5487135010118531, "val_exact_accuracy": 0.3417402269861286, "learning_rate": 0.00025364759782997353}
+{"run": "spec_dynf", "epoch": 51, "train_loss": 0.006670970835127971, "val_cer": 0.19425353978637078, "val_wer": 0.5394622723330442, "val_exact_accuracy": 0.35224884405212276, "learning_rate": 0.0002342496582898601}
