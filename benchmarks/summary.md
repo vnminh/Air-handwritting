@@ -1,7 +1,7 @@
 | Protocol | Method | Repr. | Params | Seeds | Test CER | Test WER | Exact |
 |---|---|---|---:|---:|---:|---:|---:|
-| lexical | alam_cnn | xy | 1,192,152 | 2 | 84.47 ± 1.62 | 100.32 ± 0.18 | 0.00 ± 0.00 |
-| lexical | alam_lstm | xy | 277,328 | 2 | 82.46 ± 1.17 | 99.75 ± 0.57 | 0.00 ± 0.00 |
+| lexical | alam_cnn | xy | 1,192,152 | 3 | 84.04 ± 1.36 | 100.64 ± 0.57 | 0.00 ± 0.00 |
+| lexical | alam_lstm | xy | 277,328 | 3 | 82.26 ± 0.90 | 100.49 ± 1.34 | 0.00 ± 0.00 |
 | lexical | carbune_bilstm | delta | 443,480 | 2 | 67.31 ± 10.46 | 99.38 ± 0.87 | 1.01 ± 1.43 |
 | lexical | ott_cnn_bilstm | xy | 225,968 | 2 | 46.91 ± 6.02 | 87.91 ± 4.87 | 10.89 ± 0.23 |
 | lexical | ours | dynamics_fourier | 1,580,392 | 3 | 20.56 ± 0.94 | 55.62 ± 1.43 | 33.23 ± 3.20 |
