@@ -5,3 +5,5 @@ started lexical/carbune_bilstm_dynf/seed_42
 started lexical/ott_cnn_bilstm_dynf/seed_42
 finished lexical/ott_cnn_bilstm_dynf/seed_42 (exit 0)
 finished source/ott_cnn_bilstm_dynf/seed_42 (exit 0)
+finished source/carbune_bilstm_dynf/seed_42 (exit 0)
+finished lexical/carbune_bilstm_dynf/seed_42 (exit 0)

@@ -8,6 +8,7 @@ lexical,alam_lstm,42,alam_lstm,xy,gated,277328,99,0.9,80.51,81.63,99.35,0.0
 lexical,carbune_bilstm,2026,carbune_bilstm,delta,gated,443480,91,40.4,46.9,49.88,92.52,2.34
 lexical,carbune_bilstm,3407,carbune_bilstm,delta,gated,443480,100,68.8,71.41,74.7,100.0,0.0
 lexical,carbune_bilstm,42,carbune_bilstm,delta,gated,443480,100,74.5,53.42,59.91,98.77,2.02
+lexical,carbune_bilstm_dynf,42,carbune_bilstm,dyn+fourier,gated,454232,92,37.0,25.8,30.71,74.24,13.81
 lexical,ott_cnn_bilstm,2026,ott_cnn_bilstm,xy,gated,225968,199,16.5,44.95,43.84,87.64,11.51
 lexical,ott_cnn_bilstm,3407,ott_cnn_bilstm,xy,gated,225968,147,16.6,49.11,51.17,91.36,10.73
 lexical,ott_cnn_bilstm,42,ott_cnn_bilstm,xy,gated,225968,179,20.1,42.29,42.65,84.47,11.06
@@ -31,6 +32,7 @@ source,alam_lstm,42,alam_lstm,xy,gated,311252,100,1.4,18.08,20.81,26.1,76.76
 source,carbune_bilstm,2026,carbune_bilstm,delta,gated,443480,100,53.6,29.03,29.2,61.64,40.29
 source,carbune_bilstm,3407,carbune_bilstm,delta,gated,443480,99,70.7,3.21,3.2,9.17,92.05
 source,carbune_bilstm,42,carbune_bilstm,delta,gated,443480,9,24.0,91.17,91.14,100.0,0.0
+source,carbune_bilstm_dynf,42,carbune_bilstm,dyn+fourier,gated,450136,96,37.0,4.55,4.9,13.65,87.43
 source,ott_cnn_bilstm,2026,ott_cnn_bilstm,xy,gated,225968,196,19.7,9.04,9.27,19.14,87.96
 source,ott_cnn_bilstm,3407,ott_cnn_bilstm,xy,gated,225968,200,22.5,7.15,6.65,16.34,89.02
 source,ott_cnn_bilstm,42,ott_cnn_bilstm,xy,gated,225968,200,28.0,5.2,5.45,14.26,88.58
