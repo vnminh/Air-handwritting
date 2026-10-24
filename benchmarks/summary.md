@@ -1,7 +1,7 @@
 | Protocol | Method | Repr. | Params | Seeds | Test CER | Test WER | Exact |
 |---|---|---|---:|---:|---:|---:|---:|
 | lexical | alam_cnn | xy | 1,192,152 | 3 | 84.04 ± 1.36 | 100.64 ± 0.57 | 0.00 ± 0.00 |
-| lexical | alam_cnn_long | xy | 1,192,152 | 1 | 83.32 | 100.45 | 0.00 |
+| lexical | alam_cnn_long | xy | 1,192,152 | 2 | 82.40 ± 1.30 | 100.94 ± 0.69 | 0.00 ± 0.00 |
 | lexical | alam_lstm | xy | 277,328 | 3 | 82.26 ± 0.90 | 100.49 ± 1.34 | 0.00 ± 0.00 |
 | lexical | carbune_bilstm | delta | 443,480 | 3 | 61.50 ± 12.49 | 97.10 ± 4.01 | 1.45 ± 1.27 |
 | lexical | carbune_bilstm_dynf | dyn+fourier | 454,232 | 1 | 30.71 | 74.24 | 13.81 |
@@ -16,6 +16,7 @@
 | lexical | spec_spec | spec | 1,550,952 | 1 | 37.54 | 81.49 | 11.83 |
 | lexical | spec_xy_spec | xy+spec | 1,584,488 | 1 | 31.27 | 72.85 | 17.84 |
 | source | alam_cnn | xy | 1,209,180 | 3 | 9.19 ± 5.26 | 11.52 ± 5.74 | 89.78 ± 3.59 |
+| source | alam_cnn_long | xy | 1,209,180 | 3 | 3.14 ± 1.12 | 4.45 ± 1.35 | 95.15 ± 1.07 |
 | source | alam_lstm | xy | 311,252 | 3 | 19.34 ± 2.40 | 24.23 ± 3.08 | 78.90 ± 2.97 |
 | source | carbune_bilstm | delta | 443,480 | 3 | 41.18 ± 45.18 | 56.94 ± 45.60 | 44.11 ± 46.14 |
 | source | carbune_bilstm_dynf | dyn+fourier | 450,136 | 1 | 4.90 | 13.65 | 87.43 |
