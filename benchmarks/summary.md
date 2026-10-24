@@ -5,6 +5,7 @@
 | lexical | carbune_bilstm | delta | 443,480 | 3 | 61.50 ± 12.49 | 97.10 ± 4.01 | 1.45 ± 1.27 |
 | lexical | ott_cnn_bilstm | xy | 225,968 | 3 | 45.89 ± 4.61 | 87.82 ± 3.45 | 11.10 ± 0.39 |
 | lexical | ours | dynamics_fourier | 1,580,392 | 3 | 20.56 ± 0.94 | 55.62 ± 1.43 | 33.23 ± 3.20 |
+| lexical | spec_dyn_spec | dyn+spec | 1,585,128 | 1 | 28.19 | 67.38 | 19.68 |
 | lexical | spec_dynf | dyn+fourier | 1,580,392 | 1 | 21.14 | 55.76 | 34.72 |
 | lexical | spec_spec | spec | 1,550,952 | 1 | 37.54 | 81.49 | 11.83 |
 | source | alam_cnn | xy | 1,209,180 | 3 | 9.19 ± 5.26 | 11.52 ± 5.74 | 89.78 ± 3.59 |

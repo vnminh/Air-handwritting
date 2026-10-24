@@ -14,6 +14,7 @@ lexical,ott_cnn_bilstm,42,ott_cnn_bilstm,xy,gated,225968,179,20.1,42.29,42.65,84
 lexical,ours,2026,conformer,dynamics_fourier,concat,1580392,41,11.0,17.41,19.59,54.27,35.6
 lexical,ours,3407,conformer,dynamics_fourier,concat,1580392,42,10.6,18.02,20.61,55.47,34.5
 lexical,ours,42,conformer,dynamics_fourier,concat,1580392,70,15.1,18.31,21.47,57.12,29.59
+lexical,spec_dyn_spec,42,conformer,dyn+spec,concat,1585128,47,30.5,22.94,28.19,67.38,19.68
 lexical,spec_dynf,42,conformer,dyn+fourier,concat,1580392,36,25.1,19.24,21.14,55.76,34.72
 lexical,spec_spec,42,conformer,spec,concat,1550952,51,31.7,36.29,37.54,81.49,11.83
 source,alam_cnn,2026,alam_cnn,xy,gated,1209180,199,1.8,4.75,4.18,5.86,93.54
